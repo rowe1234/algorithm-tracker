@@ -18,7 +18,6 @@
   --mono:'JetBrains Mono','Fira Code','SF Mono',Consolas,'Courier New',monospace;
 }
 @media (max-width:760px){ :root{ --cell:9px; --gap:2px; } }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
 body{
@@ -28,7 +27,6 @@ body{
 }
 ::selection{background:rgba(0,255,156,.28);color:#eafff5}
 
-/* 背景层 */
 #matrix{position:fixed;inset:0;z-index:0;opacity:.55;pointer-events:none}
 .grid-overlay{
   position:fixed;inset:0;z-index:1;pointer-events:none;
@@ -54,8 +52,6 @@ body{
 
 /* HERO */
 .hero{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
-
-/* 头像（硬编码 + 呼吸光晕） */
 .avatar{
   width:96px;height:96px;border-radius:50%;
   object-fit:cover;padding:3px;flex-shrink:0;
@@ -118,7 +114,6 @@ h1.glitch::after{
   97%{transform:translate(2px,-1px)}
 }
 
-/* CF handle 行 */
 .hero-id{
   display:flex;align-items:center;gap:12px;
   margin-top:14px;flex-wrap:wrap;
@@ -144,7 +139,6 @@ h1.glitch::after{
   padding:3px 9px;border:1px solid currentColor;border-radius:2px;
   color:var(--green);opacity:.9;
 }
-
 .sub{color:var(--muted);font-size:12px;letter-spacing:2px;margin-top:10px}
 
 /* 卡片 */
@@ -256,7 +250,6 @@ h1.glitch::after{
   font-size:10px;color:var(--muted);letter-spacing:1px;
 }
 
-/* 双列 */
 .grid-2{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}
 
 /* 难度分布 */
@@ -307,7 +300,6 @@ h1.glitch::after{
 }
 .pf-count{text-align:right;font-size:12px;color:var(--c,var(--green));font-variant-numeric:tabular-nums}
 
-/* 页脚 */
 footer{
   margin-top:44px;padding-top:20px;border-top:1px solid rgba(0,255,156,.1);
   display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
@@ -336,13 +328,13 @@ footer{
 
 <main class="wrap">
 
-  <!-- HERO：头像 + 硬编码 ID -->
   <header class="hero">
+    <!-- 初始用默认头像占位，JS 加载 data.json 后替换为真实头像 -->
     <img
       class="avatar"
       id="avatar"
       alt="Rowe"
-      src="https://codeforces.com/titlePhoto/Rowe"
+      src="https://userpic.codeforces.org/no-avatar.jpg"
     />
     <div class="hero-text">
       <div class="term-line">
@@ -360,7 +352,6 @@ footer{
     </div>
   </header>
 
-  <!-- 数字卡 -->
   <section class="hero-cards">
     <div class="card stat-card">
       <div class="stat-label">TOTAL AC</div>
@@ -379,7 +370,7 @@ footer{
     </div>
   </section>
 
-  <!-- 刷题热力图 -->
+  <!-- 热力图 1：刷题频率 -->
   <section class="card heatmap-card">
     <div class="card-head">
       <span class="card-title">// Submission Heatmap</span>
@@ -402,7 +393,7 @@ footer{
     </div>
   </section>
 
-  <!-- 难度热力图 -->
+  <!-- 热力图 2：难度 -->
   <section class="card heatmap-card">
     <div class="card-head">
       <span class="card-title">// Difficulty Heatmap</span>
@@ -429,7 +420,6 @@ footer{
     </div>
   </section>
 
-  <!-- 难度分布 + 30 天 -->
   <section class="grid-2">
     <div class="card">
       <div class="card-head"><span class="card-title">// Difficulty Distribution</span></div>
@@ -444,7 +434,6 @@ footer{
     </div>
   </section>
 
-  <!-- 平台 -->
   <section class="card platform-card">
     <div class="card-head">
       <span class="card-title">// Platform Breakdown</span>
@@ -542,14 +531,11 @@ const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'
 function computeWeeks(daily){
   const keys  = Object.keys(daily).sort();
   const today = new Date(); today.setHours(0,0,0,0);
-
   let start = keys.length ? parseYMD(keys[0]) : new Date(today);
   if (!keys.length) start.setDate(start.getDate() - 364);
   start.setDate(start.getDate() - start.getDay());
-
   const end = new Date(today);
   end.setDate(end.getDate() + (6 - end.getDay()));
-
   let weeks = Math.round((end - start) / 604800000);
   if (weeks > MAX_WEEKS){
     start = new Date(end);
@@ -589,10 +575,9 @@ function iterateWeeks(start, weeks, cb){
   }
 }
 
-/* ================= Tooltip 单例 ================= */
+/* ================= Tooltip ================= */
 const tipEl = $('#tooltip');
 let tipHideTimer = null;
-
 function showTip(html, e){
   clearTimeout(tipHideTimer);
   tipEl.innerHTML = html;
@@ -615,7 +600,7 @@ function scheduleHide(){
 tipEl.addEventListener('mouseenter', () => clearTimeout(tipHideTimer));
 tipEl.addEventListener('mouseleave', scheduleHide);
 
-/* ================= 热力图 1：刷题频率 ================= */
+/* ================= 热力图 1：频率 ================= */
 function levelOf(c){
   if (c <= 0)  return 0;
   if (c <= 1)  return 1;
@@ -630,37 +615,29 @@ function renderHeatmap(daily){
   const monthsEl = $('#months');
   const bodyEl   = $('#heatBody');
   heatEl.innerHTML = '';
-
   const { start, today, weeks } = computeWeeks(daily);
   bodyEl.style.setProperty('--weeks', weeks);
   renderMonthLabels(monthsEl, start, weeks);
-
   let totalInRange = 0;
-
   iterateWeeks(start, weeks, (d, w) => {
     const cell = document.createElement('div');
     cell.className = 'cell';
     cell.style.animationDelay = (w * 14) + 'ms';
-
     if (d.getTime() > today.getTime()){
       cell.classList.add('future');
       heatEl.appendChild(cell);
       return;
     }
-
     const key  = ymd(d);
     const info = daily[key];
     const cnt  = info ? (info.count || 0) : 0;
     totalInRange += cnt;
-
     cell.classList.add('l' + levelOf(cnt));
     cell.dataset.date  = key;
     cell.dataset.count = cnt;
     heatEl.appendChild(cell);
   });
-
   $('#heatMeta').textContent = `PAST ${weeks} WEEKS · ${totalInRange.toLocaleString('en-US')} AC`;
-
   heatEl.onmousemove = e => {
     const cell = e.target.closest('.cell');
     if (!cell || !cell.dataset.date) { scheduleHide(); return; }
@@ -694,37 +671,29 @@ function renderDiffHeatmap(daily){
   const monthsEl = $('#diffMonths');
   const bodyEl   = $('#diffBody');
   heatEl.innerHTML = '';
-
   const { start, today, weeks } = computeWeeks(daily);
   bodyEl.style.setProperty('--weeks', weeks);
   renderMonthLabels(monthsEl, start, weeks);
-
   let activeDays = 0, totalProblems = 0;
-
   iterateWeeks(start, weeks, (d, w) => {
     const cell = document.createElement('div');
     cell.className = 'cell';
     cell.style.animationDelay = (w * 14) + 'ms';
-
     if (d.getTime() > today.getTime()){
       cell.classList.add('future');
       heatEl.appendChild(cell);
       return;
     }
-
     const key  = ymd(d);
     const info = daily[key];
     const problems = (info && info.problems) ? info.problems : [];
     const cnt = info ? (info.count || 0) : 0;
     const maxR = (info && info.max_rating) ? info.max_rating : null;
-
     if (cnt > 0) activeDays++;
     totalProblems += cnt;
-
     const col = colorOfRating(maxR);
     cell.style.background = col;
     if (maxR) cell.style.boxShadow = `0 0 8px ${col}66`;
-
     cell.dataset.date = key;
     cell.dataset.count = cnt;
     cell.dataset.maxR = maxR ?? '';
@@ -733,26 +702,19 @@ function renderDiffHeatmap(daily){
       u: p.url,
       n: p.name || ''
     })));
-
     heatEl.appendChild(cell);
   });
-
-  $('#diffMeta').textContent =
-    `ACTIVE ${activeDays} DAYS · ${totalProblems} AC · HOVER TO VIEW PROBLEMS`;
-
+  $('#diffMeta').textContent = `ACTIVE ${activeDays} DAYS · ${totalProblems} AC · HOVER TO VIEW PROBLEMS`;
   heatEl.onmousemove = e => {
     const cell = e.target.closest('.cell');
     if (!cell || !cell.dataset.date) { scheduleHide(); return; }
-
     const date = cell.dataset.date;
     const cnt  = cell.dataset.count;
     const maxR = cell.dataset.maxR;
     let probs = [];
     try { probs = JSON.parse(cell.dataset.problems || '[]'); } catch(_){}
-
     let html = `<b>${date}</b> · ${cnt} AC`;
     if (maxR) html += ` · MAX <b>${maxR}</b>`;
-
     if (probs.length){
       html += `<div class="tip-divider">SOLVED (${probs.length})</div>`;
       probs.forEach(p => {
@@ -764,7 +726,6 @@ function renderDiffHeatmap(daily){
         </div>`;
       });
     }
-
     showTip(html, e);
   };
   heatEl.onmouseleave = scheduleHide;
@@ -776,7 +737,6 @@ function renderDist(dist){
   const order = ['<1200','1200-1399','1400-1599','1600-1899','1900-2099','>=2100','Unrated'];
   box.innerHTML = '';
   const max = Math.max(1, ...order.map(k => Number(dist[k]) || 0));
-
   order.forEach((k, i) => {
     const v   = Number(dist[k]) || 0;
     const pct = (v / max) * 100;
@@ -809,7 +769,6 @@ function renderSpark(daily){
   const max = Math.max(1, ...arr.map(a => a.count));
   const totalSum = arr.reduce((s, a) => s + a.count, 0);
   $('#sparkMeta').textContent = `${totalSum} AC / 30D`;
-
   arr.forEach((a, i) => {
     const bar = document.createElement('div');
     bar.className = 'spark-bar';
@@ -832,13 +791,11 @@ function renderPlatforms(platforms, profiles, manual){
   box.innerHTML = '';
   const names = Object.keys(platforms);
   const total = names.reduce((s, k) => s + (Number(platforms[k]) || 0), 0) || 1;
-
   names.forEach((name, i) => {
     const v    = Number(platforms[name]) || 0;
     const pct  = (v / total) * 100;
     const col  = PF_COLORS[name] || '#00ff9c';
     const isManual = manual && manual[name];
-
     const a = document.createElement('a');
     a.className = 'pf-row';
     a.href   = profiles[name] || '#';
@@ -873,28 +830,26 @@ const RANK_COLORS = {
   'legendary grandmaster':    '#ff2bd6'
 };
 
-/* ================= 头像兜底 SVG ================= */
-const FALLBACK_AVATAR =
-  'data:image/svg+xml;utf8,' + encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' +
-    '<rect width="100" height="100" fill="#0a141a"/>' +
-    '<rect x="2" y="2" width="96" height="96" fill="none" stroke="#00ff9c" stroke-opacity="0.4" stroke-width="2"/>' +
-    '<text x="50" y="66" font-family="monospace" font-size="46" font-weight="bold" fill="#00ff9c" text-anchor="middle">R</text>' +
-    '</svg>'
-  );
+/* ================= 头像兜底 ================= */
+const DEFAULT_AVATAR = 'https://userpic.codeforces.org/no-avatar.jpg';
+const FALLBACK_SVG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' +
+  '<rect width="100" height="100" fill="#0a141a"/>' +
+  '<rect x="2" y="2" width="96" height="96" fill="none" stroke="#00ff9c" stroke-opacity="0.4" stroke-width="2"/>' +
+  '<text x="50" y="66" font-family="monospace" font-size="46" font-weight="bold" fill="#00ff9c" text-anchor="middle">R</text>' +
+  '</svg>'
+);
 
-function attachAvatarFallback(){
+function setAvatar(url){
   const av = $('#avatar');
   if (!av) return;
-  av.addEventListener('error', () => {
-    if (av.src !== FALLBACK_AVATAR) av.src = FALLBACK_AVATAR;
-  });
+  av.src = url || DEFAULT_AVATAR;
+  av.onerror = () => { av.src = FALLBACK_SVG; };
 }
 
 /* ================= 渲染入口 ================= */
 function render(d){
   $('#updatedAt').textContent = 'LAST SYNC · ' + (d.updated_at || 'N/A');
-
   animateNumber($('#totalAc'), Number(d.total_ac) || 0);
 
   const cf = d.cf_info || {};
@@ -908,11 +863,8 @@ function render(d){
     rankEl.style.color = RANK_COLORS[key] || 'var(--green)';
   }
 
-  // 头像：API 有值则覆盖硬编码，无值保留 HTML 里写的
-  if (cf.avatar){
-    const av = $('#avatar');
-    av.src = cf.avatar;
-  }
+  // 关键：用 API 返回的 avatar 字段覆盖默认头像
+  setAvatar(cf.avatar);
 
   const daily = d.daily_stats || {};
   renderHeatmap(daily);
@@ -924,8 +876,6 @@ function render(d){
 
 /* ================= 启动 ================= */
 (async function init(){
-  attachAvatarFallback();
-
   try{
     const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
