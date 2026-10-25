@@ -217,7 +217,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 .feed-main{flex:1;min-width:0;padding:14px 16px;border:1px solid rgba(128,128,128,.15);border-left:3px solid var(--magenta);border-radius:3px;background:rgba(128,128,128,.05)}
 .feed-main .pm{margin-bottom:8px}.feed-main .pm b{color:var(--green)}
 .ft{color:var(--green);font-weight:700;margin-bottom:4px}
-.feed-main .md{line-height:1.7}.feed-main .md img{height:120px;width:auto;max-width:100%;object-fit:cover;margin:4px 8px 4px 0;border-radius:3px;border:1px solid rgba(var(--g),.25);cursor:zoom-in;vertical-align:top;transition:.2s}
+.feed-main .md{line-height:1.7}.feed-main .md img,.feed-main img.thumb{height:120px!important;max-height:120px!important;width:auto!important;max-width:100%!important;object-fit:cover;display:inline-block!important;margin:4px 8px 4px 0;border-radius:3px;border:1px solid rgba(var(--g),.25);cursor:zoom-in;vertical-align:top;transition:.2s}
 .feed-main .md img:hover{border-color:var(--green);box-shadow:0 0 14px rgba(var(--g),.4);transform:scale(1.03)}
 .lightbox{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);backdrop-filter:blur(6px);cursor:zoom-out;padding:3vh 3vw}
 .lightbox.on{display:flex}
@@ -690,6 +690,7 @@ async function initFeed(){
   $('#feedMeta').textContent=items.length+' POSTS';
   box.innerHTML=items.length?items.map((i,k)=>`<div class="feed-item" style="animation-delay:${k*60}ms"><img class="feed-av" src="${esc(i.user.avatar_url)}&s=80" alt="" referrerpolicy="no-referrer"><div class="feed-main"><div class="pm"><b>@${esc(i.user.login)}</b><span>${esc(new Date(i.created_at).toLocaleString())}</span>${i.labels.filter(l=>l.name!==CONFIG.feedLabel).map(l=>`<span class="tg">#${esc(l.name)}</span>`).join('')}</div>${i.title?`<div class="ft">${esc(i.title)}</div>`:''}<div class="md">${i.body_html||''}</div><div class="feed-foot"><a href="${esc(i.html_url)}" target="_blank" rel="noopener noreferrer">💬 ${i.comments} 条回复 · 在 GitHub 查看 / 回复 ↗</a></div></div></div>`).join(''):'<div class="empty">还没有动态 · 去发第一条吧</div>';
   box.querySelectorAll('.md a').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
+  box.querySelectorAll('.md img').forEach(im=>{im.classList.add('thumb');['width','height','style'].forEach(k=>im.removeAttribute(k));im.loading='lazy'});
 }
 
 /* 动态图片:缩略图 → 点击看大图 */
