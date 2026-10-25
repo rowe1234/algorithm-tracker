@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25 13:13:09 UTC",
-  "total_ac": 711,
+  "updated_at": "2026-10-25 13:21:27 UTC",
+  "total_ac": 714,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -13,7 +13,7 @@
     "Nowcoder": "https://ac.nowcoder.com/acm/contest/profile/344403471"
   },
   "platforms": {
-    "Codeforces": 267,
+    "Codeforces": 270,
     "Luogu": 377,
     "Nowcoder": 67
   },
@@ -22,6 +22,32 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-10-25": {
+      "count": 3,
+      "max_rating": 2500,
+      "ratings": [
+        2500,
+        1700,
+        1100
+      ],
+      "problems": [
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/825/problem/A",
+          "name": "Binary Protocol"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/1019/problem/A",
+          "name": "Elections"
+        },
+        {
+          "rating": 2500,
+          "url": "https://codeforces.com/contest/1146/problem/F",
+          "name": "Leaf Partition"
+        }
+      ]
+    },
     "2026-10-24": {
       "count": 4,
       "max_rating": 1200,
@@ -2380,12 +2406,12 @@
     }
   },
   "rating_dist": {
-    "<1200": 129,
+    "<1200": 130,
     "1200-1399": 48,
     "1400-1599": 43,
-    "1600-1899": 28,
+    "1600-1899": 29,
     "1900-2099": 6,
-    ">=2100": 8,
+    ">=2100": 9,
     "Unrated": 5
   }
 }
