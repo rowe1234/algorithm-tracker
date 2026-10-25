@@ -10,7 +10,8 @@ def get_cf_user_info(handle):
         res = requests.get(url, timeout=10).json()
         if res.get("status") == "OK" and len(res.get("result", [])) > 0:
             user = res["result"][0]
-            avatar = user.get("titlePhoto", "")
+            #avatar = user.get("titlePhoto", "")
+            avatar = user.get("avatar", "")
             if avatar.startswith("//"):
                 avatar = "https:" + avatar
             return {
