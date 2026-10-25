@@ -217,7 +217,12 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 .feed-main{flex:1;min-width:0;padding:14px 16px;border:1px solid rgba(128,128,128,.15);border-left:3px solid var(--magenta);border-radius:3px;background:rgba(128,128,128,.05)}
 .feed-main .pm{margin-bottom:8px}.feed-main .pm b{color:var(--green)}
 .ft{color:var(--green);font-weight:700;margin-bottom:4px}
-.feed-main .md{line-height:1.7}.feed-main .md img{max-height:460px;margin:6px 0}
+.feed-main .md{line-height:1.7}.feed-main .md img{height:120px;width:auto;max-width:100%;object-fit:cover;margin:4px 8px 4px 0;border-radius:3px;border:1px solid rgba(var(--g),.25);cursor:zoom-in;vertical-align:top;transition:.2s}
+.feed-main .md img:hover{border-color:var(--green);box-shadow:0 0 14px rgba(var(--g),.4);transform:scale(1.03)}
+.lightbox{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);backdrop-filter:blur(6px);cursor:zoom-out;padding:3vh 3vw}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:4px;box-shadow:0 0 50px rgba(var(--g),.3)}
+.lightbox i{position:absolute;right:18px;top:12px;font-style:normal;font-size:28px;color:#fff;opacity:.7}
 .feed-foot{margin-top:10px;font-size:10px;letter-spacing:1px}
 .feed-foot a{color:var(--muted);text-decoration:none}.feed-foot a:hover{color:var(--green)}
 </style>
@@ -349,6 +354,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </footer>
 </main>
 
+<div class="lightbox" id="lightbox"><i>×</i><img alt=""></div>
 <div class="reader" id="reader"><div class="reader-in"><button class="reader-x" id="readerX" aria-label="close">×</button><div id="readerBody"></div></div></div>
 <script>
 /* ============ CONFIG(按需修改) ============ */
@@ -685,6 +691,18 @@ async function initFeed(){
   box.innerHTML=items.length?items.map((i,k)=>`<div class="feed-item" style="animation-delay:${k*60}ms"><img class="feed-av" src="${esc(i.user.avatar_url)}&s=80" alt="" referrerpolicy="no-referrer"><div class="feed-main"><div class="pm"><b>@${esc(i.user.login)}</b><span>${esc(new Date(i.created_at).toLocaleString())}</span>${i.labels.filter(l=>l.name!==CONFIG.feedLabel).map(l=>`<span class="tg">#${esc(l.name)}</span>`).join('')}</div>${i.title?`<div class="ft">${esc(i.title)}</div>`:''}<div class="md">${i.body_html||''}</div><div class="feed-foot"><a href="${esc(i.html_url)}" target="_blank" rel="noopener noreferrer">💬 ${i.comments} 条回复 · 在 GitHub 查看 / 回复 ↗</a></div></div></div>`).join(''):'<div class="empty">还没有动态 · 去发第一条吧</div>';
   box.querySelectorAll('.md a').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
 }
+
+/* 动态图片:缩略图 → 点击看大图 */
+(function(){
+  const lb=$('#lightbox'),im=lb.querySelector('img');
+  const close=()=>{lb.classList.remove('on');im.removeAttribute('src')};
+  document.addEventListener('click',e=>{
+    const t=e.target;
+    if(t.tagName==='IMG'&&t.closest('.feed-main .md')){e.preventDefault();im.src=t.currentSrc||t.src;lb.classList.add('on')}
+  });
+  lb.onclick=close;
+  addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+})();
 
 /* ============ 入口 ============ */
 function render(d){
