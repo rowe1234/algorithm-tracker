@@ -95,7 +95,7 @@ if __name__ == "__main__":
     LUOGU_UID = "1965170"
     NOWCODER_ID = "344403471"
     
-    LUOGU_AC = 0  # 若洛谷拦截抓取，可在此填写手动备用数
+    LUOGU_AC = 377  # 若洛谷拦截抓取，可在此填写手动备用数
 
     cf_info = get_cf_user_info(CF_HANDLE)
     cf_ac, daily_stats, rating_dist = get_cf_data(CF_HANDLE)
