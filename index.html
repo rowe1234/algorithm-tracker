@@ -47,7 +47,6 @@ body{
   background:radial-gradient(circle,rgba(0,255,156,.075) 0%,transparent 62%);
   transform:translate(-50%,-50%);will-change:transform;
 }
-
 .wrap{position:relative;z-index:4;max-width:1080px;margin:0 auto;padding:52px 20px 80px}
 
 /* HERO */
@@ -59,7 +58,10 @@ body{
   border:2px solid rgba(0,255,156,.55);
   box-shadow:0 0 26px rgba(0,255,156,.28),inset 0 0 20px rgba(0,255,156,.12);
   animation:avatarPulse 3.6s ease-in-out infinite;
+  transition:transform .3s,box-shadow .3s;
+  cursor:pointer;
 }
+.avatar:hover{transform:scale(1.05);box-shadow:0 0 46px rgba(0,255,156,.55)}
 @keyframes avatarPulse{
   0%,100%{box-shadow:0 0 22px rgba(0,255,156,.22),inset 0 0 18px rgba(0,255,156,.10)}
   50%{box-shadow:0 0 42px rgba(0,255,156,.5),inset 0 0 26px rgba(0,255,156,.2)}
@@ -114,14 +116,10 @@ h1.glitch::after{
   97%{transform:translate(2px,-1px)}
 }
 
-.hero-id{
-  display:flex;align-items:center;gap:12px;
-  margin-top:14px;flex-wrap:wrap;
-}
+.hero-id{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
 .hero-id .caret-symbol{color:var(--green);font-weight:700;font-size:16px;letter-spacing:0}
 .handle{
-  position:relative;
-  font-size:20px;font-weight:700;letter-spacing:1.5px;
+  position:relative;font-size:20px;font-weight:700;letter-spacing:1.5px;
   color:var(--green);text-decoration:none;
   text-shadow:0 0 16px rgba(0,255,156,.55);
   transition:color .25s,text-shadow .25s;
@@ -133,7 +131,6 @@ h1.glitch::after{
 }
 .handle:hover{color:#fff;text-shadow:0 0 22px var(--green)}
 .handle:hover::after{width:calc(100% - 22px)}
-
 .rank-badge{
   display:inline-block;font-size:10px;letter-spacing:1.5px;
   padding:3px 9px;border:1px solid currentColor;border-radius:2px;
@@ -163,12 +160,10 @@ h1.glitch::after{
 }
 .card:hover{border-color:rgba(0,255,156,.42);box-shadow:0 0 32px rgba(0,255,156,.12)}
 .card:hover::before{opacity:1}
-
 .card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
 .card-title{font-size:11px;letter-spacing:2px;color:var(--green);text-transform:uppercase}
 .card-meta{font-size:11px;color:var(--muted);letter-spacing:1px}
 
-/* 数字卡 */
 .hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
 .stat-card{padding:22px 20px}
 .stat-label{font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:10px}
@@ -180,7 +175,6 @@ h1.glitch::after{
 .stat-value.magenta{color:var(--magenta);text-shadow:0 0 22px rgba(255,43,214,.45)}
 .stat-sub{font-size:10px;color:var(--muted);letter-spacing:1.5px;margin-top:12px}
 
-/* 热力图通用 */
 .heatmap-card{margin-bottom:16px}
 .heatmap-wrap{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
 .weekdays{
@@ -214,14 +208,12 @@ h1.glitch::after{
 .cell.l4{background:#3ce87a;box-shadow:0 0 6px rgba(60,232,122,.35)}
 .cell.l5{background:#9dffc4;box-shadow:0 0 11px rgba(157,255,196,.6)}
 .cell.future{background:transparent;pointer-events:none;animation:none}
-
 .legend{
   display:flex;align-items:center;gap:5px;justify-content:flex-end;
   margin-top:14px;font-size:10px;color:var(--muted);letter-spacing:1px;
 }
 .legend .cell{width:var(--cell);height:var(--cell);border-radius:2px;display:inline-block;pointer-events:none}
 
-/* tooltip */
 .tooltip{
   position:fixed;left:0;top:0;z-index:200;
   padding:8px 11px;font-size:11px;border-radius:3px;
@@ -252,7 +244,6 @@ h1.glitch::after{
 
 .grid-2{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}
 
-/* 难度分布 */
 .dist-row{display:grid;grid-template-columns:78px 1fr 44px;align-items:center;gap:12px;margin-bottom:11px}
 .dist-label{font-size:11px;color:var(--muted);white-space:nowrap}
 .dist-track{height:8px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
@@ -264,7 +255,6 @@ h1.glitch::after{
 }
 .dist-count{font-size:11px;color:var(--green);text-align:right;font-variant-numeric:tabular-nums}
 
-/* 30 天 */
 .spark{display:flex;align-items:flex-end;gap:4px;height:118px;padding-top:4px}
 .spark-bar{
   flex:1;min-width:3px;height:0;border-radius:1px 1px 0 0;
@@ -274,7 +264,6 @@ h1.glitch::after{
 }
 .spark-bar:hover{background:var(--cyan);box-shadow:0 0 14px rgba(0,212,255,.6)}
 
-/* 平台 */
 .platform-card{margin-top:16px}
 .pf-row{
   display:grid;grid-template-columns:120px 1fr 90px;align-items:center;gap:14px;
@@ -329,12 +318,14 @@ footer{
 <main class="wrap">
 
   <header class="hero">
-    <!-- 初始用默认头像占位，JS 加载 data.json 后替换为真实头像 -->
+    <!-- 硬编码真实头像 + referrerpolicy 绕防盗链 -->
     <img
       class="avatar"
       id="avatar"
       alt="Rowe"
-      src="https://userpic.codeforces.org/no-avatar.jpg"
+      src="https://userpic.codeforces.org/5395057/avatar/1decc048b4e55985.jpg"
+      referrerpolicy="no-referrer"
+      title="Rowe @ Codeforces"
     />
     <div class="hero-text">
       <div class="term-line">
@@ -370,7 +361,6 @@ footer{
     </div>
   </section>
 
-  <!-- 热力图 1：刷题频率 -->
   <section class="card heatmap-card">
     <div class="card-head">
       <span class="card-title">// Submission Heatmap</span>
@@ -393,7 +383,6 @@ footer{
     </div>
   </section>
 
-  <!-- 热力图 2：难度 -->
   <section class="card heatmap-card">
     <div class="card-head">
       <span class="card-title">// Difficulty Heatmap</span>
@@ -830,8 +819,9 @@ const RANK_COLORS = {
   'legendary grandmaster':    '#ff2bd6'
 };
 
-/* ================= 头像兜底 ================= */
+/* ================= 头像（多重兜底） ================= */
 const DEFAULT_AVATAR = 'https://userpic.codeforces.org/no-avatar.jpg';
+const HARDCODED_AVATAR = 'https://userpic.codeforces.org/5395057/avatar/1decc048b4e55985.jpg';
 const FALLBACK_SVG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' +
   '<rect width="100" height="100" fill="#0a141a"/>' +
@@ -843,8 +833,32 @@ const FALLBACK_SVG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
 function setAvatar(url){
   const av = $('#avatar');
   if (!av) return;
-  av.src = url || DEFAULT_AVATAR;
-  av.onerror = () => { av.src = FALLBACK_SVG; };
+
+  // 关键 1：绕过 Codeforces 防盗链
+  av.referrerPolicy = 'no-referrer';
+
+  // 关键 2：多级兜底：真实 → 代理 → 默认 → SVG
+  const real = url || HARDCODED_AVATAR;
+  let stage = 0;
+
+  const tryNext = () => {
+    stage++;
+    if (stage === 1){
+      // 用 wsrv.nl 图片代理绕过防盗链/网络问题
+      av.src = 'https://wsrv.nl/?url=' + encodeURIComponent(real.replace(/^https?:\/\//, ''));
+    } else if (stage === 2){
+      av.src = DEFAULT_AVATAR;
+    } else {
+      av.src = FALLBACK_SVG;
+    }
+  };
+
+  av.onerror = tryNext;
+  av.onload = () => {
+    // 若 wsrv 代理失败，wsrv 会返回错误图，用 naturalWidth 判断
+    if (stage === 1 && av.naturalWidth <= 1) tryNext();
+  };
+  av.src = real;
 }
 
 /* ================= 渲染入口 ================= */
@@ -863,7 +877,6 @@ function render(d){
     rankEl.style.color = RANK_COLORS[key] || 'var(--green)';
   }
 
-  // 关键：用 API 返回的 avatar 字段覆盖默认头像
   setAvatar(cf.avatar);
 
   const daily = d.daily_stats || {};
@@ -876,6 +889,10 @@ function render(d){
 
 /* ================= 启动 ================= */
 (async function init(){
+  // 先确保 <img> 上也有 referrerpolicy（即使 data.json 加载失败也能显示硬编码头像）
+  const av = $('#avatar');
+  if (av) av.referrerPolicy = 'no-referrer';
+
   try{
     const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -885,6 +902,8 @@ function render(d){
     console.error('[stats] load failed:', err);
     $('#updatedAt').textContent = 'DATA UNAVAILABLE · 请确认 data.json 已生成';
     $('#heatMeta').textContent  = 'FETCH ERROR';
+    // 即使 data.json 挂了也走一次头像加载
+    setAvatar(HARDCODED_AVATAR);
   }
 })();
 </script>
