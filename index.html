@@ -3,113 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rowe | CP Problem Solving Dashboard</title>
-  <!-- 自定义网页标签页图标 (Favicon) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <title>Rowe | CP Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
   <style>
+    :root {
+      --bg: #0b0e14;
+      --card-bg: #131722;
+      --border: #232936;
+      --text-main: #e6edf3;
+      --text-sub: #8b949e;
+      --accent-blue: #3b82f6;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px 16px; }
-    .container { max-width: 960px; margin: 0 auto; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text-main); padding: 32px 16px; min-height: 100vh; }
+    .container { max-width: 1000px; margin: 0 auto; }
+
+    /* Header Profile */
+    .header-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px 28px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .profile-group { display: flex; align-items: center; gap: 20px; }
+    .avatar { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--accent-blue); background: #1c212e; object-fit: cover; }
+    .title-area h1 { font-size: 24px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+    .title-area p { font-size: 13px; color: var(--text-sub); margin-top: 4px; }
     
-    /* Header */
-    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; }
-    .user-info { display: flex; align-items: center; gap: 16px; }
-    .avatar { width: 56px; height: 56px; border-radius: 50%; background: #21262d; border: 2px solid #30363d; }
-    .title-area h1 { font-size: 22px; color: #f0f6fc; }
-    .title-area p { font-size: 13px; color: #8b949e; margin-top: 4px; }
-    .cf-badge { background: #21262d; border: 1px solid #30363d; padding: 8px 14px; border-radius: 8px; font-size: 13px; text-align: right; }
-    
-    /* Top Stats Grid */
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
-    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; text-align: center; }
-    .stat-num { font-size: 38px; font-weight: bold; color: #58a6ff; }
-    .stat-label { font-size: 13px; color: #8b949e; margin-top: 6px; }
+    .rating-badge { background: #1a202c; border: 1px solid var(--border); padding: 10px 16px; border-radius: 10px; text-align: right; }
+    .rating-val { font-size: 20px; font-weight: 800; color: #3b82f6; }
 
-    /* Main Content Sections */
-    .section-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
-    .section-title { font-size: 16px; color: #f0f6fc; font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
+    /* Main Stats Grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    @media (max-width: 640px) { .stats-grid { grid-template-columns: 1fr; } }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+    .stat-num { font-size: 42px; font-weight: 800; color: var(--accent-blue); }
+    .stat-label { font-size: 12px; color: var(--text-sub); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    /* Embed Cards Grid */
-    .embed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 768px) { .embed-grid { grid-template-columns: 1fr; } }
-    .embed-card { width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #30363d; background: #0d1117; display: flex; justify-content: center; padding: 12px 0; }
-    .embed-card img { max-width: 100%; height: auto; }
+    /* Panel Base */
+    .panel { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 24px; }
+    .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .panel-title { font-size: 16px; font-weight: 600; color: #fff; }
 
-    #heatmap { width: 100%; height: 200px; }
-    #pie-chart { width: 100%; height: 220px; }
+    /* Platforms List */
+    .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 768px) { .platform-grid { grid-template-columns: 1fr; } }
+    .platform-card { background: #181d2a; border: 1px solid var(--border); border-radius: 12px; padding: 18px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; transition: all 0.2s; }
+    .platform-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); }
+    .platform-name { font-weight: 600; font-size: 15px; }
+    .platform-count { font-size: 20px; font-weight: 700; color: var(--accent-blue); }
 
-    .footer { text-align: center; font-size: 12px; color: #8b949e; margin-top: 32px; }
+    /* Charts */
+    #heatmap { width: 100%; height: 210px; }
+    #dist-chart { width: 100%; height: 260px; }
+
+    /* Difficulty Colors Legend */
+    .diff-legend { display: flex; gap: 12px; font-size: 11px; color: var(--text-sub); justify-content: flex-end; margin-top: 8px; flex-wrap: wrap; }
+    .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; }
+
+    .footer { text-align: center; font-size: 12px; color: var(--text-sub); margin-top: 32px; }
   </style>
 </head>
 <body>
   <div class="container">
     
-    <!-- 1. Header Persona -->
-    <div class="header">
-      <div class="user-info">
-        <img id="user-avatar" class="avatar" src="https://codeforces.org/s/0/images/user-alt.png" alt="Avatar">
+    <!-- 1. Persona Header -->
+    <div class="header-card">
+      <div class="profile-group">
+        <img id="user-avatar" class="avatar" src="https://codeforces.org/s/0/images/user-alt.png" alt="Avatar" onerror="this.src='https://codeforces.org/s/0/images/user-alt.png'">
         <div class="title-area">
-          <h1>Rowe's CP Dashboard 🚀</h1>
-          <p>ACM / ICPC Algorithm Training Tracker</p>
+          <h1>Rowe's CP Tracker</h1>
+          <p>ICPC / Competitive Programming Dashboard</p>
         </div>
       </div>
-      <div class="cf-badge">
-        <div>CF Rating: <strong id="cf-rating" style="color:#58a6ff;">-</strong></div>
-        <div style="font-size:11px; color:#8b949e; margin-top:2px;">Max: <span id="cf-max-rating">-</span> | <span id="cf-rank" style="text-transform:capitalize;">-</span></div>
+      <div class="rating-badge">
+        <div class="rating-val" id="cf-rating">-</div>
+        <div style="font-size:11px; color:var(--text-sub); margin-top:2px;">CF Rating (Max: <span id="cf-max">-</span>)</div>
       </div>
     </div>
 
-    <!-- 2. Core Stats Counters -->
+    <!-- 2. Counter Stats -->
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-num" id="total-ac">0</div>
-        <div class="stat-label">全网累计 AC 题数</div>
+        <div class="stat-label">全网 AC 总数</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num" id="active-days" style="color: #3fb950;">0</div>
-        <div class="stat-label">累计活跃打卡天数</div>
+        <div class="stat-num" id="active-days" style="color: #10b981;">0</div>
+        <div class="stat-label">累计打卡天数</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num" id="max-daily-ac" style="color: #d29922;">0</div>
-        <div class="stat-label">单日最高 AC 题数</div>
+        <div class="stat-num" id="max-rating-solved" style="color: #f59e0b;">0</div>
+        <div class="stat-label">已斩获最高难度 (Rating)</div>
       </div>
     </div>
 
-    <!-- 3. Heatmap Chart -->
-    <div class="section-card">
-      <div class="section-title">
-        <span>🔥 刷题活跃热力图</span>
-        <span style="font-size: 12px; font-weight: normal; color: #8b949e;">近一年 Codeforces 提交分布</span>
+    <!-- 3. Dynamic Heatmap (Difficulty Colored) -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">🔥 刷题热力图（按当日最高 / 平均难度分色）</div>
       </div>
       <div id="heatmap"></div>
+      <div class="diff-legend">
+        <span><i class="dot" style="background:#525252;"></i>未打卡</span>
+        <span><i class="dot" style="background:#22c55e;"></i>&lt;1200</span>
+        <span><i class="dot" style="background:#06b6d4;"></i>1200+</span>
+        <span><i class="dot" style="background:#3b82f6;"></i>1400+</span>
+        <span><i class="dot" style="background:#a855f7;"></i>1600+</span>
+        <span><i class="dot" style="background:#f97316;"></i>1900+</span>
+        <span><i class="dot" style="background:#ef4444;"></i>2100+</span>
+      </div>
     </div>
 
-    <!-- 4. Interactive & Embed Section -->
-    <div class="embed-grid">
-      <!-- Luogu Card -->
-      <div class="section-card" style="margin-bottom:0;">
-        <div class="section-title">洛谷 Stats</div>
-        <div class="embed-card">
-          <a href="https://www.luogu.com.cn/user/1965170" target="_blank">
-            <img src="https://luogu-stats-card.vercel.app/api?id=1965170&theme=dark" alt="Luogu Stats">
-          </a>
-        </div>
+    <!-- 4. Platform Cards Grid -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">🌐 绑定平台与 AC 题数</div>
       </div>
+      <div class="platform-grid">
+        <a id="link-cf" class="platform-card" href="#" target="_blank">
+          <div>
+            <div class="platform-name">Codeforces</div>
+            <div style="font-size:12px; color:var(--text-sub); margin-top:4px;">@Rowe</div>
+          </div>
+          <div class="platform-count" id="count-cf">0</div>
+        </a>
 
-      <!-- Codeforces Card -->
-      <div class="section-card" style="margin-bottom:0;">
-        <div class="section-title">Codeforces Card</div>
-        <div class="embed-card">
-          <a href="https://codeforces.com/profile/Rowe" target="_blank">
-            <img src="https://codeforces-readme-stats.vercel.app/api/card?username=Rowe&theme=dark" alt="Codeforces Stats">
-          </a>
-        </div>
+        <a id="link-luogu" class="platform-card" href="#" target="_blank">
+          <div>
+            <div class="platform-name">洛谷 Luogu</div>
+            <div style="font-size:12px; color:var(--text-sub); margin-top:4px;">UID: 1965170</div>
+          </div>
+          <div class="platform-count" id="count-luogu">0</div>
+        </a>
+
+        <a id="link-nowcoder" class="platform-card" href="#" target="_blank">
+          <div>
+            <div class="platform-name">牛客网 Nowcoder</div>
+            <div style="font-size:12px; color:var(--text-sub); margin-top:4px;">ID: 344403471</div>
+          </div>
+          <div class="platform-count" id="count-nowcoder">0</div>
+        </a>
       </div>
+    </div>
+
+    <!-- 5. Difficulty Distribution Chart -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">📊 Codeforces 题目难度分布 (Rating Distribution)</div>
+      </div>
+      <div id="dist-chart"></div>
     </div>
 
     <div class="footer">
-      自动更新机制运行中 | 最后同步时间: <span id="update-time">-</span>
+      自动更新运行中 | 最后同步时间: <span id="update-time">-</span>
     </div>
   </div>
 
@@ -120,64 +164,106 @@
         document.getElementById('total-ac').innerText = data.total_ac;
         document.getElementById('update-time').innerText = data.updated_at;
 
-        // CF 用户信息渲染
+        // CF Profile Info
         if (data.cf_info) {
           document.getElementById('cf-rating').innerText = data.cf_info.rating;
-          document.getElementById('cf-max-rating').innerText = data.cf_info.maxRating;
-          document.getElementById('cf-rank').innerText = data.cf_info.rank;
+          document.getElementById('cf-max').innerText = data.cf_info.maxRating;
           if (data.cf_info.avatar) {
             document.getElementById('user-avatar').src = data.cf_info.avatar;
           }
         }
 
-        // 处理时间戳数据渲染热力图
-        if (data.timestamps && data.timestamps.length > 0) {
-          const dayMap = {};
-          data.timestamps.forEach(ts => {
-            const dateStr = new Date(ts * 1000).toISOString().split('T')[0];
-            dayMap[dateStr] = (dayMap[dateStr] || 0) + 1;
-          });
+        // Platform Links & Counts
+        if (data.platforms) {
+          document.getElementById('count-cf').innerText = data.platforms.Codeforces || 0;
+          document.getElementById('count-luogu').innerText = data.platforms.Luogu || 0;
+          document.getElementById('count-nowcoder').innerText = data.platforms.Nowcoder || 0;
+        }
+        if (data.profiles) {
+          document.getElementById('link-cf').href = data.profiles.Codeforces;
+          document.getElementById('link-luogu').href = data.profiles.Luogu;
+          document.getElementById('link-nowcoder').href = data.profiles.Nowcoder;
+        }
 
-          const activeDays = Object.keys(dayMap).length;
-          const maxAc = Math.max(...Object.values(dayMap));
-          document.getElementById('active-days').innerText = activeDays;
-          document.getElementById('max-daily-ac').innerText = maxAc;
+        // Render Heatmap by Difficulty
+        if (data.daily_stats) {
+          const heatmapRaw = [];
+          let activeCount = 0;
+          let maxRatingSolved = 0;
 
-          const heatmapData = Object.entries(dayMap).map(([date, count]) => [date, count]);
+          for (const [dateStr, item] of Object.entries(data.daily_stats)) {
+            activeCount++;
+            const maxR = item.max_rating || 0;
+            if (maxR > maxRatingSolved) maxRatingSolved = maxR;
+            
+            // Map rating to a color level weight (1..6)
+            let level = 1;
+            if (maxR >= 2100) level = 6;
+            else if (maxR >= 1900) level = 5;
+            else if (maxR >= 1600) level = 4;
+            else if (maxR >= 1400) level = 3;
+            else if (maxR >= 1200) level = 2;
+
+            heatmapRaw.push([dateStr, level, item.count, maxR]);
+          }
+
+          document.getElementById('active-days').innerText = activeCount;
+          document.getElementById('max-rating-solved').innerText = maxRatingSolved || 'N/A';
+
           const currentYear = new Date().getFullYear();
-
           const heatmapChart = echarts.init(document.getElementById('heatmap'), 'dark');
           heatmapChart.setOption({
             backgroundColor: 'transparent',
             tooltip: {
               formatter: function (p) {
-                return `${p.data[0]}: AC ${p.data[1]} 题`;
+                const [date, level, count, maxR] = p.data;
+                return `<b>${date}</b><br/>通过题数: ${count} 题<br/>最高难度: ${maxR ? maxR : 'Unrated'}`;
               }
             },
             visualMap: {
               min: 0,
-              max: Math.max(maxAc, 5),
-              type: 'piecewise',
-              orient: 'horizontal',
-              left: 'center',
-              top: 0,
-              inRange: { color: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'] }
+              max: 6,
+              show: false,
+              inRange: {
+                color: ['#181d2a', '#22c55e', '#06b6d4', '#3b82f6', '#a855f7', '#f97316', '#ef4444']
+              }
             },
             calendar: {
-              top: 40,
-              left: 30,
-              right: 30,
+              top: 30, left: 35, right: 20,
               cellSize: ['auto', 13],
               range: `${currentYear}`,
-              itemStyle: { borderWidth: 2, borderColor: '#161b22' },
+              itemStyle: { borderWidth: 3, borderColor: '#131722', borderRadius: 3 },
               yearLabel: { show: false },
               dayLabel: { color: '#8b949e', firstDay: 1 },
               monthLabel: { color: '#8b949e' }
             },
+            series: [{ type: 'heatmap', coordinateSystem: 'calendar', data: heatmapRaw }]
+          });
+        }
+
+        // Render Difficulty Distribution Bar Chart
+        if (data.rating_dist) {
+          const distChart = echarts.init(document.getElementById('dist-chart'), 'dark');
+          const categories = ['<1200', '1200-1399', '1400-1599', '1600-1899', '1900-2099', '>=2100', 'Unrated'];
+          const values = categories.map(cat => data.rating_dist[cat] || 0);
+
+          distChart.setOption({
+            backgroundColor: 'transparent',
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            xAxis: { type: 'category', data: categories, axisLine: { lineStyle: { color: '#232936' } }, axisLabel: { color: '#8b949e' } },
+            yAxis: { type: 'value', splitLine: { lineStyle: { color: '#1f2636' } }, axisLabel: { color: '#8b949e' } },
             series: [{
-              type: 'heatmap',
-              coordinateSystem: 'calendar',
-              data: heatmapData
+              data: values,
+              type: 'bar',
+              barWidth: '45%',
+              itemStyle: {
+                borderRadius: [6, 6, 0, 0],
+                color: function(params) {
+                  const colors = ['#22c55e', '#06b6d4', '#3b82f6', '#a855f7', '#f97316', '#ef4444', '#6b7280'];
+                  return colors[params.dataIndex];
+                }
+              }
             }]
           });
         }
