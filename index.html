@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rowe - CP Problem Solving Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 24px; }
+    .total-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px; text-align: center; margin-bottom: 20px; }
+    .total-num { font-size: 64px; font-weight: bold; color: #58a6ff; line-height: 1.1; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; }
+    .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #21262d; }
+    .stat-row a { color: #58a6ff; text-decoration: none; font-weight: 500; }
+    .stat-row a:hover { text-decoration: underline; }
+    #chart { width: 100%; height: 240px; }
+    .footer { text-align: center; margin-top: 28px; font-size: 13px; color: #8b949e; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Rowe's CP Dashboard</h1>
+      <p style="color: #8b949e; margin-top: 6px;">全网算法刷题数据自动化统计</p>
+    </div>
+
+    <div class="total-card">
+      <div class="total-num" id="total-ac">0</div>
+      <p style="margin-top: 10px; color: #8b949e; font-size: 16px;">全网累计 AC 题数</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3 style="margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px;">各平台数据与主页</h3>
+        <div id="platform-list"></div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px;">题目分布占比</h3>
+        <div id="chart"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      自动同步时间: <span id="update-time">-</span>
+    </div>
+  </div>
+
+  <script>
+    fetch('./data.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('total-ac').innerText = data.total_ac;
+        document.getElementById('update-time').innerText = data.updated_at;
+
+        const listDiv = document.getElementById('platform-list');
+        const chartData = [];
+        for (const [platform, count] of Object.entries(data.platforms)) {
+          chartData.push({ name: platform, value: count });
+          const row = document.createElement('div');
+          row.className = 'stat-row';
+          const link = data.profiles && data.profiles[platform] ? data.profiles[platform] : '#';
+          row.innerHTML = `<a href="${link}" target="_blank">${platform} ↗</a><strong>${count} 题</strong>`;
+          listDiv.appendChild(row);
+        }
+
+        const myChart = echarts.init(document.getElementById('chart'), 'dark');
+        myChart.setOption({
+          backgroundColor: 'transparent',
+          tooltip: { trigger: 'item' },
+          series: [{
+            type: 'pie',
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: false,
+            itemStyle: { borderRadius: 6 },
+            data: chartData
+          }]
+        });
+      });
+  </script>
+</body>
+</html>
