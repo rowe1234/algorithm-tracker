@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25 13:37:06 UTC",
-  "total_ac": 647,
+  "updated_at": "2026-10-25 14:05:45 UTC",
+  "total_ac": 648,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -10,12 +10,14 @@
   "profiles": {
     "Codeforces": "https://codeforces.com/profile/Rowe",
     "Luogu": "https://www.luogu.com.cn/user/1965170",
-    "Nowcoder": "https://ac.nowcoder.com/acm/contest/profile/344403471"
+    "Nowcoder": "https://ac.nowcoder.com/acm/contest/profile/344403471",
+    "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
     "Codeforces": 270,
     "Luogu": 377,
-    "Nowcoder": 0
+    "Nowcoder": 0,
+    "AtCoder": 1
   },
   "manual": {
     "Luogu": true,
@@ -2504,6 +2506,109 @@
       "verdict": "WRONG_ANSWER",
       "time": "2026-10-24T10:21:34+00:00",
       "url": "https://codeforces.com/contest/1822/problem/D"
+    }
+  ],
+  "atcoder_daily_stats": {
+    "2026-08-18": {
+      "count": 1,
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://atcoder.jp/contests/past17-open/tasks/past17_o",
+          "name": "past17_o"
+        }
+      ]
+    }
+  },
+  "atcoder_rating_dist": {
+    "<400": 0,
+    "400-799": 0,
+    "800-1199": 0,
+    "1200-1599": 0,
+    "1600-1999": 0,
+    ">=2000": 0,
+    "Unrated": 1
+  },
+  "upcoming_contests": [
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2272",
+      "start": "2026-10-26T14:35:00Z",
+      "duration": 8100,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/ahc074",
+      "start": "2026-10-30T10:00:00Z",
+      "duration": 864000,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/abc482",
+      "start": "2026-10-31T12:00:00Z",
+      "duration": 6000,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2278",
+      "start": "2026-10-31T14:35:00Z",
+      "duration": 8100,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2281",
+      "start": "2026-11-05T11:00:00Z",
+      "duration": 1209600,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/abc483",
+      "start": "2026-11-07T12:00:00Z",
+      "duration": 6000,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2279",
+      "start": "2026-11-07T14:35:00Z",
+      "duration": 9000,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2280",
+      "start": "2026-11-07T14:35:00Z",
+      "duration": 9000,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/agc079",
+      "start": "2026-11-08T12:00:00Z",
+      "duration": 10800,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/abc484",
+      "start": "2026-11-14T12:00:00Z",
+      "duration": 6000,
+      "color": "#a882ff"
     }
   ]
 }
