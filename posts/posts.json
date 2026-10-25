@@ -1,1 +1,9 @@
-
+[
+  {
+    "title": "Hello, World",
+    "date": "2026-10-25",
+    "tags": ["随笔"],
+    "summary": "第一篇文章:这个博客是怎么搭起来的。",
+    "file": "posts/hello-world.md"
+  }
+]
