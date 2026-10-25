@@ -217,8 +217,39 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 .feed-main{flex:1;min-width:0;padding:14px 16px;border:1px solid rgba(128,128,128,.15);border-left:3px solid var(--magenta);border-radius:3px;background:rgba(128,128,128,.05)}
 .feed-main .pm{margin-bottom:8px}.feed-main .pm b{color:var(--green)}
 .ft{color:var(--green);font-weight:700;margin-bottom:4px}
-.feed-main .md{line-height:1.7}.feed-main .md img,.feed-main img.thumb{height:120px!important;max-height:120px!important;width:auto!important;max-width:100%!important;object-fit:cover;display:inline-block!important;margin:4px 8px 4px 0;border-radius:3px;border:1px solid rgba(var(--g),.25);cursor:zoom-in;vertical-align:top;transition:.2s}
-.feed-main .md img:hover{border-color:var(--green);box-shadow:0 0 14px rgba(var(--g),.4);transform:scale(1.03)}
+.feed-main .md{line-height:1.7}
+
+/* ============ 改动 1：朋友圈九宫格 ============ */
+.feed-imgs{display:grid;gap:4px;margin:8px 0 4px;max-width:420px}
+.feed-imgs.n1{grid-template-columns:1fr;max-width:300px}
+.feed-imgs.n2,.feed-imgs.n4{grid-template-columns:repeat(2,1fr)}
+.feed-imgs.n3,.feed-imgs.n5,.feed-imgs.n6,.feed-imgs.n7,.feed-imgs.n8,.feed-imgs.n9{grid-template-columns:repeat(3,1fr)}
+.feed-imgs img{
+  display:block!important;width:100%!important;height:auto!important;
+  aspect-ratio:1/1;object-fit:cover!important;
+  max-width:none!important;max-height:none!important;
+  margin:0!important;padding:0!important;border-radius:3px;
+  border:1px solid rgba(var(--g),.2);cursor:zoom-in;
+  transition:.2s;background:rgba(0,0,0,.12);
+}
+.feed-imgs.n1 img{
+  aspect-ratio:auto;width:auto!important;
+  max-width:300px!important;max-height:340px!important;
+  object-fit:contain!important;margin:0 auto!important;
+}
+.feed-imgs img:hover{
+  border-color:var(--green);
+  box-shadow:0 0 14px rgba(var(--g),.4);
+  transform:scale(1.02);
+  z-index:2;position:relative;
+}
+/* 兜底：万一有图片没被 JS 抽出来 */
+.feed-main .md > p > img,.feed-main .md > img{
+  max-width:200px;max-height:200px;object-fit:cover;
+  border-radius:3px;cursor:zoom-in;vertical-align:top;margin:4px 8px 4px 0;
+}
+/* ============ 改动 1 结束 ============ */
+
 .lightbox{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);backdrop-filter:blur(6px);cursor:zoom-out;padding:3vh 3vw}
 .lightbox.on{display:flex}
 .lightbox img{max-width:100%;max-height:100%;border-radius:4px;box-shadow:0 0 50px rgba(var(--g),.3)}
@@ -361,7 +392,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 const CONFIG = {
   cfHandle: 'Rowe',
   githubUser: 'rowe1234',
-  feedLabel: 'feed',            // 带此标签的 Issue 也会显示(别人的投稿需你打标签审核)
+  feedLabel: 'feed',
   localAvatar: 'avatar.jpg',
   hardAvatar: 'https://userpic.codeforces.org/5395057/avatar/1decc048b4e55985.jpg',
   giscus: {
@@ -671,6 +702,35 @@ async function initBlog(){
   if(location.hash.startsWith('#post='))openPost(decodeURIComponent(location.hash.slice(6)));
 }
 
+/* ============ 改动 2：图片抽出来重排成九宫格 ============ */
+function layoutFeedImages(container){
+  container.querySelectorAll('.md').forEach(md=>{
+    const imgs=Array.from(md.querySelectorAll('img'));
+    if(!imgs.length)return;
+    // 清掉 GitHub 注入的 inline 样式 / 宽高
+    imgs.forEach(img=>{
+      img.removeAttribute('style');
+      img.removeAttribute('width');
+      img.removeAttribute('height');
+      img.loading='lazy';
+      if(img.alt&&!img.title)img.title=img.alt;
+      img.remove();
+    });
+    // 清理因抽图而变空的 <p> / <a>（跑两遍处理嵌套）
+    for(let pass=0;pass<2;pass++){
+      md.querySelectorAll('p, a').forEach(el=>{
+        if(!el.textContent.trim()&&!el.querySelector('*'))el.remove();
+      });
+    }
+    // 建网格
+    const grid=document.createElement('div');
+    grid.className='feed-imgs n'+Math.min(imgs.length,9);
+    imgs.forEach(img=>grid.appendChild(img));
+    md.appendChild(grid);
+  });
+}
+/* ============ 改动 2 结束 ============ */
+
 /* ============ 动态(GitHub Issues) ============ */
 async function initFeed(){
   const repo=CONFIG.giscus.repo,box=$('#feedList');
@@ -690,7 +750,7 @@ async function initFeed(){
   $('#feedMeta').textContent=items.length+' POSTS';
   box.innerHTML=items.length?items.map((i,k)=>`<div class="feed-item" style="animation-delay:${k*60}ms"><img class="feed-av" src="${esc(i.user.avatar_url)}&s=80" alt="" referrerpolicy="no-referrer"><div class="feed-main"><div class="pm"><b>@${esc(i.user.login)}</b><span>${esc(new Date(i.created_at).toLocaleString())}</span>${i.labels.filter(l=>l.name!==CONFIG.feedLabel).map(l=>`<span class="tg">#${esc(l.name)}</span>`).join('')}</div>${i.title?`<div class="ft">${esc(i.title)}</div>`:''}<div class="md">${i.body_html||''}</div><div class="feed-foot"><a href="${esc(i.html_url)}" target="_blank" rel="noopener noreferrer">💬 ${i.comments} 条回复 · 在 GitHub 查看 / 回复 ↗</a></div></div></div>`).join(''):'<div class="empty">还没有动态 · 去发第一条吧</div>';
   box.querySelectorAll('.md a').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
-  box.querySelectorAll('.md img').forEach(im=>{im.classList.add('thumb');['width','height','style'].forEach(k=>im.removeAttribute(k));im.loading='lazy'});
+  layoutFeedImages(box);  // 改动：重排图片
 }
 
 /* 动态图片:缩略图 → 点击看大图 */
@@ -699,7 +759,8 @@ async function initFeed(){
   const close=()=>{lb.classList.remove('on');im.removeAttribute('src')};
   document.addEventListener('click',e=>{
     const t=e.target;
-    if(t.tagName==='IMG'&&t.closest('.feed-main .md')){e.preventDefault();im.src=t.currentSrc||t.src;lb.classList.add('on')}
+    // 改动：将 .feed-main .md 放宽为 .md，博客阅读器里的图片也能放大
+    if(t.tagName==='IMG'&&t.closest('.md')){e.preventDefault();im.src=t.currentSrc||t.src;lb.classList.add('on')}
   });
   lb.onclick=close;
   addEventListener('keydown',e=>{if(e.key==='Escape')close()});
