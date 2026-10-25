@@ -212,6 +212,14 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 .md blockquote{border-left:3px solid var(--magenta);padding-left:12px;color:var(--muted)}
 .md a{color:var(--cyan)}.md img{max-width:100%;border-radius:3px}
 .md hr{border:0;border-top:1px solid rgba(var(--g),.2)}
+.feed-item{display:flex;gap:14px;margin-bottom:16px;animation:rise .5s backwards}
+.feed-av{width:38px;height:38px;border-radius:50%;border:1px solid rgba(var(--g),.5);flex-shrink:0;object-fit:cover}
+.feed-main{flex:1;min-width:0;padding:14px 16px;border:1px solid rgba(128,128,128,.15);border-left:3px solid var(--magenta);border-radius:3px;background:rgba(128,128,128,.05)}
+.feed-main .pm{margin-bottom:8px}.feed-main .pm b{color:var(--green)}
+.ft{color:var(--green);font-weight:700;margin-bottom:4px}
+.feed-main .md{line-height:1.7}.feed-main .md img{max-height:460px;margin:6px 0}
+.feed-foot{margin-top:10px;font-size:10px;letter-spacing:1px}
+.feed-foot a{color:var(--muted);text-decoration:none}.feed-foot a:hover{color:var(--green)}
 </style>
 </head>
 <body>
@@ -226,6 +234,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   <div class="links">
     <a class="nl" href="#stats">STATS</a>
     <a class="nl" href="#today">TODAY</a>
+    <a class="nl" href="#feed">FEED</a>
     <a class="nl" href="#blog">BLOG</a>
     <a class="nl" href="#guestbook">GUESTBOOK</a>
     <span class="themes" id="themes"></span>
@@ -300,8 +309,16 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
     </div>
   </section>
 
+  <section class="blk" id="feed">
+    <div class="sec-h"><b>03</b> FEED</div>
+    <div class="card reveal">
+      <div class="card-head"><span class="card-title">// 动态 Timeline</span><span class="card-meta"><span id="feedMeta"></span> · <a id="feedNew" href="#" target="_blank" rel="noopener noreferrer" style="color:var(--green)">✎ 发动态</a></span></div>
+      <div id="feedList"><div class="empty">LOADING…</div></div>
+    </div>
+  </section>
+
   <section class="blk" id="blog">
-    <div class="sec-h"><b>03</b> BLOG</div>
+    <div class="sec-h"><b>04</b> BLOG</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// Posts</span><span class="card-meta" id="blogMeta"></span></div>
       <div class="blog-bar"><input id="blogQ" placeholder="search posts…" /><span id="blogTags" style="display:contents"></span></div>
@@ -310,7 +327,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </section>
 
   <section class="blk" id="guestbook">
-    <div class="sec-h"><b>04</b> GUESTBOOK</div>
+    <div class="sec-h"><b>05</b> GUESTBOOK</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// Leave a message</span><span class="card-meta" id="gbMode"></span></div>
       <div id="giscusBox"></div>
@@ -338,6 +355,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 const CONFIG = {
   cfHandle: 'Rowe',
   githubUser: 'rowe1234',
+  feedLabel: 'feed',            // 带此标签的 Issue 也会显示(别人的投稿需你打标签审核)
   localAvatar: 'avatar.jpg',
   hardAvatar: 'https://userpic.codeforces.org/5395057/avatar/1decc048b4e55985.jpg',
   giscus: {
@@ -647,6 +665,27 @@ async function initBlog(){
   if(location.hash.startsWith('#post='))openPost(decodeURIComponent(location.hash.slice(6)));
 }
 
+/* ============ 动态(GitHub Issues) ============ */
+async function initFeed(){
+  const repo=CONFIG.giscus.repo,box=$('#feedList');
+  if(!repo){box.innerHTML='<div class="empty">未配置仓库</div>';return}
+  $('#feedNew').href=`https://github.com/${repo}/issues/new?labels=${CONFIG.feedLabel}`;
+  const KEY='rowe_feed',now=Date.now();let items;
+  try{const c=JSON.parse(sessionStorage.getItem(KEY));if(c&&now-c.t<300000)items=c.d}catch(_){}
+  if(!items){
+    try{
+      const api=`https://api.github.com/repos/${repo}/issues?state=open&per_page=30`,H={headers:{Accept:'application/vnd.github.html+json'}};
+      const rs=await Promise.all([`${api}&creator=${CONFIG.githubUser}`,`${api}&labels=${CONFIG.feedLabel}`].map(u=>fetch(u,H).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})));
+      const m=new Map();rs.flat().forEach(i=>{if(!i.pull_request)m.set(i.id,i)});
+      items=[...m.values()].sort((a,b)=>b.created_at.localeCompare(a.created_at)).slice(0,30);
+      try{sessionStorage.setItem(KEY,JSON.stringify({t:now,d:items}))}catch(_){}
+    }catch(err){box.innerHTML='<div class="empty">动态加载失败(可能被 GitHub API 限流),稍后刷新重试</div>';return}
+  }
+  $('#feedMeta').textContent=items.length+' POSTS';
+  box.innerHTML=items.length?items.map((i,k)=>`<div class="feed-item" style="animation-delay:${k*60}ms"><img class="feed-av" src="${esc(i.user.avatar_url)}&s=80" alt="" referrerpolicy="no-referrer"><div class="feed-main"><div class="pm"><b>@${esc(i.user.login)}</b><span>${esc(new Date(i.created_at).toLocaleString())}</span>${i.labels.filter(l=>l.name!==CONFIG.feedLabel).map(l=>`<span class="tg">#${esc(l.name)}</span>`).join('')}</div>${i.title?`<div class="ft">${esc(i.title)}</div>`:''}<div class="md">${i.body_html||''}</div><div class="feed-foot"><a href="${esc(i.html_url)}" target="_blank" rel="noopener noreferrer">💬 ${i.comments} 条回复 · 在 GitHub 查看 / 回复 ↗</a></div></div></div>`).join(''):'<div class="empty">还没有动态 · 去发第一条吧</div>';
+  box.querySelectorAll('.md a').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
+}
+
 /* ============ 入口 ============ */
 function render(d){
   $('#updatedAt').textContent='LAST SYNC · '+(d.updated_at||'N/A');
@@ -660,7 +699,7 @@ function render(d){
   renderDist(d.rating_dist||{});renderSpark(daily);renderPlatforms(d.platforms||{},d.profiles||{},d.manual||{});
 }
 (async function(){
-  initGuestbook();initBlog();
+  initGuestbook();initBlog();initFeed();
   try{
     const res=await fetch('data.json?t='+Date.now(),{cache:'no-store'});
     if(!res.ok)throw new Error('HTTP '+res.status);
