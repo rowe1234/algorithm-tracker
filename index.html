@@ -3,50 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rowe - CP Problem Solving Dashboard</title>
+  <title>Rowe | CP Problem Solving Dashboard</title>
+  <!-- 自定义网页标签页图标 (Favicon) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .header { text-align: center; margin-bottom: 24px; }
-    .total-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px; text-align: center; margin-bottom: 20px; }
-    .total-num { font-size: 64px; font-weight: bold; color: #58a6ff; line-height: 1.1; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
-    .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; }
-    .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #21262d; }
-    .stat-row a { color: #58a6ff; text-decoration: none; font-weight: 500; }
-    .stat-row a:hover { text-decoration: underline; }
-    #chart { width: 100%; height: 240px; }
-    .footer { text-align: center; margin-top: 28px; font-size: 13px; color: #8b949e; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px 16px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    
+    /* Header */
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; }
+    .user-info { display: flex; align-items: center; gap: 16px; }
+    .avatar { width: 56px; height: 56px; border-radius: 50%; background: #21262d; border: 2px solid #30363d; }
+    .title-area h1 { font-size: 22px; color: #f0f6fc; }
+    .title-area p { font-size: 13px; color: #8b949e; margin-top: 4px; }
+    .cf-badge { background: #21262d; border: 1px solid #30363d; padding: 8px 14px; border-radius: 8px; font-size: 13px; text-align: right; }
+    
+    /* Top Stats Grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; text-align: center; }
+    .stat-num { font-size: 38px; font-weight: bold; color: #58a6ff; }
+    .stat-label { font-size: 13px; color: #8b949e; margin-top: 6px; }
+
+    /* Main Content Sections */
+    .section-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+    .section-title { font-size: 16px; color: #f0f6fc; font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
+
+    /* Embed Cards Grid */
+    .embed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 768px) { .embed-grid { grid-template-columns: 1fr; } }
+    .embed-card { width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #30363d; background: #0d1117; display: flex; justify-content: center; padding: 12px 0; }
+    .embed-card img { max-width: 100%; height: auto; }
+
+    #heatmap { width: 100%; height: 200px; }
+    #pie-chart { width: 100%; height: 220px; }
+
+    .footer { text-align: center; font-size: 12px; color: #8b949e; margin-top: 32px; }
   </style>
 </head>
 <body>
   <div class="container">
+    
+    <!-- 1. Header Persona -->
     <div class="header">
-      <h1>Rowe's CP Dashboard</h1>
-      <p style="color: #8b949e; margin-top: 6px;">全网算法刷题数据自动化统计</p>
-    </div>
-
-    <div class="total-card">
-      <div class="total-num" id="total-ac">0</div>
-      <p style="margin-top: 10px; color: #8b949e; font-size: 16px;">全网累计 AC 题数</p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3 style="margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px;">各平台数据与主页</h3>
-        <div id="platform-list"></div>
+      <div class="user-info">
+        <img id="user-avatar" class="avatar" src="https://codeforces.org/s/0/images/user-alt.png" alt="Avatar">
+        <div class="title-area">
+          <h1>Rowe's CP Dashboard 🚀</h1>
+          <p>ACM / ICPC Algorithm Training Tracker</p>
+        </div>
       </div>
-      <div class="card">
-        <h3 style="margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px;">题目分布占比</h3>
-        <div id="chart"></div>
+      <div class="cf-badge">
+        <div>CF Rating: <strong id="cf-rating" style="color:#58a6ff;">-</strong></div>
+        <div style="font-size:11px; color:#8b949e; margin-top:2px;">Max: <span id="cf-max-rating">-</span> | <span id="cf-rank" style="text-transform:capitalize;">-</span></div>
+      </div>
+    </div>
+
+    <!-- 2. Core Stats Counters -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" id="total-ac">0</div>
+        <div class="stat-label">全网累计 AC 题数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="active-days" style="color: #3fb950;">0</div>
+        <div class="stat-label">累计活跃打卡天数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="max-daily-ac" style="color: #d29922;">0</div>
+        <div class="stat-label">单日最高 AC 题数</div>
+      </div>
+    </div>
+
+    <!-- 3. Heatmap Chart -->
+    <div class="section-card">
+      <div class="section-title">
+        <span>🔥 刷题活跃热力图</span>
+        <span style="font-size: 12px; font-weight: normal; color: #8b949e;">近一年 Codeforces 提交分布</span>
+      </div>
+      <div id="heatmap"></div>
+    </div>
+
+    <!-- 4. Interactive & Embed Section -->
+    <div class="embed-grid">
+      <!-- Luogu Card -->
+      <div class="section-card" style="margin-bottom:0;">
+        <div class="section-title">洛谷 Stats</div>
+        <div class="embed-card">
+          <a href="https://www.luogu.com.cn/user/1965170" target="_blank">
+            <img src="https://luogu-stats-card.vercel.app/api?id=1965170&theme=dark" alt="Luogu Stats">
+          </a>
+        </div>
+      </div>
+
+      <!-- Codeforces Card -->
+      <div class="section-card" style="margin-bottom:0;">
+        <div class="section-title">Codeforces Card</div>
+        <div class="embed-card">
+          <a href="https://codeforces.com/profile/Rowe" target="_blank">
+            <img src="https://codeforces-readme-stats.vercel.app/api/card?username=Rowe&theme=dark" alt="Codeforces Stats">
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="footer">
-      自动同步时间: <span id="update-time">-</span>
+      自动更新机制运行中 | 最后同步时间: <span id="update-time">-</span>
     </div>
   </div>
 
@@ -57,29 +120,67 @@
         document.getElementById('total-ac').innerText = data.total_ac;
         document.getElementById('update-time').innerText = data.updated_at;
 
-        const listDiv = document.getElementById('platform-list');
-        const chartData = [];
-        for (const [platform, count] of Object.entries(data.platforms)) {
-          chartData.push({ name: platform, value: count });
-          const row = document.createElement('div');
-          row.className = 'stat-row';
-          const link = data.profiles && data.profiles[platform] ? data.profiles[platform] : '#';
-          row.innerHTML = `<a href="${link}" target="_blank">${platform} ↗</a><strong>${count} 题</strong>`;
-          listDiv.appendChild(row);
+        // CF 用户信息渲染
+        if (data.cf_info) {
+          document.getElementById('cf-rating').innerText = data.cf_info.rating;
+          document.getElementById('cf-max-rating').innerText = data.cf_info.maxRating;
+          document.getElementById('cf-rank').innerText = data.cf_info.rank;
+          if (data.cf_info.avatar) {
+            document.getElementById('user-avatar').src = data.cf_info.avatar;
+          }
         }
 
-        const myChart = echarts.init(document.getElementById('chart'), 'dark');
-        myChart.setOption({
-          backgroundColor: 'transparent',
-          tooltip: { trigger: 'item' },
-          series: [{
-            type: 'pie',
-            radius: ['40%', '70%'],
-            avoidLabelOverlap: false,
-            itemStyle: { borderRadius: 6 },
-            data: chartData
-          }]
-        });
+        // 处理时间戳数据渲染热力图
+        if (data.timestamps && data.timestamps.length > 0) {
+          const dayMap = {};
+          data.timestamps.forEach(ts => {
+            const dateStr = new Date(ts * 1000).toISOString().split('T')[0];
+            dayMap[dateStr] = (dayMap[dateStr] || 0) + 1;
+          });
+
+          const activeDays = Object.keys(dayMap).length;
+          const maxAc = Math.max(...Object.values(dayMap));
+          document.getElementById('active-days').innerText = activeDays;
+          document.getElementById('max-daily-ac').innerText = maxAc;
+
+          const heatmapData = Object.entries(dayMap).map(([date, count]) => [date, count]);
+          const currentYear = new Date().getFullYear();
+
+          const heatmapChart = echarts.init(document.getElementById('heatmap'), 'dark');
+          heatmapChart.setOption({
+            backgroundColor: 'transparent',
+            tooltip: {
+              formatter: function (p) {
+                return `${p.data[0]}: AC ${p.data[1]} 题`;
+              }
+            },
+            visualMap: {
+              min: 0,
+              max: Math.max(maxAc, 5),
+              type: 'piecewise',
+              orient: 'horizontal',
+              left: 'center',
+              top: 0,
+              inRange: { color: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'] }
+            },
+            calendar: {
+              top: 40,
+              left: 30,
+              right: 30,
+              cellSize: ['auto', 13],
+              range: `${currentYear}`,
+              itemStyle: { borderWidth: 2, borderColor: '#161b22' },
+              yearLabel: { show: false },
+              dayLabel: { color: '#8b949e', firstDay: 1 },
+              monthLabel: { color: '#8b949e' }
+            },
+            series: [{
+              type: 'heatmap',
+              coordinateSystem: 'calendar',
+              data: heatmapData
+            }]
+          });
+        }
       });
   </script>
 </body>
