@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CODING STATS · Dashboard</title>
+<title>CODING STATS · Rowe</title>
 <style>
 :root{
   --bg:#05080c;
@@ -54,16 +54,21 @@ body{
 
 /* HERO */
 .hero{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
+
+/* 头像（硬编码 + 呼吸光晕） */
 .avatar{
-  width:92px;height:92px;border-radius:50%;object-fit:cover;padding:3px;flex-shrink:0;
+  width:96px;height:96px;border-radius:50%;
+  object-fit:cover;padding:3px;flex-shrink:0;
+  background:rgba(10,20,26,.9);
   border:2px solid rgba(0,255,156,.55);
   box-shadow:0 0 26px rgba(0,255,156,.28),inset 0 0 20px rgba(0,255,156,.12);
-  animation:avatarPulse 3.6s ease-in-out infinite;display:none;
+  animation:avatarPulse 3.6s ease-in-out infinite;
 }
 @keyframes avatarPulse{
   0%,100%{box-shadow:0 0 22px rgba(0,255,156,.22),inset 0 0 18px rgba(0,255,156,.10)}
-  50%{box-shadow:0 0 38px rgba(0,255,156,.45),inset 0 0 24px rgba(0,255,156,.18)}
+  50%{box-shadow:0 0 42px rgba(0,255,156,.5),inset 0 0 26px rgba(0,255,156,.2)}
 }
+
 .hero-text{flex:1;min-width:240px}
 .term-line{font-size:12px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;flex-wrap:wrap}
 .term-line .prompt{color:var(--green)}
@@ -112,7 +117,35 @@ h1.glitch::after{
   95%{transform:translate(-3px,-1px)}
   97%{transform:translate(2px,-1px)}
 }
-.sub{color:var(--muted);font-size:12px;letter-spacing:2px;margin-top:8px}
+
+/* CF handle 行 */
+.hero-id{
+  display:flex;align-items:center;gap:12px;
+  margin-top:14px;flex-wrap:wrap;
+}
+.hero-id .caret-symbol{color:var(--green);font-weight:700;font-size:16px;letter-spacing:0}
+.handle{
+  position:relative;
+  font-size:20px;font-weight:700;letter-spacing:1.5px;
+  color:var(--green);text-decoration:none;
+  text-shadow:0 0 16px rgba(0,255,156,.55);
+  transition:color .25s,text-shadow .25s;
+}
+.handle::before{content:'@';color:var(--cyan);margin-right:2px;font-weight:400}
+.handle::after{
+  content:'';position:absolute;left:22px;bottom:-2px;
+  width:0;height:1px;background:var(--green);transition:width .35s;
+}
+.handle:hover{color:#fff;text-shadow:0 0 22px var(--green)}
+.handle:hover::after{width:calc(100% - 22px)}
+
+.rank-badge{
+  display:inline-block;font-size:10px;letter-spacing:1.5px;
+  padding:3px 9px;border:1px solid currentColor;border-radius:2px;
+  color:var(--green);opacity:.9;
+}
+
+.sub{color:var(--muted);font-size:12px;letter-spacing:2px;margin-top:10px}
 
 /* 卡片 */
 .card{
@@ -152,11 +185,6 @@ h1.glitch::after{
 .stat-value.cyan{color:var(--cyan);text-shadow:0 0 22px rgba(0,212,255,.45)}
 .stat-value.magenta{color:var(--magenta);text-shadow:0 0 22px rgba(255,43,214,.45)}
 .stat-sub{font-size:10px;color:var(--muted);letter-spacing:1.5px;margin-top:12px}
-.rank-badge{
-  display:inline-block;margin-top:12px;font-size:10px;letter-spacing:1.5px;
-  padding:3px 9px;border:1px solid currentColor;border-radius:2px;
-  color:var(--green);opacity:.9;
-}
 
 /* 热力图通用 */
 .heatmap-card{margin-bottom:16px}
@@ -207,7 +235,7 @@ h1.glitch::after{
   color:var(--text);opacity:0;
   transform:translateY(4px);transition:opacity .15s,transform .15s;
   box-shadow:0 0 22px rgba(0,255,156,.18);
-  pointer-events:auto;max-width:320px;
+  pointer-events:auto;max-width:340px;
 }
 .tooltip.on{opacity:1;transform:translateY(0)}
 .tooltip b{color:var(--green)}
@@ -293,6 +321,8 @@ footer{
   .grid-2{grid-template-columns:1fr}
   .pf-row{grid-template-columns:96px 1fr 70px}
   .wrap{padding:36px 16px 64px}
+  .avatar{width:76px;height:76px}
+  .handle{font-size:17px}
 }
 </style>
 </head>
@@ -306,9 +336,14 @@ footer{
 
 <main class="wrap">
 
-  <!-- HERO -->
+  <!-- HERO：头像 + 硬编码 ID -->
   <header class="hero">
-    <img class="avatar" id="avatar" alt="avatar" />
+    <img
+      class="avatar"
+      id="avatar"
+      alt="Rowe"
+      src="https://codeforces.com/titlePhoto/Rowe"
+    />
     <div class="hero-text">
       <div class="term-line">
         <span class="prompt">rowe@github</span><span class="sep">:</span><span class="path">~/stats</span>
@@ -316,6 +351,11 @@ footer{
         <span class="typewriter">./render_dashboard.sh --theme=neon</span>
       </div>
       <h1 class="glitch" data-text="CODING STATS">CODING STATS</h1>
+      <div class="hero-id">
+        <span class="caret-symbol">&gt;</span>
+        <a class="handle" href="https://codeforces.com/profile/Rowe" target="_blank" rel="noopener noreferrer">Rowe</a>
+        <span class="rank-badge" id="cfRank">UNRATED</span>
+      </div>
       <p class="sub">COMPETITIVE PROGRAMMING · LIVE DASHBOARD</p>
     </div>
   </header>
@@ -331,7 +371,6 @@ footer{
       <div class="stat-label">CURRENT RATING</div>
       <div class="stat-value cyan" id="cfRating">—</div>
       <div class="stat-sub">CODEFORCES</div>
-      <div class="rank-badge" id="cfRank">UNRATED</div>
     </div>
     <div class="card stat-card">
       <div class="stat-label">MAX RATING</div>
@@ -378,7 +417,7 @@ footer{
         <div class="heatmap" id="diffHeatmap"></div>
       </div>
     </div>
-    <div class="legend" id="diffLegend">
+    <div class="legend">
       <span>Easy</span>
       <i class="cell" style="background:#7a8a96"></i>
       <i class="cell" style="background:#2ecc71"></i>
@@ -496,7 +535,7 @@ function setStat(el, value){
   }
 }
 
-/* ================= 热力图通用周对齐 ================= */
+/* ================= 热力图通用 ================= */
 const MAX_WEEKS = 53;
 const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
@@ -506,10 +545,10 @@ function computeWeeks(daily){
 
   let start = keys.length ? parseYMD(keys[0]) : new Date(today);
   if (!keys.length) start.setDate(start.getDate() - 364);
-  start.setDate(start.getDate() - start.getDay());      // 回退到周日
+  start.setDate(start.getDate() - start.getDay());
 
   const end = new Date(today);
-  end.setDate(end.getDate() + (6 - end.getDay()));      // 前进到周六
+  end.setDate(end.getDate() + (6 - end.getDay()));
 
   let weeks = Math.round((end - start) / 604800000);
   if (weeks > MAX_WEEKS){
@@ -540,8 +579,7 @@ function renderMonthLabels(monthsEl, start, weeks){
   }
 }
 
-/* 遍历所有格子，回调负责定制外观 */
-function iterateWeeks(start, weeks, today, cb){
+function iterateWeeks(start, weeks, cb){
   for (let w = 0; w < weeks; w++){
     for (let day = 0; day < 7; day++){
       const d = new Date(start);
@@ -599,7 +637,7 @@ function renderHeatmap(daily){
 
   let totalInRange = 0;
 
-  iterateWeeks(start, weeks, today, (d, w) => {
+  iterateWeeks(start, weeks, (d, w) => {
     const cell = document.createElement('div');
     cell.className = 'cell';
     cell.style.animationDelay = (w * 14) + 'ms';
@@ -623,7 +661,6 @@ function renderHeatmap(daily){
 
   $('#heatMeta').textContent = `PAST ${weeks} WEEKS · ${totalInRange.toLocaleString('en-US')} AC`;
 
-  // 事件
   heatEl.onmousemove = e => {
     const cell = e.target.closest('.cell');
     if (!cell || !cell.dataset.date) { scheduleHide(); return; }
@@ -652,10 +689,6 @@ function colorOfRating(r){
   return DIFF_COLORS.r2100;
 }
 
-function ratingBadgeColor(r){
-  return colorOfRating(r);
-}
-
 function renderDiffHeatmap(daily){
   const heatEl   = $('#diffHeatmap');
   const monthsEl = $('#diffMonths');
@@ -668,7 +701,7 @@ function renderDiffHeatmap(daily){
 
   let activeDays = 0, totalProblems = 0;
 
-  iterateWeeks(start, weeks, today, (d, w) => {
+  iterateWeeks(start, weeks, (d, w) => {
     const cell = document.createElement('div');
     cell.className = 'cell';
     cell.style.animationDelay = (w * 14) + 'ms';
@@ -695,7 +728,6 @@ function renderDiffHeatmap(daily){
     cell.dataset.date = key;
     cell.dataset.count = cnt;
     cell.dataset.maxR = maxR ?? '';
-    // 只存必要字段，控制体积
     cell.dataset.problems = JSON.stringify(problems.map(p => ({
       r: p.rating ?? null,
       u: p.url,
@@ -725,7 +757,7 @@ function renderDiffHeatmap(daily){
       html += `<div class="tip-divider">SOLVED (${probs.length})</div>`;
       probs.forEach(p => {
         const label = p.r ?? '—';
-        const color = ratingBadgeColor(p.r);
+        const color = colorOfRating(p.r);
         html += `<div class="prob-item">
           <span class="prob-rating" style="background:${color}">${label}</span>
           <a href="${esc(p.u)}" target="_blank" rel="noopener noreferrer" title="${esc(p.n)}">${esc(p.n || p.u)}</a>
@@ -841,6 +873,24 @@ const RANK_COLORS = {
   'legendary grandmaster':    '#ff2bd6'
 };
 
+/* ================= 头像兜底 SVG ================= */
+const FALLBACK_AVATAR =
+  'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' +
+    '<rect width="100" height="100" fill="#0a141a"/>' +
+    '<rect x="2" y="2" width="96" height="96" fill="none" stroke="#00ff9c" stroke-opacity="0.4" stroke-width="2"/>' +
+    '<text x="50" y="66" font-family="monospace" font-size="46" font-weight="bold" fill="#00ff9c" text-anchor="middle">R</text>' +
+    '</svg>'
+  );
+
+function attachAvatarFallback(){
+  const av = $('#avatar');
+  if (!av) return;
+  av.addEventListener('error', () => {
+    if (av.src !== FALLBACK_AVATAR) av.src = FALLBACK_AVATAR;
+  });
+}
+
 /* ================= 渲染入口 ================= */
 function render(d){
   $('#updatedAt').textContent = 'LAST SYNC · ' + (d.updated_at || 'N/A');
@@ -858,11 +908,10 @@ function render(d){
     rankEl.style.color = RANK_COLORS[key] || 'var(--green)';
   }
 
+  // 头像：API 有值则覆盖硬编码，无值保留 HTML 里写的
   if (cf.avatar){
     const av = $('#avatar');
     av.src = cf.avatar;
-    av.style.display = 'block';
-    av.onerror = () => { av.style.display = 'none'; };
   }
 
   const daily = d.daily_stats || {};
@@ -875,6 +924,8 @@ function render(d){
 
 /* ================= 启动 ================= */
 (async function init(){
+  attachAvatarFallback();
+
   try{
     const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
