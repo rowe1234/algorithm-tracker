@@ -112,7 +112,7 @@ if __name__ == "__main__":
     NOWCODER_ID = "344403471"
 
     LUOGU_AC = 377       # 洛谷被 Cloudflare 拦截，手动填写
-    NOWCODER_AC = 0      # 牛客需要登录态，抓不到就用手动值
+    NOWCODER_AC = 67      # 牛客需要登录态，抓不到就用手动值
 
     cf_info = get_cf_user_info(CF_HANDLE)
     cf_ac, daily_stats, rating_dist = get_cf_data(CF_HANDLE)
