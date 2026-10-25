@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25 11:01:32 UTC",
-  "total_ac": 267,
+  "updated_at": "2026-10-25 11:13:18 UTC",
+  "total_ac": 644,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
   },
   "platforms": {
     "Codeforces": 267,
-    "Luogu": 0,
+    "Luogu": 377,
     "Nowcoder": 0
   },
   "daily_stats": {
