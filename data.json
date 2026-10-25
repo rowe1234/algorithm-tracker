@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 14:05:45 UTC",
+  "updated_at": "2026-10-25 22:10:18 UTC",
   "total_ac": 648,
   "cf_info": {
     "rating": 1451,
@@ -2608,6 +2608,14 @@
       "url": "https://atcoder.jp/contests/abc484",
       "start": "2026-11-14T12:00:00Z",
       "duration": 6000,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/arc234",
+      "start": "2026-11-22T12:00:00Z",
+      "duration": 9000,
       "color": "#a882ff"
     }
   ]
