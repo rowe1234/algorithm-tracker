@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CODING STATS · Dashboard</title>
 <style>
-/* ============ 基础变量 ============ */
 :root{
   --bg:#05080c;
-  --panel:rgba(10,20,26,.78);
   --border:rgba(0,255,156,.16);
   --green:#00ff9c;
   --cyan:#00d4ff;
@@ -19,24 +17,18 @@
   --gap:3px;
   --mono:'JetBrains Mono','Fira Code','SF Mono',Consolas,'Courier New',monospace;
 }
-@media (max-width:760px){
-  :root{ --cell:9px; --gap:2px; }
-}
+@media (max-width:760px){ :root{ --cell:9px; --gap:2px; } }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%}
 body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--mono);
-  font-size:13px;
-  line-height:1.55;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
+  background:var(--bg);color:var(--text);
+  font-family:var(--mono);font-size:13px;line-height:1.55;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
 ::selection{background:rgba(0,255,156,.28);color:#eafff5}
 
-/* ============ 背景层 ============ */
+/* 背景层 */
 #matrix{position:fixed;inset:0;z-index:0;opacity:.55;pointer-events:none}
 .grid-overlay{
   position:fixed;inset:0;z-index:1;pointer-events:none;
@@ -55,46 +47,32 @@ body{
   position:fixed;left:0;top:0;width:520px;height:520px;z-index:3;
   pointer-events:none;border-radius:50%;
   background:radial-gradient(circle,rgba(0,255,156,.075) 0%,transparent 62%);
-  transform:translate(-50%,-50%);
-  will-change:transform;
+  transform:translate(-50%,-50%);will-change:transform;
 }
 
-/* ============ 容器 ============ */
-.wrap{
-  position:relative;z-index:4;
-  max-width:1080px;margin:0 auto;
-  padding:52px 20px 80px;
-}
+.wrap{position:relative;z-index:4;max-width:1080px;margin:0 auto;padding:52px 20px 80px}
 
-/* ============ 顶部 Hero ============ */
+/* HERO */
 .hero{display:flex;align-items:center;gap:22px;margin-bottom:38px;flex-wrap:wrap}
 .avatar{
-  width:92px;height:92px;border-radius:50%;
-  object-fit:cover;padding:3px;flex-shrink:0;
+  width:92px;height:92px;border-radius:50%;object-fit:cover;padding:3px;flex-shrink:0;
   border:2px solid rgba(0,255,156,.55);
   box-shadow:0 0 26px rgba(0,255,156,.28),inset 0 0 20px rgba(0,255,156,.12);
-  animation:avatarPulse 3.6s ease-in-out infinite;
-  display:none;
+  animation:avatarPulse 3.6s ease-in-out infinite;display:none;
 }
 @keyframes avatarPulse{
   0%,100%{box-shadow:0 0 22px rgba(0,255,156,.22),inset 0 0 18px rgba(0,255,156,.10)}
   50%{box-shadow:0 0 38px rgba(0,255,156,.45),inset 0 0 24px rgba(0,255,156,.18)}
 }
 .hero-text{flex:1;min-width:240px}
-
-.term-line{
-  font-size:12px;color:var(--muted);margin-bottom:12px;
-  display:flex;align-items:center;gap:0;flex-wrap:wrap;
-}
+.term-line{font-size:12px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;flex-wrap:wrap}
 .term-line .prompt{color:var(--green)}
 .term-line .sep{color:var(--muted)}
 .term-line .path{color:var(--cyan)}
 .term-line .dollar{color:var(--magenta);margin:0 8px}
 .typewriter{
-  color:var(--text);
-  overflow:hidden;white-space:nowrap;
-  border-right:2px solid var(--green);
-  width:0;
+  color:var(--text);overflow:hidden;white-space:nowrap;
+  border-right:2px solid var(--green);width:0;
   animation:typing 1.8s steps(34) .35s forwards,caret .8s step-end infinite;
 }
 @keyframes typing{to{width:34ch}}
@@ -102,18 +80,15 @@ body{
 
 h1.glitch{
   position:relative;display:inline-block;
-  font-size:clamp(26px,5vw,44px);
-  font-weight:700;letter-spacing:4px;line-height:1.15;
+  font-size:clamp(26px,5vw,44px);font-weight:700;letter-spacing:4px;line-height:1.15;
   background:linear-gradient(90deg,#00ff9c,#00d4ff 45%,#00ff9c 90%);
-  background-size:220% 100%;
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
   animation:shine 7s linear infinite;
 }
 @keyframes shine{to{background-position:220% 0}}
 h1.glitch::before,h1.glitch::after{
-  content:attr(data-text);position:absolute;left:0;top:0;
-  width:100%;overflow:hidden;pointer-events:none;
-  background:none;-webkit-text-fill-color:currentColor;
+  content:attr(data-text);position:absolute;left:0;top:0;width:100%;
+  overflow:hidden;pointer-events:none;background:none;-webkit-text-fill-color:currentColor;
 }
 h1.glitch::before{
   color:var(--cyan);opacity:.75;
@@ -139,7 +114,7 @@ h1.glitch::after{
 }
 .sub{color:var(--muted);font-size:12px;letter-spacing:2px;margin-top:8px}
 
-/* ============ 卡片通用 ============ */
+/* 卡片 */
 .card{
   position:relative;
   background:
@@ -148,47 +123,31 @@ h1.glitch::after{
     linear-gradient(rgba(0,255,156,.55),rgba(0,255,156,.55)) bottom right/16px 1px no-repeat,
     linear-gradient(rgba(0,255,156,.55),rgba(0,255,156,.55)) bottom right/1px 16px no-repeat,
     linear-gradient(150deg,rgba(10,20,26,.86),rgba(6,12,16,.92));
-  border:1px solid var(--border);
-  border-radius:4px;
-  padding:20px;
-  overflow:hidden;
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--border);border-radius:4px;padding:20px;overflow:hidden;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   transition:border-color .3s,box-shadow .3s,transform .3s;
   animation:rise .65s cubic-bezier(.2,.8,.2,1) backwards;
 }
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .card::before{
   content:'';position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),
-             rgba(0,255,156,.10),transparent 62%);
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(0,255,156,.10),transparent 62%);
   opacity:0;transition:opacity .35s;
 }
 .card:hover{border-color:rgba(0,255,156,.42);box-shadow:0 0 32px rgba(0,255,156,.12)}
 .card:hover::before{opacity:1}
 
-.card-head{
-  display:flex;justify-content:space-between;align-items:center;
-  gap:12px;margin-bottom:16px;flex-wrap:wrap;
-}
-.card-title{
-  font-size:11px;letter-spacing:2px;color:var(--green);
-  text-transform:uppercase;
-}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.card-title{font-size:11px;letter-spacing:2px;color:var(--green);text-transform:uppercase}
 .card-meta{font-size:11px;color:var(--muted);letter-spacing:1px}
 
-/* ============ 顶部三个数字卡 ============ */
-.hero-cards{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:16px;margin-bottom:16px;
-}
+/* 数字卡 */
+.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
 .stat-card{padding:22px 20px}
 .stat-label{font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:10px}
 .stat-value{
-  font-size:clamp(26px,4vw,38px);font-weight:700;
-  color:var(--green);line-height:1;
-  text-shadow:0 0 22px rgba(0,255,156,.45);
-  font-variant-numeric:tabular-nums;
+  font-size:clamp(26px,4vw,38px);font-weight:700;color:var(--green);line-height:1;
+  text-shadow:0 0 22px rgba(0,255,156,.45);font-variant-numeric:tabular-nums;
 }
 .stat-value.cyan{color:var(--cyan);text-shadow:0 0 22px rgba(0,212,255,.45)}
 .stat-value.magenta{color:var(--magenta);text-shadow:0 0 22px rgba(255,43,214,.45)}
@@ -199,7 +158,8 @@ h1.glitch::after{
   color:var(--green);opacity:.9;
 }
 
-/* ============ 热力图 ============ */
+/* 热力图通用 */
+.heatmap-card{margin-bottom:16px}
 .heatmap-wrap{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
 .weekdays{
   display:grid;grid-template-rows:repeat(7,var(--cell));gap:var(--gap);
@@ -210,27 +170,21 @@ h1.glitch::after{
 .heatmap-body{--weeks:53;flex-shrink:0}
 .months{
   display:grid;grid-template-columns:repeat(var(--weeks),var(--cell));
-  gap:var(--gap);height:16px;font-size:10px;color:var(--muted);
-  margin-bottom:4px;
+  gap:var(--gap);height:16px;font-size:10px;color:var(--muted);margin-bottom:4px;
 }
 .month-label{grid-row:1;white-space:nowrap;letter-spacing:.5px}
 .heatmap{
-  display:grid;grid-auto-flow:column;
-  grid-template-rows:repeat(7,var(--cell));
-  grid-auto-columns:var(--cell);
-  gap:var(--gap);
+  display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,var(--cell));
+  grid-auto-columns:var(--cell);gap:var(--gap);
 }
 .heatmap .cell{
-  width:var(--cell);height:var(--cell);border-radius:2px;
-  position:relative;cursor:pointer;
+  width:var(--cell);height:var(--cell);border-radius:2px;position:relative;cursor:pointer;
   transition:transform .15s,outline-color .15s;
   outline:1px solid transparent;
   animation:pop .36s cubic-bezier(.2,.8,.2,1) backwards;
 }
 @keyframes pop{from{opacity:0;transform:scale(.35)}to{opacity:1;transform:scale(1)}}
 .heatmap .cell:hover{transform:scale(1.45);outline-color:var(--green);z-index:5}
-
-/* 6 级颜色 */
 .cell.l0{background:rgba(255,255,255,.045)}
 .cell.l1{background:#0b3d24}
 .cell.l2{background:#116b3a}
@@ -243,74 +197,78 @@ h1.glitch::after{
   display:flex;align-items:center;gap:5px;justify-content:flex-end;
   margin-top:14px;font-size:10px;color:var(--muted);letter-spacing:1px;
 }
-.legend .cell{width:var(--cell);height:var(--cell);border-radius:2px;display:inline-block}
+.legend .cell{width:var(--cell);height:var(--cell);border-radius:2px;display:inline-block;pointer-events:none}
 
 /* tooltip */
 .tooltip{
-  position:fixed;left:0;top:0;z-index:200;pointer-events:none;
-  padding:6px 10px;font-size:11px;border-radius:3px;
-  background:rgba(6,14,18,.96);border:1px solid rgba(0,255,156,.35);
-  color:var(--text);white-space:nowrap;opacity:0;
+  position:fixed;left:0;top:0;z-index:200;
+  padding:8px 11px;font-size:11px;border-radius:3px;
+  background:rgba(6,14,18,.97);border:1px solid rgba(0,255,156,.35);
+  color:var(--text);opacity:0;
   transform:translateY(4px);transition:opacity .15s,transform .15s;
   box-shadow:0 0 22px rgba(0,255,156,.18);
+  pointer-events:auto;max-width:320px;
 }
 .tooltip.on{opacity:1;transform:translateY(0)}
 .tooltip b{color:var(--green)}
-
-/* ============ 双列区 ============ */
-.grid-2{
-  display:grid;grid-template-columns:1.15fr 1fr;
-  gap:16px;margin-top:16px;
+.tooltip .prob-item{
+  display:flex;align-items:center;gap:6px;margin:4px 0;
+  font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
+.tooltip .prob-item a{
+  color:var(--cyan);text-decoration:none;overflow:hidden;text-overflow:ellipsis;
+}
+.tooltip .prob-item a:hover{text-decoration:underline}
+.tooltip .prob-rating{
+  font-size:10px;font-weight:700;padding:1px 5px;border-radius:2px;
+  flex-shrink:0;color:#05080c;
+}
+.tooltip .tip-divider{
+  margin:7px 0 4px;border-top:1px solid rgba(0,255,156,.15);padding-top:5px;
+  font-size:10px;color:var(--muted);letter-spacing:1px;
+}
+
+/* 双列 */
+.grid-2{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}
 
 /* 难度分布 */
-.dist-row{
-  display:grid;grid-template-columns:78px 1fr 44px;
-  align-items:center;gap:12px;margin-bottom:11px;
-}
+.dist-row{display:grid;grid-template-columns:78px 1fr 44px;align-items:center;gap:12px;margin-bottom:11px}
 .dist-label{font-size:11px;color:var(--muted);white-space:nowrap}
-.dist-track{
-  height:8px;background:rgba(255,255,255,.05);
-  border-radius:2px;overflow:hidden;
-}
+.dist-track{height:8px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
 .dist-fill{
   height:100%;width:0;border-radius:2px;
   background:linear-gradient(90deg,rgba(0,255,156,.25),var(--green));
   box-shadow:0 0 10px rgba(0,255,156,.35);
   transition:width 1s cubic-bezier(.2,.8,.2,1);
 }
-.dist-count{
-  font-size:11px;color:var(--green);text-align:right;
-  font-variant-numeric:tabular-nums;
-}
+.dist-count{font-size:11px;color:var(--green);text-align:right;font-variant-numeric:tabular-nums}
 
-/* 30 天活跃 */
-.spark{
-  display:flex;align-items:flex-end;gap:4px;
-  height:118px;padding-top:4px;
-}
+/* 30 天 */
+.spark{display:flex;align-items:flex-end;gap:4px;height:118px;padding-top:4px}
 .spark-bar{
   flex:1;min-width:3px;height:0;border-radius:1px 1px 0 0;
   background:linear-gradient(to top,rgba(0,255,156,.12),var(--green));
   box-shadow:0 0 8px rgba(0,255,156,.22);
-  transition:height .8s cubic-bezier(.2,.8,.2,1);
-  cursor:pointer;
+  transition:height .8s cubic-bezier(.2,.8,.2,1);cursor:pointer;
 }
 .spark-bar:hover{background:var(--cyan);box-shadow:0 0 14px rgba(0,212,255,.6)}
 
-/* ============ 平台分布 ============ */
+/* 平台 */
 .platform-card{margin-top:16px}
 .pf-row{
-  display:grid;grid-template-columns:110px 1fr 70px;
-  align-items:center;gap:14px;
-  padding:9px 6px;border-radius:3px;
-  text-decoration:none;color:inherit;
+  display:grid;grid-template-columns:120px 1fr 90px;align-items:center;gap:14px;
+  padding:9px 6px;border-radius:3px;text-decoration:none;color:inherit;
   transition:background .25s;
 }
 .pf-row:hover{background:rgba(0,255,156,.05)}
 .pf-name{
   font-size:12px;letter-spacing:1px;color:var(--c,var(--green));
   text-shadow:0 0 14px color-mix(in srgb,var(--c) 40%,transparent);
+  display:flex;align-items:center;gap:6px;
+}
+.pf-tag{
+  font-size:9px;padding:1px 4px;border:1px solid currentColor;border-radius:2px;
+  opacity:.6;letter-spacing:.5px;
 }
 .pf-track{height:9px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
 .pf-fill{
@@ -319,27 +277,21 @@ h1.glitch::after{
   box-shadow:0 0 12px var(--c,var(--green));
   transition:width 1s cubic-bezier(.2,.8,.2,1);
 }
-.pf-count{
-  text-align:right;font-size:12px;color:var(--c,var(--green));
-  font-variant-numeric:tabular-nums;
-}
+.pf-count{text-align:right;font-size:12px;color:var(--c,var(--green));font-variant-numeric:tabular-nums}
 
-/* ============ 页脚 ============ */
+/* 页脚 */
 footer{
-  margin-top:44px;padding-top:20px;
-  border-top:1px solid rgba(0,255,156,.1);
-  display:flex;justify-content:space-between;align-items:center;
-  gap:12px;flex-wrap:wrap;
+  margin-top:44px;padding-top:20px;border-top:1px solid rgba(0,255,156,.1);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
   font-size:10px;letter-spacing:1.5px;color:var(--muted);
 }
 .footer-dot{color:var(--green);animation:blinkDot 2s infinite}
 @keyframes blinkDot{0%,100%{opacity:1}50%{opacity:.25}}
 
-/* ============ 响应式 ============ */
 @media (max-width:820px){
   .hero-cards{grid-template-columns:1fr}
   .grid-2{grid-template-columns:1fr}
-  .pf-row{grid-template-columns:88px 1fr 60px}
+  .pf-row{grid-template-columns:96px 1fr 70px}
   .wrap{padding:36px 16px 64px}
 }
 </style>
@@ -354,7 +306,7 @@ footer{
 
 <main class="wrap">
 
-  <!-- ========== HERO ========== -->
+  <!-- HERO -->
   <header class="hero">
     <img class="avatar" id="avatar" alt="avatar" />
     <div class="hero-text">
@@ -368,7 +320,7 @@ footer{
     </div>
   </header>
 
-  <!-- ========== 三个数字卡 ========== -->
+  <!-- 数字卡 -->
   <section class="hero-cards">
     <div class="card stat-card">
       <div class="stat-label">TOTAL AC</div>
@@ -388,7 +340,7 @@ footer{
     </div>
   </section>
 
-  <!-- ========== 热力图 ========== -->
+  <!-- 刷题热力图 -->
   <section class="card heatmap-card">
     <div class="card-head">
       <span class="card-title">// Submission Heatmap</span>
@@ -411,7 +363,34 @@ footer{
     </div>
   </section>
 
-  <!-- ========== 难度分布 + 30 天活跃 ========== -->
+  <!-- 难度热力图 -->
+  <section class="card heatmap-card">
+    <div class="card-head">
+      <span class="card-title">// Difficulty Heatmap</span>
+      <span class="card-meta" id="diffMeta">MAX RATING PER DAY · HOVER TO VIEW PROBLEMS</span>
+    </div>
+    <div class="heatmap-wrap">
+      <div class="weekdays">
+        <span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span>
+      </div>
+      <div class="heatmap-body" id="diffBody">
+        <div class="months" id="diffMonths"></div>
+        <div class="heatmap" id="diffHeatmap"></div>
+      </div>
+    </div>
+    <div class="legend" id="diffLegend">
+      <span>Easy</span>
+      <i class="cell" style="background:#7a8a96"></i>
+      <i class="cell" style="background:#2ecc71"></i>
+      <i class="cell" style="background:#00d4ff"></i>
+      <i class="cell" style="background:#4a7dff"></i>
+      <i class="cell" style="background:#c04cf0"></i>
+      <i class="cell" style="background:#ff2bd6"></i>
+      <span>Hard</span>
+    </div>
+  </section>
+
+  <!-- 难度分布 + 30 天 -->
   <section class="grid-2">
     <div class="card">
       <div class="card-head"><span class="card-title">// Difficulty Distribution</span></div>
@@ -426,7 +405,7 @@ footer{
     </div>
   </section>
 
-  <!-- ========== 平台分布 ========== -->
+  <!-- 平台 -->
   <section class="card platform-card">
     <div class="card-head">
       <span class="card-title">// Platform Breakdown</span>
@@ -442,9 +421,7 @@ footer{
 </main>
 
 <script>
-/* ============================================================
-   工具函数
-============================================================ */
+/* ================= 工具 ================= */
 const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const pad2 = n => String(n).padStart(2, '0');
@@ -452,25 +429,19 @@ const ymd  = d => d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.
 const parseYMD = s => { const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); };
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-/* ============================================================
-   背景矩阵雨
-============================================================ */
+/* ================= 矩阵雨 ================= */
 (function matrixRain(){
-  const cv = $('#matrix');
-  const ctx = cv.getContext('2d');
+  const cv = $('#matrix'), ctx = cv.getContext('2d');
   const FS = window.innerWidth < 760 ? 20 : 15;
   const glyphs = '01アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789{}<>/\\|=+-*'.split('');
   let cols, drops;
-
   function resize(){
     cv.width  = window.innerWidth;
     cv.height = window.innerHeight;
     cols = Math.ceil(cv.width / FS);
     drops = Array.from({length: cols}, () => Math.random() * -60);
   }
-  resize();
-  window.addEventListener('resize', resize);
-
+  resize(); window.addEventListener('resize', resize);
   function frame(){
     ctx.fillStyle = 'rgba(5,8,12,0.09)';
     ctx.fillRect(0, 0, cv.width, cv.height);
@@ -479,9 +450,7 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
       const ch = glyphs[(Math.random() * glyphs.length) | 0];
       const y  = drops[i] * FS;
       if (y > 0 && y < cv.height){
-        ctx.fillStyle = Math.random() > 0.985
-          ? 'rgba(182,255,212,0.9)'
-          : 'rgba(0,255,156,0.26)';
+        ctx.fillStyle = Math.random() > 0.985 ? 'rgba(182,255,212,0.9)' : 'rgba(0,255,156,0.26)';
         ctx.fillText(ch, i * FS, y);
       }
       drops[i]++;
@@ -491,34 +460,28 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
   setInterval(frame, 62);
 })();
 
-/* ============================================================
-   光标光晕 + 卡片光晕跟随
-============================================================ */
+/* ================= 光标 + 卡片光晕 ================= */
 (function cursorFX(){
   const glow = $('#cursorGlow');
   window.addEventListener('mousemove', e => {
     glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%,-50%)`;
   }, {passive: true});
-
-  const bind = card => {
+  $$('.card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
       card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
       card.style.setProperty('--my', (e.clientY - r.top)  + 'px');
     });
-  };
-  $$('.card').forEach(bind);
+  });
 })();
 
-/* ============================================================
-   数字滚动动画
-============================================================ */
+/* ================= 数字滚动 ================= */
 function animateNumber(el, target, duration = 1500){
   const start = performance.now();
   const fmt = n => n.toLocaleString('en-US');
   function tick(now){
     const p = Math.min((now - start) / duration, 1);
-    const e = 1 - Math.pow(1 - p, 4);          // easeOutQuart
+    const e = 1 - Math.pow(1 - p, 4);
     el.textContent = fmt(Math.round(target * e));
     if (p < 1) requestAnimationFrame(tick);
   }
@@ -533,51 +496,33 @@ function setStat(el, value){
   }
 }
 
-/* ============================================================
-   热力图
-============================================================ */
-const HEAT_MAX_WEEKS = 53;
+/* ================= 热力图通用周对齐 ================= */
+const MAX_WEEKS = 53;
 const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-function levelOf(c){
-  if (c <= 0)  return 0;
-  if (c <= 1)  return 1;
-  if (c <= 3)  return 2;
-  if (c <= 6)  return 3;
-  if (c <= 10) return 4;
-  return 5;
-}
-
-function renderHeatmap(daily){
-  const heatEl   = $('#heatmap');
-  const monthsEl = $('#months');
-  const bodyEl   = $('#heatBody');
-  heatEl.innerHTML   = '';
-  monthsEl.innerHTML = '';
-
+function computeWeeks(daily){
   const keys  = Object.keys(daily).sort();
   const today = new Date(); today.setHours(0,0,0,0);
 
-  /* --- 计算起始（对齐到周日）--- */
   let start = keys.length ? parseYMD(keys[0]) : new Date(today);
   if (!keys.length) start.setDate(start.getDate() - 364);
-  start.setDate(start.getDate() - start.getDay());   // 回退到周日
+  start.setDate(start.getDate() - start.getDay());      // 回退到周日
 
-  /* --- 计算结束（对齐到本周六）--- */
   const end = new Date(today);
-  end.setDate(end.getDate() + (6 - end.getDay()));
+  end.setDate(end.getDate() + (6 - end.getDay()));      // 前进到周六
 
-  /* --- 周数限制 --- */
   let weeks = Math.round((end - start) / 604800000);
-  if (weeks > HEAT_MAX_WEEKS){
+  if (weeks > MAX_WEEKS){
     start = new Date(end);
-    start.setDate(start.getDate() - (HEAT_MAX_WEEKS * 7 - 1));
-    start.setDate(start.getDate() - start.getDay()); // 重新对齐周日
+    start.setDate(start.getDate() - (MAX_WEEKS * 7 - 1));
+    start.setDate(start.getDate() - start.getDay());
     weeks = Math.round((end - start) / 604800000);
   }
-  bodyEl.style.setProperty('--weeks', weeks);
+  return { start, today, weeks };
+}
 
-  /* --- 月份标签 --- */
+function renderMonthLabels(monthsEl, start, weeks){
+  monthsEl.innerHTML = '';
   let lastMonth = -1, lastLabelCol = -99;
   for (let w = 0; w < weeks; w++){
     const d = new Date(start);
@@ -593,80 +538,216 @@ function renderHeatmap(daily){
     }
     lastMonth = m;
   }
+}
 
-  /* --- 单元格 --- */
-  let totalInRange = 0;
+/* 遍历所有格子，回调负责定制外观 */
+function iterateWeeks(start, weeks, today, cb){
   for (let w = 0; w < weeks; w++){
     for (let day = 0; day < 7; day++){
       const d = new Date(start);
       d.setDate(start.getDate() + w * 7 + day);
-
-      const cell = document.createElement('div');
-      cell.className = 'cell';
-      cell.style.animationDelay = (w * 14) + 'ms';
-
-      if (d.getTime() > today.getTime()){
-        cell.classList.add('future');
-        heatEl.appendChild(cell);
-        continue;
-      }
-
-      const key  = ymd(d);
-      const info = daily[key];
-      const cnt  = info ? (info.count || 0) : 0;
-      totalInRange += cnt;
-
-      cell.classList.add('l' + levelOf(cnt));
-      cell.dataset.date  = key;
-      cell.dataset.count = cnt;
-      heatEl.appendChild(cell);
+      cb(d, w, day);
     }
   }
-
-  $('#heatMeta').textContent =
-    `PAST ${weeks} WEEKS · ${totalInRange.toLocaleString('en-US')} AC`;
 }
 
-/* --- Tooltip --- */
-(function heatTooltip(){
-  const tip  = $('#tooltip');
-  const heat = $('#heatmap');
-  if (!heat) return;
+/* ================= Tooltip 单例 ================= */
+const tipEl = $('#tooltip');
+let tipHideTimer = null;
 
-  function move(e){
-    const pad = 14;
-    let x = e.clientX + pad;
-    let y = e.clientY + pad;
-    if (x + 180 > window.innerWidth)  x = e.clientX - 180;
-    if (y + 44  > window.innerHeight) y = e.clientY - 44;
-    tip.style.left = x + 'px';
-    tip.style.top  = y + 'px';
-  }
+function showTip(html, e){
+  clearTimeout(tipHideTimer);
+  tipEl.innerHTML = html;
+  tipEl.classList.add('on');
+  positionTip(e);
+}
+function positionTip(e){
+  const pad = 14;
+  const w = tipEl.offsetWidth, h = tipEl.offsetHeight;
+  let x = e.clientX + pad, y = e.clientY + pad;
+  if (x + w > window.innerWidth - 8)  x = e.clientX - w - pad;
+  if (y + h > window.innerHeight - 8) y = e.clientY - h - pad;
+  tipEl.style.left = Math.max(8, x) + 'px';
+  tipEl.style.top  = Math.max(8, y) + 'px';
+}
+function scheduleHide(){
+  clearTimeout(tipHideTimer);
+  tipHideTimer = setTimeout(() => tipEl.classList.remove('on'), 200);
+}
+tipEl.addEventListener('mouseenter', () => clearTimeout(tipHideTimer));
+tipEl.addEventListener('mouseleave', scheduleHide);
 
-  heat.addEventListener('mousemove', e => {
-    const cell = e.target.closest('.cell');
-    if (!cell || !cell.dataset.date){ tip.classList.remove('on'); return; }
-    tip.innerHTML = `<b>${cell.dataset.date}</b> · ${cell.dataset.count} AC`;
-    tip.classList.add('on');
-    move(e);
+/* ================= 热力图 1：刷题频率 ================= */
+function levelOf(c){
+  if (c <= 0)  return 0;
+  if (c <= 1)  return 1;
+  if (c <= 3)  return 2;
+  if (c <= 6)  return 3;
+  if (c <= 10) return 4;
+  return 5;
+}
+
+function renderHeatmap(daily){
+  const heatEl   = $('#heatmap');
+  const monthsEl = $('#months');
+  const bodyEl   = $('#heatBody');
+  heatEl.innerHTML = '';
+
+  const { start, today, weeks } = computeWeeks(daily);
+  bodyEl.style.setProperty('--weeks', weeks);
+  renderMonthLabels(monthsEl, start, weeks);
+
+  let totalInRange = 0;
+
+  iterateWeeks(start, weeks, today, (d, w) => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.style.animationDelay = (w * 14) + 'ms';
+
+    if (d.getTime() > today.getTime()){
+      cell.classList.add('future');
+      heatEl.appendChild(cell);
+      return;
+    }
+
+    const key  = ymd(d);
+    const info = daily[key];
+    const cnt  = info ? (info.count || 0) : 0;
+    totalInRange += cnt;
+
+    cell.classList.add('l' + levelOf(cnt));
+    cell.dataset.date  = key;
+    cell.dataset.count = cnt;
+    heatEl.appendChild(cell);
   });
-  heat.addEventListener('mouseleave', () => tip.classList.remove('on'));
-})();
 
-/* ============================================================
-   难度分布
-============================================================ */
+  $('#heatMeta').textContent = `PAST ${weeks} WEEKS · ${totalInRange.toLocaleString('en-US')} AC`;
+
+  // 事件
+  heatEl.onmousemove = e => {
+    const cell = e.target.closest('.cell');
+    if (!cell || !cell.dataset.date) { scheduleHide(); return; }
+    showTip(`<b>${cell.dataset.date}</b> · ${cell.dataset.count} AC`, e);
+  };
+  heatEl.onmouseleave = scheduleHide;
+}
+
+/* ================= 热力图 2：难度 ================= */
+const DIFF_COLORS = {
+  unrated: '#3a4a56',
+  lt1200:  '#7a8a96',
+  r1200:   '#2ecc71',
+  r1400:   '#00d4ff',
+  r1600:   '#4a7dff',
+  r1900:   '#c04cf0',
+  r2100:   '#ff2bd6'
+};
+function colorOfRating(r){
+  if (r == null || r === 0) return DIFF_COLORS.unrated;
+  if (r < 1200) return DIFF_COLORS.lt1200;
+  if (r < 1400) return DIFF_COLORS.r1200;
+  if (r < 1600) return DIFF_COLORS.r1400;
+  if (r < 1900) return DIFF_COLORS.r1600;
+  if (r < 2100) return DIFF_COLORS.r1900;
+  return DIFF_COLORS.r2100;
+}
+
+function ratingBadgeColor(r){
+  return colorOfRating(r);
+}
+
+function renderDiffHeatmap(daily){
+  const heatEl   = $('#diffHeatmap');
+  const monthsEl = $('#diffMonths');
+  const bodyEl   = $('#diffBody');
+  heatEl.innerHTML = '';
+
+  const { start, today, weeks } = computeWeeks(daily);
+  bodyEl.style.setProperty('--weeks', weeks);
+  renderMonthLabels(monthsEl, start, weeks);
+
+  let activeDays = 0, totalProblems = 0;
+
+  iterateWeeks(start, weeks, today, (d, w) => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.style.animationDelay = (w * 14) + 'ms';
+
+    if (d.getTime() > today.getTime()){
+      cell.classList.add('future');
+      heatEl.appendChild(cell);
+      return;
+    }
+
+    const key  = ymd(d);
+    const info = daily[key];
+    const problems = (info && info.problems) ? info.problems : [];
+    const cnt = info ? (info.count || 0) : 0;
+    const maxR = (info && info.max_rating) ? info.max_rating : null;
+
+    if (cnt > 0) activeDays++;
+    totalProblems += cnt;
+
+    const col = colorOfRating(maxR);
+    cell.style.background = col;
+    if (maxR) cell.style.boxShadow = `0 0 8px ${col}66`;
+
+    cell.dataset.date = key;
+    cell.dataset.count = cnt;
+    cell.dataset.maxR = maxR ?? '';
+    // 只存必要字段，控制体积
+    cell.dataset.problems = JSON.stringify(problems.map(p => ({
+      r: p.rating ?? null,
+      u: p.url,
+      n: p.name || ''
+    })));
+
+    heatEl.appendChild(cell);
+  });
+
+  $('#diffMeta').textContent =
+    `ACTIVE ${activeDays} DAYS · ${totalProblems} AC · HOVER TO VIEW PROBLEMS`;
+
+  heatEl.onmousemove = e => {
+    const cell = e.target.closest('.cell');
+    if (!cell || !cell.dataset.date) { scheduleHide(); return; }
+
+    const date = cell.dataset.date;
+    const cnt  = cell.dataset.count;
+    const maxR = cell.dataset.maxR;
+    let probs = [];
+    try { probs = JSON.parse(cell.dataset.problems || '[]'); } catch(_){}
+
+    let html = `<b>${date}</b> · ${cnt} AC`;
+    if (maxR) html += ` · MAX <b>${maxR}</b>`;
+
+    if (probs.length){
+      html += `<div class="tip-divider">SOLVED (${probs.length})</div>`;
+      probs.forEach(p => {
+        const label = p.r ?? '—';
+        const color = ratingBadgeColor(p.r);
+        html += `<div class="prob-item">
+          <span class="prob-rating" style="background:${color}">${label}</span>
+          <a href="${esc(p.u)}" target="_blank" rel="noopener noreferrer" title="${esc(p.n)}">${esc(p.n || p.u)}</a>
+        </div>`;
+      });
+    }
+
+    showTip(html, e);
+  };
+  heatEl.onmouseleave = scheduleHide;
+}
+
+/* ================= 难度分布 ================= */
 function renderDist(dist){
   const box   = $('#distList');
   const order = ['<1200','1200-1399','1400-1599','1600-1899','1900-2099','>=2100','Unrated'];
   box.innerHTML = '';
-
   const max = Math.max(1, ...order.map(k => Number(dist[k]) || 0));
 
   order.forEach((k, i) => {
     const v   = Number(dist[k]) || 0;
     const pct = (v / max) * 100;
-
     const row = document.createElement('div');
     row.className = 'dist-row';
     row.innerHTML = `
@@ -675,31 +756,25 @@ function renderDist(dist){
       <span class="dist-count">${v}</span>
     `;
     box.appendChild(row);
-
     const fill = row.querySelector('.dist-fill');
     setTimeout(() => { fill.style.width = pct + '%'; }, 120 + i * 70);
   });
 }
 
-/* ============================================================
-   最近 30 天活跃
-============================================================ */
+/* ================= 30 天 ================= */
 function renderSpark(daily){
   const box = $('#spark');
   box.innerHTML = '';
-
   const DAYS  = 30;
   const today = new Date(); today.setHours(0,0,0,0);
   const arr   = [];
-
   for (let i = DAYS - 1; i >= 0; i--){
     const dt  = new Date(today);
     dt.setDate(today.getDate() - i);
     const key = ymd(dt);
     arr.push({ key, count: daily[key] ? (daily[key].count || 0) : 0 });
   }
-
-  const max     = Math.max(1, ...arr.map(a => a.count));
+  const max = Math.max(1, ...arr.map(a => a.count));
   const totalSum = arr.reduce((s, a) => s + a.count, 0);
   $('#sparkMeta').textContent = `${totalSum} AC / 30D`;
 
@@ -708,25 +783,21 @@ function renderSpark(daily){
     bar.className = 'spark-bar';
     bar.title = `${a.key} · ${a.count} AC`;
     box.appendChild(bar);
-
     const h = a.count === 0 ? 3 : Math.max(8, (a.count / max) * 100);
     setTimeout(() => { bar.style.height = h + '%'; }, 90 + i * 18);
   });
 }
 
-/* ============================================================
-   平台分布
-============================================================ */
+/* ================= 平台 ================= */
 const PF_COLORS = {
   Codeforces: '#00d4ff',
   Luogu:      '#00ff9c',
   Nowcoder:   '#ff2bd6'
 };
 
-function renderPlatforms(platforms, profiles){
+function renderPlatforms(platforms, profiles, manual){
   const box = $('#platformList');
   box.innerHTML = '';
-
   const names = Object.keys(platforms);
   const total = names.reduce((s, k) => s + (Number(platforms[k]) || 0), 0) || 1;
 
@@ -734,6 +805,7 @@ function renderPlatforms(platforms, profiles){
     const v    = Number(platforms[name]) || 0;
     const pct  = (v / total) * 100;
     const col  = PF_COLORS[name] || '#00ff9c';
+    const isManual = manual && manual[name];
 
     const a = document.createElement('a');
     a.className = 'pf-row';
@@ -741,22 +813,21 @@ function renderPlatforms(platforms, profiles){
     a.target = '_blank';
     a.rel    = 'noopener noreferrer';
     a.innerHTML = `
-      <span class="pf-name" style="--c:${col}">${esc(name)}</span>
+      <span class="pf-name" style="--c:${col}">
+        ${esc(name)}${isManual ? '<span class="pf-tag">MANUAL</span>' : ''}
+      </span>
       <div class="pf-track">
         <div class="pf-fill" style="--c:${col}"></div>
       </div>
       <span class="pf-count" style="--c:${col}">${v.toLocaleString('en-US')}</span>
     `;
     box.appendChild(a);
-
     const fill = a.querySelector('.pf-fill');
     setTimeout(() => { fill.style.width = pct + '%'; }, 150 + i * 110);
   });
 }
 
-/* ============================================================
-   CF rank 颜色
-============================================================ */
+/* ================= CF rank 颜色 ================= */
 const RANK_COLORS = {
   'newbie':                   '#9a9a9a',
   'pupil':                    '#4caf50',
@@ -770,17 +841,12 @@ const RANK_COLORS = {
   'legendary grandmaster':    '#ff2bd6'
 };
 
-/* ============================================================
-   渲染总入口
-============================================================ */
+/* ================= 渲染入口 ================= */
 function render(d){
-  /* 更新时间 */
   $('#updatedAt').textContent = 'LAST SYNC · ' + (d.updated_at || 'N/A');
 
-  /* 总 AC */
   animateNumber($('#totalAc'), Number(d.total_ac) || 0);
 
-  /* CF 信息 */
   const cf = d.cf_info || {};
   setStat($('#cfRating'),    cf.rating    ?? 'Unrated');
   setStat($('#cfMaxRating'), cf.maxRating ?? 'Unrated');
@@ -792,7 +858,6 @@ function render(d){
     rankEl.style.color = RANK_COLORS[key] || 'var(--green)';
   }
 
-  /* 头像 */
   if (cf.avatar){
     const av = $('#avatar');
     av.src = cf.avatar;
@@ -800,16 +865,15 @@ function render(d){
     av.onerror = () => { av.style.display = 'none'; };
   }
 
-  /* 图表 */
-  renderHeatmap(d.daily_stats || {});
+  const daily = d.daily_stats || {};
+  renderHeatmap(daily);
+  renderDiffHeatmap(daily);
   renderDist(d.rating_dist || {});
-  renderSpark(d.daily_stats || {});
-  renderPlatforms(d.platforms || {}, d.profiles || {});
+  renderSpark(daily);
+  renderPlatforms(d.platforms || {}, d.profiles || {}, d.manual || {});
 }
 
-/* ============================================================
-   启动
-============================================================ */
+/* ================= 启动 ================= */
 (async function init(){
   try{
     const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
