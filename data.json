@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 11:13:18 UTC",
+  "updated_at": "2026-10-25 11:20:32 UTC",
   "total_ac": 644,
   "cf_info": {
     "rating": 1451,
@@ -17,12 +17,38 @@
     "Luogu": 377,
     "Nowcoder": 0
   },
+  "manual": {
+    "Luogu": true,
+    "Nowcoder": true
+  },
   "daily_stats": {
     "2026-10-24": {
       "count": 4,
       "max_rating": 1200,
       "ratings": [
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/1822/problem/D",
+          "name": "Super-Permutation"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2277/problem/C",
+          "name": "Edge Addeleting"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2277/problem/B",
+          "name": "Sequence Decreasing"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2277/problem/A",
+          "name": "Subset Selecting"
+        }
       ]
     },
     "2026-10-23": {
@@ -33,6 +59,28 @@
         1600,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2232/problem/A",
+          "name": "Convergence"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2232/problem/B",
+          "name": "Cake Leveling"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2232/problem/C1",
+          "name": "Seating Arrangement (Easy Version)"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/2232/problem/C2",
+          "name": "Seating Arrangement (Hard Version)"
+        }
       ]
     },
     "2026-10-22": {
@@ -46,6 +94,43 @@
         1500,
         1700,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/46/problem/A",
+          "name": "Ball Game"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/1771/problem/A",
+          "name": "Hossam and Combinatorics"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1771/problem/B",
+          "name": "Hossam and Friends"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/191/problem/A",
+          "name": "Dynasty Puzzles"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1771/problem/C",
+          "name": "Hossam and Trainees"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/1061/problem/C",
+          "name": "Multiplicity"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/484/problem/A",
+          "name": "Bits"
+        }
       ]
     },
     "2026-10-21": {
@@ -57,6 +142,33 @@
         1100,
         1200,
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2240/problem/B",
+          "name": "AI Finds Nothing Here"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2173/problem/B",
+          "name": "Niko's Tactical Cards"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2175/problem/C",
+          "name": "Needle in a Haystack"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/1042/problem/B",
+          "name": "Vitamins"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1860/problem/C",
+          "name": "Game on Permutation"
+        }
       ]
     },
     "2026-10-20": {
@@ -67,6 +179,28 @@
         1300,
         1400,
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2175/problem/B",
+          "name": "XOR Array"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2274/problem/C",
+          "name": "Lavencia Oranges"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1189/problem/C",
+          "name": "Candies!"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/253/problem/B",
+          "name": "Physics Practical"
+        }
       ]
     },
     "2026-10-19": {
@@ -79,6 +213,38 @@
         1500,
         1500,
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1422/problem/B",
+          "name": "Nice Matrix"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1800/problem/E1",
+          "name": "Unforgivable Curse (easy version)"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/22/problem/B",
+          "name": "Bargaining Table"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/1106/problem/D",
+          "name": "Lunar New Year and a Wander"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/1800/problem/E2",
+          "name": "Unforgivable Curse (hard version)"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/22/problem/C",
+          "name": "System Administrator"
+        }
       ]
     },
     "2026-10-18": {
@@ -90,6 +256,33 @@
         1000,
         800,
         1100
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2229/problem/B",
+          "name": "Absolute Cinema"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2261/problem/A",
+          "name": "Hey, It's Me, Souvlakity"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2261/problem/C",
+          "name": "I Know About a Million Things"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2261/problem/B",
+          "name": "What's the Capital of France?"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2261/problem/D1",
+          "name": "Come Be My Friend, Don't Be So Scared (Easy Version)"
+        }
       ]
     },
     "2026-10-17": {
@@ -101,6 +294,33 @@
         1700,
         1300,
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/485/problem/B",
+          "name": "Valuable Resources"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/485/problem/A",
+          "name": "Factory"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/485/problem/C",
+          "name": "Bits"
+        },
+        {
+          "rating": 2100,
+          "url": "https://codeforces.com/contest/485/problem/D",
+          "name": "Maximum Value"
+        },
+        {
+          "rating": 2600,
+          "url": "https://codeforces.com/contest/485/problem/E",
+          "name": "Strange Sorting"
+        }
       ]
     },
     "2026-10-16": {
@@ -110,6 +330,23 @@
         1400,
         1800,
         1100
+      ],
+      "problems": [
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/1523/problem/B",
+          "name": "Lord of the Values"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2264/problem/C",
+          "name": "Madamant's Skating Dynasty"
+        },
+        {
+          "rating": 1800,
+          "url": "https://codeforces.com/contest/2276/problem/E",
+          "name": "Good Substrings"
+        }
       ]
     },
     "2026-10-15": {
@@ -121,6 +358,33 @@
         1000,
         1100,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2274/problem/A",
+          "name": "The Projections of Paco"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1659/problem/A",
+          "name": "Red Versus Blue"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2274/problem/B",
+          "name": "Prefix"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1659/problem/B",
+          "name": "Bit Flipping"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/1659/problem/C",
+          "name": "Line Empire"
+        }
       ]
     },
     "2026-10-14": {
@@ -136,6 +400,53 @@
         1600,
         2200,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2276/problem/A",
+          "name": "Perfect Sandwiches"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1537/problem/A",
+          "name": "Arithmetic Array"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1461/problem/A",
+          "name": "String Generation"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/1537/problem/B",
+          "name": "Bad Boy"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2276/problem/B",
+          "name": "Replace and Compress"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2276/problem/C",
+          "name": "Subarrays"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2276/problem/D",
+          "name": "Caveman"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1537/problem/E1",
+          "name": "Erase and Extend (Easy Version)"
+        },
+        {
+          "rating": 2200,
+          "url": "https://codeforces.com/contest/1537/problem/E2",
+          "name": "Erase and Extend (Hard Version)"
+        }
       ]
     },
     "2026-10-12": {
@@ -145,6 +456,23 @@
         1300,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2166/problem/A",
+          "name": "Same Difference"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2166/problem/B",
+          "name": "Tab Closing"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2166/problem/C",
+          "name": "Cyclic Merging"
+        }
       ]
     },
     "2026-10-11": {
@@ -153,6 +481,18 @@
       "ratings": [
         3100,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2240/problem/A",
+          "name": "Another Popcount Problem"
+        },
+        {
+          "rating": 3100,
+          "url": "https://codeforces.com/contest/2271/problem/G",
+          "name": "Grid Filling"
+        }
       ]
     },
     "2026-10-10": {
@@ -166,6 +506,43 @@
         2400,
         1400,
         1200
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2271/problem/A",
+          "name": "Robot Odd Moves"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2271/problem/B",
+          "name": "MEX Game"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/1154/problem/B",
+          "name": "Make Them Equal"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2271/problem/C",
+          "name": "XOR Problem"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1451/problem/C",
+          "name": "String Equality"
+        },
+        {
+          "rating": 2400,
+          "url": "https://codeforces.com/contest/1673/problem/F",
+          "name": "Anti-Theft Road Planning"
+        },
+        {
+          "rating": 2700,
+          "url": "https://codeforces.com/contest/2268/problem/E",
+          "name": "Kia Kio and Tree of Life"
+        }
       ]
     },
     "2026-10-09": {
@@ -177,6 +554,33 @@
         1900,
         1000,
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1234/problem/B1",
+          "name": "Social Network (easy version)"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2245/problem/B",
+          "name": "Delete and Concatenate"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1234/problem/B2",
+          "name": "Social Network (hard version)"
+        },
+        {
+          "rating": 1900,
+          "url": "https://codeforces.com/contest/535/problem/D",
+          "name": "Tavas and Malekas"
+        },
+        {
+          "rating": 2900,
+          "url": "https://codeforces.com/contest/1452/problem/F",
+          "name": "Divide Powers"
+        }
       ]
     },
     "2026-10-08": {
@@ -188,6 +592,33 @@
         800,
         2000,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2275/problem/B",
+          "name": "Did Not Go to Print"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2275/problem/A",
+          "name": "In Search of Convenience"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/202/problem/A",
+          "name": "LLPS"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2275/problem/C",
+          "name": "Unrequited Love"
+        },
+        {
+          "rating": 2000,
+          "url": "https://codeforces.com/contest/435/problem/D",
+          "name": "Special Grid"
+        }
       ]
     },
     "2026-10-07": {
@@ -197,6 +628,23 @@
         1900,
         1100,
         1600
+      ],
+      "problems": [
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/1566/problem/D1",
+          "name": "Seating Arrangements (easy version) "
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1566/problem/D2",
+          "name": "Seating Arrangements (hard version) "
+        },
+        {
+          "rating": 1900,
+          "url": "https://codeforces.com/contest/1328/problem/E",
+          "name": "Tree Queries"
+        }
       ]
     },
     "2026-10-05": {
@@ -207,6 +655,28 @@
         900,
         1600,
         1400
+      ],
+      "problems": [
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/1609/problem/A",
+          "name": "Divide and Multiply"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/1609/problem/B",
+          "name": "William the Vigilant"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1609/problem/C",
+          "name": "Complex Market Analysis"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1609/problem/D",
+          "name": "Social Network"
+        }
       ]
     },
     "2026-10-04": {
@@ -214,6 +684,13 @@
       "max_rating": 1000,
       "ratings": [
         1000
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1847/problem/B",
+          "name": "Hamon Odyssey"
+        }
       ]
     },
     "2026-10-03": {
@@ -222,6 +699,18 @@
       "ratings": [
         800,
         1400
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1847/problem/A",
+          "name": "The Man who became a God "
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/359/problem/B",
+          "name": "Permutation"
+        }
       ]
     },
     "2026-10-02": {
@@ -230,6 +719,18 @@
       "ratings": [
         1400,
         1600
+      ],
+      "problems": [
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/538/problem/B",
+          "name": "Quasi Binary"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/34/problem/D",
+          "name": "Road Map"
+        }
       ]
     },
     "2026-10-01": {
@@ -241,6 +742,33 @@
         1400,
         1100,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1706/problem/A",
+          "name": "Another String Minimization Problem"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/1706/problem/B",
+          "name": "Making Towers"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1706/problem/C",
+          "name": "Qpwoeirut And The City"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/1706/problem/D1",
+          "name": "Chopping Carrots (Easy Version)"
+        },
+        {
+          "rating": 2400,
+          "url": "https://codeforces.com/contest/1706/problem/D2",
+          "name": "Chopping Carrots (Hard Version)"
+        }
       ]
     },
     "2026-09-30": {
@@ -250,6 +778,23 @@
         1000,
         1400,
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1195/problem/A",
+          "name": "Drinks Choosing"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1195/problem/C",
+          "name": "Basketball Exercise"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/797/problem/B",
+          "name": "Odd sum"
+        }
       ]
     },
     "2026-09-28": {
@@ -258,6 +803,18 @@
       "ratings": [
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2112/problem/A",
+          "name": "Race"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2125/problem/A",
+          "name": "Difficult Contest"
+        }
       ]
     },
     "2026-09-27": {
@@ -265,6 +822,13 @@
       "max_rating": 1200,
       "ratings": [
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2269/problem/C",
+          "name": "K Is Important"
+        }
       ]
     },
     "2026-09-26": {
@@ -278,6 +842,43 @@
         1200,
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2269/problem/A",
+          "name": "SauSaGe Bank"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2267/problem/A",
+          "name": "Turn Into a Palindrome"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2267/problem/B",
+          "name": "Fashionable Array"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2269/problem/B",
+          "name": "KiaKio and Squared Numbers"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2267/problem/C",
+          "name": "GCD Treasury"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2267/problem/D",
+          "name": "Backrooms Hill"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/2269/problem/D",
+          "name": "What a SauSaGe! It's All Meat"
+        }
       ]
     },
     "2026-09-25": {
@@ -289,6 +890,33 @@
         1400,
         1300,
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1879/problem/C",
+          "name": "Make it Alternating"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1176/problem/C",
+          "name": "Lose it!"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1276/problem/A",
+          "name": "As Simple as One and Two"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1919/problem/C",
+          "name": "Grouping Increases"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1461/problem/B",
+          "name": "Find the Spruce"
+        }
       ]
     },
     "2026-09-24": {
@@ -296,6 +924,13 @@
       "max_rating": 1300,
       "ratings": [
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1753/problem/A1",
+          "name": "Make Nonzero Sum (easy version)"
+        }
       ]
     },
     "2026-09-23": {
@@ -303,6 +938,13 @@
       "max_rating": 1400,
       "ratings": [
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2266/problem/E",
+          "name": "Prime Destruction"
+        }
       ]
     },
     "2026-09-22": {
@@ -313,6 +955,28 @@
         1000,
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2266/problem/B",
+          "name": "Three Piles"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2266/problem/A",
+          "name": "Good Contest"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2266/problem/C",
+          "name": "AND, OR, Sort!"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2266/problem/D",
+          "name": "Falling Concrete"
+        }
       ]
     },
     "2026-09-21": {
@@ -320,6 +984,13 @@
       "max_rating": 1000,
       "ratings": [
         1000
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2264/problem/B",
+          "name": "Knife's Pill Farm"
+        }
       ]
     },
     "2026-09-20": {
@@ -327,6 +998,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2264/problem/A",
+          "name": "Rumb Needs a Hand"
+        }
       ]
     },
     "2026-09-19": {
@@ -337,6 +1015,28 @@
         1300,
         1300,
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1372/problem/B",
+          "name": "Omkar and Last Class of Math"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1360/problem/D",
+          "name": "Buying Shovels"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1294/problem/C",
+          "name": "Product of Three Numbers"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/230/problem/B",
+          "name": "T-primes"
+        }
       ]
     },
     "2026-09-18": {
@@ -344,6 +1044,13 @@
       "max_rating": 1300,
       "ratings": [
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/665/problem/C",
+          "name": "Simple Strings"
+        }
       ]
     },
     "2026-09-16": {
@@ -352,6 +1059,18 @@
       "ratings": [
         800,
         1300
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1660/problem/A",
+          "name": "Vasya and Coins"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1660/problem/C",
+          "name": "Get an Even String"
+        }
       ]
     },
     "2026-09-15": {
@@ -359,6 +1078,13 @@
       "max_rating": 1400,
       "ratings": [
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/44/problem/E",
+          "name": "Anfisa the Monkey"
+        }
       ]
     },
     "2026-09-14": {
@@ -368,6 +1094,23 @@
         1300,
         1200,
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/729/problem/B",
+          "name": "Spotlights"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1870/problem/C",
+          "name": "Colorful Table"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1040/problem/B",
+          "name": "Shashlik Cooking"
+        }
       ]
     },
     "2026-09-13": {
@@ -375,6 +1118,13 @@
       "max_rating": 1400,
       "ratings": [
         1400
+      ],
+      "problems": [
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1526/problem/B",
+          "name": "I Hate 1111"
+        }
       ]
     },
     "2026-09-12": {
@@ -385,6 +1135,28 @@
         1200,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2263/problem/A",
+          "name": "Min Max Game"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2263/problem/B",
+          "name": "Min Matrices"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2263/problem/C1",
+          "name": "Floor of MEX (Easy Version)"
+        },
+        {
+          "rating": 1800,
+          "url": "https://codeforces.com/contest/2263/problem/C2",
+          "name": "Floor of MEX (Hard Version)"
+        }
       ]
     },
     "2026-09-11": {
@@ -392,12 +1164,31 @@
       "max_rating": 1300,
       "ratings": [
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2260/problem/C",
+          "name": "Maximize XOR, Minimize Operations"
+        }
       ]
     },
     "2026-09-09": {
       "count": 2,
       "max_rating": 0,
-      "ratings": []
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/106677/problem/B",
+          "name": "Vending Machines"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/106677/problem/A",
+          "name": "Find the Strongest Card"
+        }
+      ]
     },
     "2026-09-08": {
       "count": 3,
@@ -406,6 +1197,23 @@
         1700,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2260/problem/A",
+          "name": "Monocarp's Contest"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2260/problem/B",
+          "name": "Monocarp and Projects"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/2260/problem/D",
+          "name": "Signs of Prefix Sums"
+        }
       ]
     },
     "2026-09-06": {
@@ -416,6 +1224,28 @@
         800,
         800,
         1000
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2258/problem/A",
+          "name": "Odd Eraser"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2259/problem/B",
+          "name": "Minus Two"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2259/problem/A",
+          "name": "Moo Language School"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2259/problem/C",
+          "name": "101"
+        }
       ]
     },
     "2026-08-27": {
@@ -423,6 +1253,13 @@
       "max_rating": 1300,
       "ratings": [
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/653/problem/B",
+          "name": "Bear and Compressing"
+        }
       ]
     },
     "2026-08-25": {
@@ -431,6 +1268,18 @@
       "ratings": [
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/116/problem/A",
+          "name": "Tram"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/265/problem/A",
+          "name": "Colorful Stones (Simplified Edition)"
+        }
       ]
     },
     "2026-08-24": {
@@ -438,6 +1287,13 @@
       "max_rating": 1000,
       "ratings": [
         1000
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2241/problem/C",
+          "name": "RemovevomeR"
+        }
       ]
     },
     "2026-08-23": {
@@ -445,6 +1301,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1822/problem/C",
+          "name": "Bun Lover"
+        }
       ]
     },
     "2026-08-22": {
@@ -452,6 +1315,13 @@
       "max_rating": 1200,
       "ratings": [
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/489/problem/B",
+          "name": "BerSU Ball"
+        }
       ]
     },
     "2026-08-21": {
@@ -459,6 +1329,13 @@
       "max_rating": 1800,
       "ratings": [
         1800
+      ],
+      "problems": [
+        {
+          "rating": 1800,
+          "url": "https://codeforces.com/contest/2143/problem/D1",
+          "name": "Inversion Graph Coloring (Easy Version)"
+        }
       ]
     },
     "2026-08-20": {
@@ -466,6 +1343,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/780/problem/A",
+          "name": "Andryusha and Socks"
+        }
       ]
     },
     "2026-08-19": {
@@ -473,6 +1357,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/32/problem/A",
+          "name": "Reconnaissance"
+        }
       ]
     },
     "2026-08-17": {
@@ -483,6 +1374,28 @@
         800,
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2257/problem/B",
+          "name": "Gigantomachy"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2257/problem/A",
+          "name": "Creating Abbreviations"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2126/problem/B",
+          "name": "No Casino in the Mountains"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/2257/problem/D",
+          "name": "Bermuda Rectangle"
+        }
       ]
     },
     "2026-08-16": {
@@ -490,6 +1403,13 @@
       "max_rating": 1300,
       "ratings": [
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1948/problem/C",
+          "name": "Arrow Path"
+        }
       ]
     },
     "2026-08-15": {
@@ -497,6 +1417,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/16/problem/A",
+          "name": "Flag"
+        }
       ]
     },
     "2026-08-14": {
@@ -504,6 +1431,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/41/problem/A",
+          "name": "Translation"
+        }
       ]
     },
     "2026-08-13": {
@@ -511,6 +1445,13 @@
       "max_rating": 1800,
       "ratings": [
         1800
+      ],
+      "problems": [
+        {
+          "rating": 1800,
+          "url": "https://codeforces.com/contest/2164/problem/D",
+          "name": "Copy String"
+        }
       ]
     },
     "2026-08-12": {
@@ -521,6 +1462,28 @@
         1400,
         1400,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2245/problem/A",
+          "name": "Who Watches the Watchpig?"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/14/problem/A",
+          "name": "Letter"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2123/problem/E",
+          "name": "MEX Count"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2126/problem/E",
+          "name": "G-C-D, Unlucky!"
+        }
       ]
     },
     "2026-08-09": {
@@ -531,6 +1494,28 @@
         1200,
         1000,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2256/problem/A",
+          "name": "Three Numbers on the Blackboard"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2256/problem/B",
+          "name": "Domino Tiles"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2256/problem/C",
+          "name": "Hot Potatoes at the Fairy Warehouse"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/2256/problem/D",
+          "name": "A Ribbon for Tomorrow"
+        }
       ]
     },
     "2026-08-07": {
@@ -540,6 +1525,23 @@
         1500,
         1100,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2253/problem/A",
+          "name": "The Best Card"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2253/problem/B",
+          "name": "Hypercarp and the Control Panel"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/2253/problem/C",
+          "name": "Sum of Distinct Values in a Matrix"
+        }
       ]
     },
     "2026-08-06": {
@@ -551,6 +1553,33 @@
         1100,
         800,
         1700
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2252/problem/A",
+          "name": "Boss Fight"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2252/problem/B",
+          "name": "Always Changing"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2252/problem/C",
+          "name": "Risky Tower"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/2252/problem/D",
+          "name": "Array Replacement"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/106/problem/C",
+          "name": "Buns"
+        }
       ]
     },
     "2026-08-04": {
@@ -563,6 +1592,38 @@
         900,
         800,
         1900
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2254/problem/A",
+          "name": "Riptide"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2254/problem/B",
+          "name": "Evanescent"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2254/problem/C1",
+          "name": "Marenol (easy version)"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2254/problem/C2",
+          "name": "Marenol (hard version)"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2254/problem/D",
+          "name": "Silhouette"
+        },
+        {
+          "rating": 1900,
+          "url": "https://codeforces.com/contest/577/problem/B",
+          "name": "Modulo Sum"
+        }
       ]
     },
     "2026-08-03": {
@@ -572,6 +1633,23 @@
         1100,
         800,
         1900
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2241/problem/A",
+          "name": "Divide and Conquer"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2241/problem/B",
+          "name": "Good times Good times"
+        },
+        {
+          "rating": 1900,
+          "url": "https://codeforces.com/contest/366/problem/C",
+          "name": "Dima and Salad"
+        }
       ]
     },
     "2026-08-02": {
@@ -580,6 +1658,18 @@
       "ratings": [
         1700,
         1700
+      ],
+      "problems": [
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/1249/problem/E",
+          "name": "By Elevator or Stairs?"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/118/problem/D",
+          "name": "Caesar's Legions"
+        }
       ]
     },
     "2026-08-01": {
@@ -593,6 +1683,43 @@
         1400,
         1500,
         1700
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2248/problem/A",
+          "name": "You Delete, I Delete"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2248/problem/B",
+          "name": "Merge to Match"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2248/problem/C",
+          "name": "Maximize the Score"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2248/problem/D",
+          "name": "Good Pair Queries"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1245/problem/C",
+          "name": "Constanze's Machine"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/166/problem/E",
+          "name": "Tetrahedron"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/977/problem/F",
+          "name": "Consecutive Subsequence"
+        }
       ]
     },
     "2026-07-31": {
@@ -602,6 +1729,23 @@
         800,
         800,
         1000
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/617/problem/A",
+          "name": "Elephant"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/50/problem/A",
+          "name": "Domino piling"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1/problem/A",
+          "name": "Theatre Square"
+        }
       ]
     },
     "2026-07-30": {
@@ -611,6 +1755,23 @@
         1200,
         2000,
         1600
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/1343/problem/C",
+          "name": "Alternating Subsequence"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1519/problem/D",
+          "name": "Maximum Sum of Products"
+        },
+        {
+          "rating": 2000,
+          "url": "https://codeforces.com/contest/1359/problem/D",
+          "name": "Yet Another Yet Another Task"
+        }
       ]
     },
     "2026-07-29": {
@@ -621,6 +1782,28 @@
         1200,
         1400,
         1500
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/327/problem/A",
+          "name": "Flipping Game"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/698/problem/A",
+          "name": "Vacations"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/1418/problem/C",
+          "name": "Mortal Kombat Tower"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1373/problem/D",
+          "name": "Maximum Sum on Even Positions"
+        }
       ]
     },
     "2026-07-28": {
@@ -629,6 +1812,18 @@
       "ratings": [
         1300,
         1600
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/1285/problem/B",
+          "name": "Just Eat It!"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/607/problem/A",
+          "name": "Chain Reaction"
+        }
       ]
     },
     "2026-07-26": {
@@ -640,6 +1835,33 @@
         800,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2250/problem/A",
+          "name": "Threshold Movement"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2210/problem/A",
+          "name": "A Simple Sequence"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2210/problem/B",
+          "name": "Simply Sitting on Chairs"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2250/problem/B",
+          "name": "String Construction"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2250/problem/C",
+          "name": "Rank Subsequence"
+        }
       ]
     },
     "2026-07-25": {
@@ -651,6 +1873,33 @@
         800,
         1500,
         1300
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2032/problem/A",
+          "name": "Circuit"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2244/problem/A",
+          "name": "Iskander and Drawings"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/189/problem/A",
+          "name": "Cut Ribbon"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/455/problem/A",
+          "name": "Boredom"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/1105/problem/C",
+          "name": "Ayoub and Lost Array"
+        }
       ]
     },
     "2026-07-24": {
@@ -659,6 +1908,18 @@
       "ratings": [
         1400,
         1600
+      ],
+      "problems": [
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1901/problem/C",
+          "name": "Add, Divide and Floor"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/431/problem/C",
+          "name": "k-Tree"
+        }
       ]
     },
     "2026-07-23": {
@@ -668,6 +1929,23 @@
         900,
         1700,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2238/problem/A",
+          "name": "Another Puzzle from Papyrus"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2238/problem/B",
+          "name": "Crimson Triples"
+        },
+        {
+          "rating": 1700,
+          "url": "https://codeforces.com/contest/474/problem/D",
+          "name": "Flowers"
+        }
       ]
     },
     "2026-07-22": {
@@ -678,6 +1956,28 @@
         1300,
         1000,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/112/problem/A",
+          "name": "Petya and Strings"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2242/problem/A",
+          "name": "Bigrams"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2242/problem/B",
+          "name": "Predominant Frequency Division"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2242/problem/C",
+          "name": "Unstable Elements"
+        }
       ]
     },
     "2026-07-21": {
@@ -687,6 +1987,23 @@
         1400,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2246/problem/A",
+          "name": "farmpiggie and Subset Sum"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2246/problem/B",
+          "name": "ezraft and Array"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2246/problem/C",
+          "name": "0mar and Alternating Sums"
+        }
       ]
     },
     "2026-07-20": {
@@ -696,6 +2013,23 @@
         1100,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2247/problem/A",
+          "name": "Zero Sum"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2247/problem/B",
+          "name": "Yet Another Constructive"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2247/problem/C",
+          "name": "Inversion of a Subsequence"
+        }
       ]
     },
     "2026-07-19": {
@@ -705,6 +2039,23 @@
         1200,
         1100,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2244/problem/B",
+          "name": "Nikita and Books"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2244/problem/C",
+          "name": "Stepan and Permutation"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2244/problem/D",
+          "name": "Yaroslav and Productivity"
+        }
       ]
     },
     "2026-05-25": {
@@ -712,6 +2063,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2228/problem/A",
+          "name": "Marisa Steals Reimu's Takeout"
+        }
       ]
     },
     "2026-05-11": {
@@ -719,6 +2077,13 @@
       "max_rating": 1300,
       "ratings": [
         1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/2224/problem/C",
+          "name": "Zhily and Bracket Swapping"
+        }
       ]
     },
     "2026-05-10": {
@@ -726,6 +2091,13 @@
       "max_rating": 1200,
       "ratings": [
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2224/problem/B",
+          "name": "Zhily and Mex and Max"
+        }
       ]
     },
     "2026-05-08": {
@@ -733,6 +2105,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2224/problem/A",
+          "name": "Zhily and Array Operating"
+        }
       ]
     },
     "2026-05-07": {
@@ -740,6 +2119,13 @@
       "max_rating": 1200,
       "ratings": [
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/6/problem/C",
+          "name": "Alice, Bob and Chocolate"
+        }
       ]
     },
     "2026-04-28": {
@@ -747,6 +2133,13 @@
       "max_rating": 1200,
       "ratings": [
         1200
+      ],
+      "problems": [
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/4/problem/B",
+          "name": "Before an Exam"
+        }
       ]
     },
     "2026-04-20": {
@@ -754,6 +2147,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2220/problem/A",
+          "name": "Blocked"
+        }
       ]
     },
     "2026-04-16": {
@@ -763,6 +2163,23 @@
         900,
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/12/problem/A",
+          "name": "Super Agent"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/9/problem/A",
+          "name": "Die Roll"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/10/problem/A",
+          "name": "Power Consumption Calculation"
+        }
       ]
     },
     "2026-04-15": {
@@ -770,6 +2187,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/4/problem/A",
+          "name": "Watermelon"
+        }
       ]
     },
     "2026-02-27": {
@@ -779,6 +2203,23 @@
         900,
         800,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2200/problem/B",
+          "name": "Deletion Sort"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2200/problem/A",
+          "name": "Eating Game"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2200/problem/C",
+          "name": "Specialty String"
+        }
       ]
     },
     "2026-02-23": {
@@ -787,6 +2228,18 @@
       "ratings": [
         1200,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2202/problem/A",
+          "name": "Parkour Design"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/2202/problem/B",
+          "name": "ABAB Construction"
+        }
       ]
     },
     "2026-02-21": {
@@ -794,6 +2247,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2192/problem/A",
+          "name": "String Rotation Game"
+        }
       ]
     },
     "2026-02-15": {
@@ -803,6 +2263,23 @@
         1100,
         900,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2195/problem/A",
+          "name": "Sieve of Erato67henes"
+        },
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/2195/problem/B",
+          "name": "Heapify 1"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2195/problem/C",
+          "name": "Dice Roll Sequence"
+        }
       ]
     },
     "2026-02-12": {
@@ -810,6 +2287,13 @@
       "max_rating": 1100,
       "ratings": [
         1100
+      ],
+      "problems": [
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2197/problem/B",
+          "name": "Array and Permutation"
+        }
       ]
     },
     "2026-02-11": {
@@ -817,6 +2301,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2197/problem/A",
+          "name": "Friendly Numbers"
+        }
       ]
     },
     "2026-02-08": {
@@ -825,6 +2316,18 @@
       "ratings": [
         1000,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2194/problem/A",
+          "name": "Lawn Mower"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2194/problem/B",
+          "name": "Offshores"
+        }
       ]
     },
     "2026-01-29": {
@@ -833,6 +2336,18 @@
       "ratings": [
         1000,
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2188/problem/A",
+          "name": "Divisible Permutation"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/2188/problem/B",
+          "name": "Seats"
+        }
       ]
     },
     "2026-01-26": {
@@ -840,6 +2355,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2193/problem/A",
+          "name": "DBMB and the Array"
+        }
       ]
     },
     "2026-01-23": {
@@ -847,6 +2369,13 @@
       "max_rating": 800,
       "ratings": [
         800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2189/problem/A",
+          "name": "Table with Numbers"
+        }
       ]
     }
   },
