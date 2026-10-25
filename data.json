@@ -1,13 +1,19 @@
 {
-  "updated_at": "2026-10-25 10:40:56 UTC",
-  "total_ac": 604,
+  "updated_at": "2026-10-25 10:50:21 UTC",
+  "total_ac": 267,
+  "cf_info": {
+    "rating": 1451,
+    "maxRating": 1495,
+    "rank": "specialist",
+    "avatar": "https://userpic.codeforces.org/5395057/title/85e62b9f8f1d94d5.jpg"
+  },
   "profiles": {
     "Codeforces": "https://codeforces.com/profile/Rowe",
     "Luogu": "https://www.luogu.com.cn/user/1965170"
   },
   "platforms": {
     "Codeforces": 267,
-    "Luogu": 337
+    "Luogu": 0
   },
   "timestamps": [
     1792845373,
