@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26 13:08:20 UTC",
+  "updated_at": "2026-10-26 15:53:57 UTC",
   "total_ac": 655,
   "cf_info": {
     "rating": 1451,
@@ -2551,22 +2551,22 @@
         {
           "rating": null,
           "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_a",
-          "name": "awc0186_a"
+          "name": "The Last Line of a School Song"
         },
         {
           "rating": null,
           "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_b",
-          "name": "awc0186_b"
+          "name": "Swimming Practice"
         },
         {
           "rating": null,
           "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_c",
-          "name": "awc0186_c"
+          "name": "Checking Weather on Consecutive Days"
         },
         {
           "rating": null,
           "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_d",
-          "name": "awc0186_d"
+          "name": "Installation of Street Lights"
         }
       ]
     }
@@ -2581,14 +2581,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2272",
-      "start": "2026-10-26T14:35:00Z",
-      "duration": 8100,
-      "color": "#00d4ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
