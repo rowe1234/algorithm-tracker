@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26 12:30:42 UTC",
+  "updated_at": "2026-10-26 12:56:15 UTC",
   "total_ac": 655,
   "cf_info": {
     "rating": 1451,
@@ -2541,7 +2541,7 @@
         {
           "rating": null,
           "url": "https://atcoder.jp/contests/past17-open/tasks/past17_o",
-          "name": "past17_o"
+          "name": "整地クエリ"
         }
       ]
     },
