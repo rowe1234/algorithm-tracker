@@ -93,7 +93,6 @@ h1.glitch::after{color:var(--magenta);opacity:.7;clip-path:polygon(0 62%,100% 62
 .stat-value{font-size:clamp(26px,4vw,38px);font-weight:700;color:var(--green);line-height:1;text-shadow:0 0 22px rgba(var(--g),.45);font-variant-numeric:tabular-nums}
 .stat-value.cyan{color:var(--cyan);text-shadow:0 0 22px rgba(var(--c2),.45)}
 .stat-value.magenta{color:var(--magenta);text-shadow:0 0 22px rgba(var(--m),.45)}
-.stat-value.atcoder{color:#a882ff;text-shadow:0 0 22px rgba(168,130,255,.45)}
 .stat-sub{font-size:10px;color:var(--muted);letter-spacing:1.5px;margin-top:12px}
 
 .heatmap-card{margin-bottom:16px}
@@ -110,15 +109,20 @@ h1.glitch::after{color:var(--magenta);opacity:.7;clip-path:polygon(0 62%,100% 62
 .cell.l0{background:var(--cell0)}.cell.l1{background:color-mix(in srgb,var(--green) 28%,var(--bg))}.cell.l2{background:color-mix(in srgb,var(--green) 50%,var(--bg))}.cell.l3{background:color-mix(in srgb,var(--green) 72%,var(--bg))}
 .cell.l4{background:var(--green);box-shadow:0 0 6px rgba(var(--g),.4)}.cell.l5{background:color-mix(in srgb,var(--green) 55%,#fff);box-shadow:0 0 11px rgba(var(--g),.65)}
 .cell.future{background:transparent;pointer-events:none;animation:none}
-.legend{display:flex;align-items:center;gap:5px;justify-content:flex-end;margin-top:14px;font-size:10px;color:var(--muted)}
+.legend{display:flex;align-items:center;gap:5px;justify-content:flex-end;margin-top:14px;font-size:10px;color:var(--muted);flex-wrap:wrap}
 .legend .cell{width:var(--cell);height:var(--cell);border-radius:2px;display:inline-block}
+.legend-pf{display:inline-flex;align-items:center;gap:4px;margin-left:12px;font-size:10px}
+.legend-dot{width:8px;height:8px;border-radius:2px;display:inline-block}
 .tooltip{position:fixed;left:0;top:0;z-index:200;padding:8px 11px;font-size:11px;border-radius:3px;background:var(--tipbg);border:1px solid rgba(var(--g),.35);color:var(--text);opacity:0;pointer-events:none;transition:opacity .15s;box-shadow:0 0 22px rgba(var(--g),.18);max-width:340px}
 .tooltip.on{opacity:1;pointer-events:auto}
 .tooltip b{color:var(--green)}
 .prob-item{display:flex;align-items:center;gap:6px;margin:4px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .prob-item a{color:var(--cyan);text-decoration:none;overflow:hidden;text-overflow:ellipsis}
 .prob-rating{font-size:10px;font-weight:700;padding:1px 5px;border-radius:2px;flex-shrink:0;color:#05080c}
+.prob-pf{font-size:9px;padding:1px 4px;border-radius:2px;flex-shrink:0;letter-spacing:.5px;font-weight:700}
 .tip-divider{margin:7px 0 4px;border-top:1px solid rgba(var(--g),.15);padding-top:5px;font-size:10px;color:var(--muted)}
+.tip-split{display:flex;gap:10px;margin-top:4px;font-size:10px}
+.tip-split span{display:flex;align-items:center;gap:4px}
 
 .grid-2{display:grid;grid-template-columns:1.15fr 1fr;gap:16px}
 .dist-row{display:grid;grid-template-columns:78px 1fr 44px;align-items:center;gap:12px;margin-bottom:11px}
@@ -143,7 +147,7 @@ h1.glitch::after{color:var(--magenta);opacity:.7;clip-path:polygon(0 62%,100% 62
 .t-item:hover{background:rgba(var(--g),.06);transform:translateX(4px);box-shadow:0 0 18px color-mix(in srgb,var(--c) 30%,transparent)}
 .t-rate{min-width:48px;text-align:center;font-weight:700;font-size:12px;padding:3px 0;border-radius:2px;color:#05080c;background:var(--c)}
 .t-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.t-src{font-size:9px;letter-spacing:1px;color:var(--muted)}
+.t-src{font-size:9px;letter-spacing:1px;flex-shrink:0}
 .empty{color:var(--muted);text-align:center;padding:26px 0;letter-spacing:1px}
 
 .gb-note{font-size:11px;color:var(--muted);margin-bottom:14px}
@@ -232,7 +236,6 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 .feed-foot{margin-top:10px;font-size:10px;letter-spacing:1px}
 .feed-foot a{color:var(--muted);text-decoration:none}.feed-foot a:hover{color:var(--green)}
 
-/* ============ NOW WIDGET ============ */
 .now-widget{
   position:fixed;right:22px;bottom:22px;z-index:80;min-width:230px;padding:14px 16px;
   border:1px solid var(--border);border-radius:6px;
@@ -267,7 +270,6 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   .now-val{max-width:140px}
 }
 
-/* ============ 主题氛围 ============ */
 .fx-layer{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .8s}
 .fx-layer.on{opacity:.55}
 
@@ -297,7 +299,6 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 [data-theme=paper] .cake-emoji{animation:none}
 [data-theme=paper] .typewriter{animation:none;width:auto;border-right:0}
 
-/* ============ BIRTHDAY ============ */
 .bday-content{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
 @media (max-width:640px){.bday-content{grid-template-columns:1fr}.bday-cake{order:-1}}
 .bday-kicker{font-size:10px;letter-spacing:3px;color:var(--muted);margin-bottom:14px}
@@ -334,7 +335,6 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
 .bday-close:hover{background:#fff;transform:scale(1.05);box-shadow:0 0 32px rgba(var(--g),.7)}
 [data-theme=paper] .bday-card{background:linear-gradient(150deg,#fff,#f4f8fb);box-shadow:0 0 60px rgba(var(--g),.2),0 0 100px rgba(var(--g),.12)}
 
-/* ============ CONTEST RADAR ============ */
 .radar-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--c);border-radius:3px;background:rgba(255,255,255,.025);margin-bottom:10px;text-decoration:none;color:var(--text);transition:.25s;animation:rise .5s backwards}
 .radar-item:hover{background:rgba(var(--g),.06);transform:translateX(4px);box-shadow:0 0 18px color-mix(in srgb,var(--c) 30%,transparent)}
 .radar-platform{font-size:10px;letter-spacing:1.5px;font-weight:700;color:var(--c);min-width:80px;flex-shrink:0}
@@ -357,7 +357,6 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   <span class="logo">&lt;ROWE/&gt;</span>
   <div class="links">
     <a class="nl" href="#stats">STATS</a>
-    <a class="nl" href="#atcoder">ATCODER</a>
     <a class="nl" href="#radar">RADAR</a>
     <a class="nl" href="#today">TODAY</a>
     <a class="nl" href="#feed">FEED</a>
@@ -397,24 +396,42 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
       <div class="card reveal"><div class="stat-label">MAX RATING</div><div class="stat-value magenta" id="cfMaxRating">—</div><div class="stat-sub">PERSONAL BEST</div></div>
     </div>
 
+    <!-- 合并后的提交热力图 -->
     <div class="card heatmap-card reveal">
-      <div class="card-head"><span class="card-title">// Submission Heatmap</span><span class="card-meta" id="heatMeta"></span></div>
+      <div class="card-head">
+        <span class="card-title">// Submission Heatmap · CF + AtCoder</span>
+        <span class="card-meta" id="heatMeta"></span>
+      </div>
       <div class="heatmap-wrap">
         <div class="weekdays"><span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span></div>
         <div class="heatmap-body" id="heatBody"><div class="months" id="months"></div><div class="heatmap" id="heatmap"></div></div>
       </div>
-      <div class="legend"><span>Less</span><i class="cell l0"></i><i class="cell l1"></i><i class="cell l2"></i><i class="cell l3"></i><i class="cell l4"></i><i class="cell l5"></i><span>More</span></div>
+      <div class="legend">
+        <span>Less</span>
+        <i class="cell l0"></i><i class="cell l1"></i><i class="cell l2"></i>
+        <i class="cell l3"></i><i class="cell l4"></i><i class="cell l5"></i>
+        <span>More</span>
+        <span class="legend-pf"><i class="legend-dot" style="background:#00d4ff"></i>Codeforces</span>
+        <span class="legend-pf"><i class="legend-dot" style="background:#a882ff"></i>AtCoder</span>
+      </div>
     </div>
 
+    <!-- 合并后的难度热力图 -->
     <div class="card heatmap-card reveal">
-      <div class="card-head"><span class="card-title">// Difficulty Heatmap</span><span class="card-meta" id="diffMeta">HOVER TO VIEW PROBLEMS</span></div>
+      <div class="card-head">
+        <span class="card-title">// Difficulty Heatmap · CF + AtCoder</span>
+        <span class="card-meta" id="diffMeta">HOVER TO VIEW PROBLEMS</span>
+      </div>
       <div class="heatmap-wrap">
         <div class="weekdays"><span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span></div>
         <div class="heatmap-body" id="diffBody"><div class="months" id="diffMonths"></div><div class="heatmap" id="diffHeatmap"></div></div>
       </div>
-      <div class="legend"><span>Easy</span>
+      <div class="legend">
+        <span>Easy</span>
         <i class="cell" style="background:#7a8a96"></i><i class="cell" style="background:#2ecc71"></i><i class="cell" style="background:#00d4ff"></i>
-        <i class="cell" style="background:#4a7dff"></i><i class="cell" style="background:#c04cf0"></i><i class="cell" style="background:#ff2bd6"></i><span>Hard</span></div>
+        <i class="cell" style="background:#4a7dff"></i><i class="cell" style="background:#c04cf0"></i><i class="cell" style="background:#ff2bd6"></i>
+        <span>Hard</span>
+      </div>
     </div>
 
     <div class="grid-2">
@@ -428,35 +445,8 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
     </div>
   </section>
 
-  <section class="blk" id="atcoder">
-    <div class="sec-h"><b>02</b> ATCODER</div>
-    <div class="hero-cards" style="grid-template-columns:repeat(2,1fr)">
-      <div class="card reveal">
-        <div class="stat-label">ATCODER AC</div>
-        <div class="stat-value atcoder" id="atcoderAc">0</div>
-        <div class="stat-sub">PROBLEMS SOLVED</div>
-      </div>
-      <div class="card reveal">
-        <div class="stat-label">PROFILE</div>
-        <div style="margin-top:14px">
-          <a href="https://atcoder.jp/users/Rowe" target="_blank" rel="noopener noreferrer" class="handle" style="color:#a882ff;text-shadow:0 0 16px rgba(168,130,255,.55)">@Rowe</a>
-        </div>
-        <div class="stat-sub" style="margin-top:14px">ATCODER.JP</div>
-      </div>
-    </div>
-
-    <div class="card heatmap-card reveal" style="margin-top:16px">
-      <div class="card-head"><span class="card-title">// AtCoder Submission Heatmap</span><span class="card-meta" id="atcoderHeatMeta"></span></div>
-      <div class="heatmap-wrap">
-        <div class="weekdays"><span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span></div>
-        <div class="heatmap-body" id="atcoderHeatBody"><div class="months" id="atcoderMonths"></div><div class="heatmap" id="atcoderHeatmap"></div></div>
-      </div>
-      <div class="legend"><span>Less</span><i class="cell l0"></i><i class="cell l1"></i><i class="cell l2"></i><i class="cell l3"></i><i class="cell l4"></i><i class="cell l5"></i><span>More</span></div>
-    </div>
-  </section>
-
   <section class="blk" id="radar">
-    <div class="sec-h"><b>03</b> CONTEST RADAR</div>
+    <div class="sec-h"><b>02</b> CONTEST RADAR</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// Upcoming Contests</span><span class="card-meta" id="radarMeta"></span></div>
       <div id="radarList"><div class="empty">LOADING…</div></div>
@@ -464,7 +454,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </section>
 
   <section class="blk" id="today">
-    <div class="sec-h"><b>04</b> TODAY'S AC</div>
+    <div class="sec-h"><b>03</b> TODAY'S AC</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title" id="todayTitle">// Solved Today</span><span class="card-meta" id="todayMeta"></span></div>
       <div class="today-list" id="todayList"><div class="empty">LOADING…</div></div>
@@ -472,7 +462,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </section>
 
   <section class="blk" id="feed">
-    <div class="sec-h"><b>05</b> FEED</div>
+    <div class="sec-h"><b>04</b> FEED</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// 动态 Timeline</span><span class="card-meta"><span id="feedMeta"></span> · <a id="feedNew" href="#" target="_blank" rel="noopener noreferrer" style="color:var(--green)">✎ 发动态</a></span></div>
       <div id="feedList"><div class="empty">LOADING…</div></div>
@@ -480,7 +470,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </section>
 
   <section class="blk" id="blog">
-    <div class="sec-h"><b>06</b> BLOG</div>
+    <div class="sec-h"><b>05</b> BLOG</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// Posts</span><span class="card-meta" id="blogMeta"></span></div>
       <div class="blog-bar"><input id="blogQ" placeholder="search posts…" /><span id="blogTags" style="display:contents"></span></div>
@@ -489,7 +479,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </section>
 
   <section class="blk" id="guestbook">
-    <div class="sec-h"><b>07</b> GUESTBOOK</div>
+    <div class="sec-h"><b>06</b> GUESTBOOK</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// Leave a message</span><span class="card-meta" id="gbMode"></span></div>
       <div id="giscusBox"></div>
@@ -502,7 +492,7 @@ html[data-theme=paper]{--bg:#eef2f5;--g:10,143,92;--c2:0,130,190;--m:200,30,160;
   </section>
 
   <section class="blk" id="birthday">
-    <div class="sec-h"><b>08</b> BIRTHDAY</div>
+    <div class="sec-h"><b>07</b> BIRTHDAY</div>
     <div class="card reveal">
       <div class="card-head"><span class="card-title">// Countdown</span><span class="card-meta">农历九月十六</span></div>
       <div class="bday-content">
@@ -668,41 +658,152 @@ function showTip(html,e){clearTimeout(tipT);tipEl.innerHTML=html;tipEl.classList
 function scheduleHide(){clearTimeout(tipT);tipT=setTimeout(()=>tipEl.classList.remove('on'),200)}
 tipEl.addEventListener('mouseenter',()=>clearTimeout(tipT));tipEl.addEventListener('mouseleave',scheduleHide);
 
-/* ============ 热力图 1 ============ */
+/* ============================================================
+   合并数据：CF + AtCoder
+   ============================================================ */
+const PF_META = {
+  Codeforces: { color: '#00d4ff', label: 'CF' },
+  AtCoder:    { color: '#a882ff', label: 'AC' }
+};
+
+function normalizeRating(r, platform){
+  if(r == null || r === 0) return null;
+  if(platform === 'AtCoder'){
+    return Math.round(800 + (r - 400) * 0.9);
+  }
+  return r;
+}
+
+function mergeDaily(cfDaily, atDaily){
+  const merged = {};
+  const allDates = new Set([...Object.keys(cfDaily||{}), ...Object.keys(atDaily||{})]);
+  allDates.forEach(date=>{
+    const cf = cfDaily[date] || {};
+    const at = atDaily[date] || {};
+    const cfProbs = (cf.problems||[]).map(p=>({
+      ...p,
+      platform:'Codeforces',
+      platformColor: PF_META.Codeforces.color,
+      platformLabel: PF_META.Codeforces.label,
+      origRating: p.rating,
+      normRating: normalizeRating(p.rating, 'Codeforces')
+    }));
+    const atProbs = (at.problems||[]).map(p=>({
+      ...p,
+      platform:'AtCoder',
+      platformColor: PF_META.AtCoder.color,
+      platformLabel: PF_META.AtCoder.label,
+      origRating: p.rating,
+      normRating: normalizeRating(p.rating, 'AtCoder')
+    }));
+    const allProbs = [...cfProbs, ...atProbs].sort((a,b)=>(b.origRating||0)-(a.origRating||0));
+    const maxNorm = allProbs.length ? Math.max(...allProbs.map(p=>p.normRating||0)) : 0;
+    merged[date] = {
+      count: (cf.count||0) + (at.count||0),
+      cf_count: cf.count||0,
+      at_count: at.count||0,
+      max_rating: maxNorm,
+      problems: allProbs
+    };
+  });
+  return merged;
+}
+
+/* ============ 热力图 1：合并提交 ============ */
 const levelOf=c=>c<=0?0:c<=1?1:c<=3?2:c<=6?3:c<=10?4:5;
-function renderHeatmap(daily){
+
+function renderMergedHeatmap(merged){
   const el=$('#heatmap');el.innerHTML='';
-  const{start,today,weeks}=computeWeeks(daily);
+  const{start,today,weeks}=computeWeeks(merged);
   $('#heatBody').style.setProperty('--weeks',weeks);renderMonthLabels($('#months'),start,weeks);
-  let total=0;
-  iterateWeeks(start,weeks,(d,w)=>{const c=document.createElement('div');c.className='cell';c.style.animationDelay=(w*14)+'ms';if(d>today){c.classList.add('future');el.appendChild(c);return}const key=ymd(d),cnt=daily[key]?(daily[key].count||0):0;total+=cnt;c.classList.add('l'+levelOf(cnt));c.dataset.date=key;c.dataset.count=cnt;el.appendChild(c)});
-  $('#heatMeta').textContent=`PAST ${weeks} WEEKS · ${total.toLocaleString('en-US')} AC`;
-  el.onmousemove=e=>{const c=e.target.closest('.cell');if(!c||!c.dataset.date){scheduleHide();return}showTip(`<b>${c.dataset.date}</b> · ${c.dataset.count} AC`,e)};
+
+  let total=0,cfTotal=0,atTotal=0;
+  iterateWeeks(start,weeks,(d,w)=>{
+    const c=document.createElement('div');c.className='cell';c.style.animationDelay=(w*14)+'ms';
+    if(d>today){c.classList.add('future');el.appendChild(c);return}
+    const key=ymd(d),info=merged[key];
+    const cnt=info?(info.count||0):0;
+    const cfCnt=info?(info.cf_count||0):0;
+    const atCnt=info?(info.at_count||0):0;
+    total+=cnt;cfTotal+=cfCnt;atTotal+=atCnt;
+    c.classList.add('l'+levelOf(cnt));
+    c.dataset.date=key;c.dataset.count=cnt;c.dataset.cf=cfCnt;c.dataset.at=atCnt;
+    el.appendChild(c);
+  });
+
+  $('#heatMeta').textContent=`PAST ${weeks} WEEKS · ${total} AC · CF ${cfTotal} · AtCoder ${atTotal}`;
+
+  el.onmousemove=e=>{
+    const c=e.target.closest('.cell');
+    if(!c||!c.dataset.date){scheduleHide();return}
+    const cf=Number(c.dataset.cf)||0;
+    const at=Number(c.dataset.at)||0;
+    let h=`<b>${c.dataset.date}</b> · ${c.dataset.count} AC`;
+    if(cf||at){
+      h+=`<div class="tip-split">`;
+      if(cf)h+=`<span><i class="legend-dot" style="background:${PF_META.Codeforces.color}"></i>CF: <b>${cf}</b></span>`;
+      if(at)h+=`<span><i class="legend-dot" style="background:${PF_META.AtCoder.color}"></i>AtCoder: <b>${at}</b></span>`;
+      h+=`</div>`;
+    }
+    showTip(h,e);
+  };
   el.onmouseleave=scheduleHide;
 }
 
-/* ============ 热力图 2 ============ */
+/* ============ 热力图 2：合并难度 ============ */
 function colorOfRating(r){if(r==null||r===0)return'#3a4a56';return r<1200?'#7a8a96':r<1400?'#2ecc71':r<1600?'#00d4ff':r<1900?'#4a7dff':r<2100?'#c04cf0':'#ff2bd6'}
-function renderDiffHeatmap(daily){
-  const el=$('#diffHeatmap');el.innerHTML='';
-  const{start,today,weeks}=computeWeeks(daily);
-  $('#diffBody').style.setProperty('--weeks',weeks);renderMonthLabels($('#diffMonths'),start,weeks);
-  let days=0,tot=0;
-  iterateWeeks(start,weeks,(d,w)=>{const c=document.createElement('div');c.className='cell';c.style.animationDelay=(w*14)+'ms';if(d>today){c.classList.add('future');el.appendChild(c);return}const key=ymd(d),info=daily[key],probs=(info&&info.problems)||[],cnt=info?(info.count||0):0,mr=info&&info.max_rating?info.max_rating:null;if(cnt>0)days++;tot+=cnt;const col=colorOfRating(mr);c.style.background=col;if(mr)c.style.boxShadow=`0 0 8px ${col}66`;c.dataset.date=key;c.dataset.count=cnt;c.dataset.maxR=mr??'';c.dataset.problems=JSON.stringify(probs.map(p=>({r:p.rating??null,u:p.url,n:p.name||''})));el.appendChild(c)});
-  $('#diffMeta').textContent=`ACTIVE ${days} DAYS · ${tot} AC · HOVER TO VIEW PROBLEMS`;
-  el.onmousemove=e=>{const c=e.target.closest('.cell');if(!c||!c.dataset.date){scheduleHide();return}let probs=[];try{probs=JSON.parse(c.dataset.problems||'[]')}catch(_){}let h=`<b>${c.dataset.date}</b> · ${c.dataset.count} AC`;if(c.dataset.maxR)h+=` · MAX <b>${c.dataset.maxR}</b>`;if(probs.length){h+=`<div class="tip-divider">SOLVED (${probs.length})</div>`;probs.forEach(p=>{h+=`<div class="prob-item"><span class="prob-rating" style="background:${colorOfRating(p.r)}">${p.r??'—'}</span><a href="${esc(p.u)}" target="_blank" rel="noopener noreferrer" title="${esc(p.n)}">${esc(p.n||p.u)}</a></div>`})}showTip(h,e)};
-  el.onmouseleave=scheduleHide;
-}
 
-/* ============ AtCoder 热力图 ============ */
-function renderAtCoderHeatmap(daily){
-  const el=$('#atcoderHeatmap');if(!el)return;el.innerHTML='';
-  const{start,today,weeks}=computeWeeks(daily);
-  $('#atcoderHeatBody').style.setProperty('--weeks',weeks);renderMonthLabels($('#atcoderMonths'),start,weeks);
-  let total=0;
-  iterateWeeks(start,weeks,(d,w)=>{const c=document.createElement('div');c.className='cell';c.style.animationDelay=(w*14)+'ms';if(d>today){c.classList.add('future');el.appendChild(c);return}const key=ymd(d),cnt=daily[key]?(daily[key].count||0):0;total+=cnt;c.classList.add('l'+levelOf(cnt));c.dataset.date=key;c.dataset.count=cnt;el.appendChild(c)});
-  const meta=$('#atcoderHeatMeta');if(meta)meta.textContent=`PAST ${weeks} WEEKS · ${total} AC`;
-  el.onmousemove=e=>{const c=e.target.closest('.cell');if(!c||!c.dataset.date){scheduleHide();return}showTip(`<b>${c.dataset.date}</b> · ${c.dataset.count} AC`,e)};
+function renderMergedDiffHeatmap(merged){
+  const el=$('#diffHeatmap');el.innerHTML='';
+  const{start,today,weeks}=computeWeeks(merged);
+  $('#diffBody').style.setProperty('--weeks',weeks);renderMonthLabels($('#diffMonths'),start,weeks);
+
+  let activeDays=0,totalProblems=0;
+  iterateWeeks(start,weeks,(d,w)=>{
+    const c=document.createElement('div');c.className='cell';c.style.animationDelay=(w*14)+'ms';
+    if(d>today){c.classList.add('future');el.appendChild(c);return}
+    const key=ymd(d),info=merged[key];
+    const probs=(info&&info.problems)||[];
+    const cnt=info?(info.count||0):0;
+    const maxNorm=info?info.max_rating:null;
+    if(cnt>0)activeDays++;
+    totalProblems+=cnt;
+
+    const col=colorOfRating(maxNorm);
+    c.style.background=col;
+    if(maxNorm)c.style.boxShadow=`0 0 8px ${col}66`;
+    c.dataset.date=key;
+    c.dataset.count=cnt;
+    c.dataset.problems=JSON.stringify(probs.map(p=>({
+      r: p.origRating ?? null,
+      nr: p.normRating ?? null,
+      u: p.url,
+      n: p.name||'',
+      pf: p.platform,
+      c: p.platformColor
+    })));
+    el.appendChild(c);
+  });
+
+  $('#diffMeta').textContent=`ACTIVE ${activeDays} DAYS · ${totalProblems} AC · HOVER TO VIEW PROBLEMS`;
+
+  el.onmousemove=e=>{
+    const c=e.target.closest('.cell');
+    if(!c||!c.dataset.date){scheduleHide();return}
+    let probs=[];try{probs=JSON.parse(c.dataset.problems||'[]')}catch(_){}
+    let h=`<b>${c.dataset.date}</b> · ${c.dataset.count} AC`;
+    if(probs.length){
+      h+=`<div class="tip-divider">SOLVED (${probs.length})</div>`;
+      probs.forEach(p=>{
+        h+=`<div class="prob-item">
+          <span class="prob-rating" style="background:${colorOfRating(p.nr)}">${p.r??'—'}</span>
+          <span class="prob-pf" style="background:${p.c};color:#05080c">${esc(p.pf)}</span>
+          <a href="${esc(p.u)}" target="_blank" rel="noopener noreferrer" title="${esc(p.n)}">${esc(p.n||p.u)}</a>
+        </div>`;
+      });
+    }
+    showTip(h,e);
+  };
   el.onmouseleave=scheduleHide;
 }
 
@@ -726,22 +827,46 @@ function renderRadar(contests){
   window.__radarTimer=setInterval(()=>renderRadar(contests),60000);
 }
 
-/* ============ 今日 AC ============ */
-function renderToday(daily){
+/* ============ 今日 AC（合并 CF + AtCoder） ============ */
+function renderToday(merged){
   const box=$('#todayList'),todayKey=ymd(new Date());
-  let key=todayKey,info=daily[key],isToday=true;
-  if(!info||!(info.problems&&info.problems.length)){const ks=Object.keys(daily).filter(k=>daily[k].problems&&daily[k].problems.length).sort();if(ks.length){key=ks[ks.length-1];info=daily[key];isToday=false}else info=null}
+  const sortedDates=Object.keys(merged).sort();
+  let key=todayKey,info=merged[todayKey],isToday=true;
+
+  if(!info||!(info.problems&&info.problems.length)){
+    for(let i=sortedDates.length-1;i>=0;i--){
+      const k=sortedDates[i];
+      const m=merged[k];
+      if(m&&m.problems&&m.problems.length){key=k;info=m;isToday=false;break;}
+    }
+  }
+
   $('#todayTitle').textContent=isToday?'// Solved Today':'// Latest Solved Day';
-  if(!info){box.innerHTML='<div class="empty">今天还没有 AC · 去刷一题吧 ⚡</div>';$('#todayMeta').textContent=todayKey;return}
-  const probs=info.problems.slice().sort((a,b)=>(b.rating||0)-(a.rating||0));
+
+  if(!info||!info.problems||!info.problems.length){
+    box.innerHTML='<div class="empty">今天还没有 AC · 去刷一题吧 ⚡</div>';
+    $('#todayMeta').textContent=todayKey;
+    return;
+  }
+
+  const probs=info.problems.slice().sort((a,b)=>(b.origRating||0)-(a.origRating||0));
   $('#todayMeta').textContent=`${key}${isToday?'':' · 今日暂无'} · ${probs.length} AC`;
   box.innerHTML='';
-  probs.forEach((p,i)=>{let host='';try{host=new URL(p.url).hostname.replace(/^www\./,'')}catch(_){}const a=document.createElement('a');a.className='t-item';a.href=p.url||'#';a.target='_blank';a.rel='noopener noreferrer';a.style.cssText=`--c:${colorOfRating(p.rating)};animation-delay:${i*60}ms`;a.innerHTML=`<span class="t-rate">${p.rating??'—'}</span><span class="t-name" title="${esc(p.name||'')}">${esc(p.name||p.url||'Unknown')}</span><span class="t-src">${esc(host)}</span>`;box.appendChild(a)});
+  probs.forEach((p,i)=>{
+    const a=document.createElement('a');
+    a.className='t-item';
+    a.href=p.url||'#';
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    a.style.cssText=`--c:${colorOfRating(p.normRating)};animation-delay:${i*60}ms`;
+    a.innerHTML=`<span class="t-rate">${p.origRating??'—'}</span><span class="t-name" title="${esc(p.name||'')}">${esc(p.name||p.url||'Unknown')}</span><span class="t-src" style="color:${p.platformColor}">${esc(p.platform)}</span>`;
+    box.appendChild(a);
+  });
 }
 
 /* ============ 分布 / 30 天 / 平台 ============ */
 function renderDist(dist){const box=$('#distList'),order=['<1200','1200-1399','1400-1599','1600-1899','1900-2099','>=2100','Unrated'];box.innerHTML='';const max=Math.max(1,...order.map(k=>Number(dist[k])||0));order.forEach((k,i)=>{const v=Number(dist[k])||0,row=document.createElement('div');row.className='dist-row';row.innerHTML=`<span class="dist-label">${esc(k)}</span><div class="dist-track"><div class="dist-fill"></div></div><span class="dist-count">${v}</span>`;box.appendChild(row);setTimeout(()=>row.querySelector('.dist-fill').style.width=(v/max*100)+'%',120+i*70)})}
-function renderSpark(daily){const box=$('#spark');box.innerHTML='';const today=new Date();today.setHours(0,0,0,0);const arr=[];for(let i=29;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const k=ymd(d);arr.push({k,c:daily[k]?(daily[k].count||0):0})}const max=Math.max(1,...arr.map(a=>a.c));$('#sparkMeta').textContent=`${arr.reduce((s,a)=>s+a.c,0)} AC / 30D`;arr.forEach((a,i)=>{const b=document.createElement('div');b.className='spark-bar';b.title=`${a.k} · ${a.c} AC`;box.appendChild(b);setTimeout(()=>b.style.height=(a.c===0?3:Math.max(8,a.c/max*100))+'%',90+i*18)})}
+function renderSpark(merged){const box=$('#spark');box.innerHTML='';const today=new Date();today.setHours(0,0,0,0);const arr=[];for(let i=29;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const k=ymd(d);arr.push({k,c:merged[k]?(merged[k].count||0):0})}const max=Math.max(1,...arr.map(a=>a.c));$('#sparkMeta').textContent=`${arr.reduce((s,a)=>s+a.c,0)} AC / 30D`;arr.forEach((a,i)=>{const b=document.createElement('div');b.className='spark-bar';b.title=`${a.k} · ${a.c} AC`;box.appendChild(b);setTimeout(()=>b.style.height=(a.c===0?3:Math.max(8,a.c/max*100))+'%',90+i*18)})}
 const PF_COLORS={Codeforces:'#00d4ff',Luogu:'#00ff9c',Nowcoder:'#ff2bd6',AtCoder:'#a882ff'};
 function renderPlatforms(pf,profiles,manual){const box=$('#platformList');box.innerHTML='';const names=Object.keys(pf),total=names.reduce((s,k)=>s+(Number(pf[k])||0),0)||1;names.forEach((n,i)=>{const v=Number(pf[n])||0,col=PF_COLORS[n]||'#00ff9c',a=document.createElement('a');a.className='pf-row';a.href=profiles[n]||'#';a.target='_blank';a.rel='noopener noreferrer';a.style.setProperty('--c',col);a.innerHTML=`<span class="pf-name">${esc(n)}${manual&&manual[n]?'<span class="pf-tag">MANUAL</span>':''}</span><div class="pf-track"><div class="pf-fill"></div></div><span class="pf-count">${v.toLocaleString('en-US')}</span>`;box.appendChild(a);setTimeout(()=>a.querySelector('.pf-fill').style.width=(v/total*100)+'%',150+i*110)})}
 const RANK_COLORS={'newbie':'#9a9a9a','pupil':'#4caf50','specialist':'#03a89e','expert':'#4a7dff','candidate master':'#c04cf0','master':'#ff9f2e','international master':'#ff9f2e','grandmaster':'#ff4d4d','international grandmaster':'#ff4d4d','legendary grandmaster':'#ff2bd6'};
@@ -810,7 +935,7 @@ function initNowWidget(){
   function updateCf(){if(!nextCfTime||isNaN(nextCfTime)){cfEl.textContent=cfg.nextCfText||'—';return}const diff=nextCfTime-Date.now();if(diff<=0){if(diff>-2.5*3600*1000){cfEl.textContent='LIVE';cfEl.classList.add('live');cfEl.classList.remove('warn')}else{cfEl.textContent='已结束';cfEl.classList.add('warn');cfEl.classList.remove('live')}return}cfEl.classList.remove('live');const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60;let text;if(d>0)text=`${d}d ${h}h`;else if(h>0)text=`${h}h ${m}m`;else text=`${m}m`;if(d===0&&h<1)cfEl.classList.add('warn');else cfEl.classList.remove('warn');cfEl.textContent=text}
   updateCf();setInterval(updateCf,30000);
   const streakEl=$('#nowStreak');
-  window.__updateNowStreak=(daily)=>{if(cfg.streak!=null){streakEl.textContent=`${cfg.streak} 天`;return}if(!daily||!Object.keys(daily).length){streakEl.textContent='0 天';return}let streak=0;const d=new Date();d.setHours(0,0,0,0);for(let i=0;i<365;i++){const key=ymd(d),info=daily[key];if(info&&info.count>0){streak++;d.setDate(d.getDate()-1)}else if(i===0){d.setDate(d.getDate()-1)}else break}streakEl.textContent=`${streak} 天`;if(streak>=7)streakEl.classList.add('highlight');else streakEl.classList.remove('highlight')};
+  window.__updateNowStreak=(merged)=>{if(cfg.streak!=null){streakEl.textContent=`${cfg.streak} 天`;return}if(!merged||!Object.keys(merged).length){streakEl.textContent='0 天';return}let streak=0;const d=new Date();d.setHours(0,0,0,0);for(let i=0;i<365;i++){const key=ymd(d),info=merged[key];if(info&&info.count>0){streak++;d.setDate(d.getDate()-1)}else if(i===0){d.setDate(d.getDate()-1)}else break}streakEl.textContent=`${streak} 天`;if(streak>=7)streakEl.classList.add('highlight');else streakEl.classList.remove('highlight')};
   window.__updateNowStreak(null);
 }
 
@@ -822,13 +947,21 @@ function render(d){
   setStat($('#cfRating'),cf.rating??'Unrated');setStat($('#cfMaxRating'),cf.maxRating??'Unrated');
   if(cf.rank){const r=$('#cfRank');r.textContent=String(cf.rank).toUpperCase();r.style.color=RANK_COLORS[String(cf.rank).toLowerCase()]||'var(--green)'}
   setAvatar(cf.avatar||cf.titlePhoto);renderSocial(d.profiles);
-  const daily=d.daily_stats||{};
-  renderHeatmap(daily);renderDiffHeatmap(daily);renderToday(daily);
-  renderDist(d.rating_dist||{});renderSpark(daily);renderPlatforms(d.platforms||{},d.profiles||{},d.manual||{});
-  renderAtCoderHeatmap(d.atcoder_daily_stats||{});
-  animateNumber($('#atcoderAc'),Number(d.platforms?.AtCoder)||0);
+
+  const cfDaily=d.daily_stats||{};
+  const atDaily=d.atcoder_daily_stats||{};
+  const merged=mergeDaily(cfDaily,atDaily);
+
+  renderMergedHeatmap(merged);
+  renderMergedDiffHeatmap(merged);
+  renderSpark(merged);
+  renderToday(merged);
+
+  renderDist(d.rating_dist||{});
+  renderPlatforms(d.platforms||{},d.profiles||{},d.manual||{});
   renderRadar(d.upcoming_contests||[]);
-  if(window.__updateNowStreak)window.__updateNowStreak(daily);
+
+  if(window.__updateNowStreak)window.__updateNowStreak(merged);
   updateNowSolving(d.recent_submissions||[]);
 }
 (async function(){
