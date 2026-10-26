@@ -159,6 +159,20 @@ def get_atcoder_data(handle):
     except Exception as e:
         print(f"AtCoder difficulty fetch failed: {e}")
 
+    # 拉取题目元数据（ID → 名称）—— 解决"看不到题目名称"的关键
+    problem_name_map = {}
+    try:
+        problems = requests.get(
+            "https://kenkoooo.com/atcoder/resources/problems.json",
+            timeout=20
+        ).json()
+        for p in problems:
+            pid = p.get("id")
+            if pid:
+                problem_name_map[pid] = p.get("name") or p.get("title") or pid
+    except Exception as e:
+        print(f"AtCoder problems metadata fetch failed: {e}")
+
     ac_problems = set()
     daily_stats = {}
     rating_dist = {
@@ -177,6 +191,7 @@ def get_atcoder_data(handle):
         ts = sub.get("epoch_second", 0)
         date_str = datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
         p_diff = difficulty_map.get(p_id)
+        p_name = problem_name_map.get(p_id, p_id)
 
         if date_str not in daily_stats:
             daily_stats[date_str] = {"count": 0, "problems": []}
@@ -184,7 +199,7 @@ def get_atcoder_data(handle):
         daily_stats[date_str]["problems"].append({
             "rating": p_diff,
             "url": f"https://atcoder.jp/contests/{sub.get('contest_id')}/tasks/{p_id}",
-            "name": p_id
+            "name": p_name
         })
 
         if p_diff is None:
@@ -202,6 +217,9 @@ def get_atcoder_data(handle):
         else:
             rating_dist[">=2000"] += 1
 
+    for d in daily_stats.values():
+        d["problems"].sort(key=lambda x: (x["rating"] is None, x["rating"] or 0))
+
     return {
         "ac": len(ac_problems),
         "daily_stats": daily_stats,
@@ -213,7 +231,6 @@ def get_atcoder_data(handle):
 def get_upcoming_contests():
     results = []
 
-    # Codeforces
     try:
         cf = requests.get("https://contest-hive.vercel.app/api/codeforces", timeout=10).json()
         for c in cf.get("data", []):
@@ -228,7 +245,6 @@ def get_upcoming_contests():
     except Exception as e:
         print(f"Contest Hive Codeforces failed: {e}")
 
-    # AtCoder
     try:
         ac = requests.get("https://contest-hive.vercel.app/api/atcoder", timeout=10).json()
         for c in ac.get("data", []):
