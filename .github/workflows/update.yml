@@ -2,11 +2,15 @@ name: Auto Update CP Stats
 
 on:
   schedule:
-    - cron: '0 20 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: auto-update-cp-stats
+  cancel-in-progress: false
 
 jobs:
   build-and-update:
