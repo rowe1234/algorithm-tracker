@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25 22:10:18 UTC",
-  "total_ac": 648,
+  "updated_at": "2026-10-26 12:30:42 UTC",
+  "total_ac": 655,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,16 +14,42 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 270,
+    "Codeforces": 273,
     "Luogu": 377,
     "Nowcoder": 0,
-    "AtCoder": 1
+    "AtCoder": 5
   },
   "manual": {
     "Luogu": true,
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-10-26": {
+      "count": 3,
+      "max_rating": 1100,
+      "ratings": [
+        1100,
+        800,
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2231/problem/A",
+          "name": "Construct an Array"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1607/problem/A",
+          "name": "Linear Keyboard"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/2231/problem/B",
+          "name": "Another Sorting Problem"
+        }
+      ]
+    },
     "2026-10-25": {
       "count": 3,
       "max_rating": 2500,
@@ -2408,7 +2434,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 130,
+    "<1200": 133,
     "1200-1399": 48,
     "1400-1599": 43,
     "1600-1899": 29,
@@ -2417,6 +2443,69 @@
     "Unrated": 5
   },
   "recent_submissions": [
+    {
+      "contestId": 2231,
+      "index": "B",
+      "name": "Another Sorting Problem",
+      "rating": 1100,
+      "verdict": "OK",
+      "time": "2026-10-26T12:23:36+00:00",
+      "url": "https://codeforces.com/contest/2231/problem/B"
+    },
+    {
+      "contestId": 2231,
+      "index": "B",
+      "name": "Another Sorting Problem",
+      "rating": 1100,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-26T09:59:55+00:00",
+      "url": "https://codeforces.com/contest/2231/problem/B"
+    },
+    {
+      "contestId": 2231,
+      "index": "B",
+      "name": "Another Sorting Problem",
+      "rating": 1100,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-26T09:56:35+00:00",
+      "url": "https://codeforces.com/contest/2231/problem/B"
+    },
+    {
+      "contestId": 2231,
+      "index": "B",
+      "name": "Another Sorting Problem",
+      "rating": 1100,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-26T09:53:37+00:00",
+      "url": "https://codeforces.com/contest/2231/problem/B"
+    },
+    {
+      "contestId": 2231,
+      "index": "A",
+      "name": "Construct an Array",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-10-26T09:09:11+00:00",
+      "url": "https://codeforces.com/contest/2231/problem/A"
+    },
+    {
+      "contestId": 2231,
+      "index": "A",
+      "name": "Construct an Array",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-26T09:01:18+00:00",
+      "url": "https://codeforces.com/contest/2231/problem/A"
+    },
+    {
+      "contestId": 1607,
+      "index": "A",
+      "name": "Linear Keyboard",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-10-26T08:49:00+00:00",
+      "url": "https://codeforces.com/contest/1607/problem/A"
+    },
     {
       "contestId": 1146,
       "index": "F",
@@ -2443,69 +2532,6 @@
       "verdict": "OK",
       "time": "2026-10-25T13:15:50+00:00",
       "url": "https://codeforces.com/contest/825/problem/A"
-    },
-    {
-      "contestId": 2277,
-      "index": "C",
-      "name": "Edge Addeleting",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-10-24T12:36:13+00:00",
-      "url": "https://codeforces.com/contest/2277/problem/C"
-    },
-    {
-      "contestId": 2277,
-      "index": "B",
-      "name": "Sequence Decreasing",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-10-24T11:47:17+00:00",
-      "url": "https://codeforces.com/contest/2277/problem/B"
-    },
-    {
-      "contestId": 2277,
-      "index": "A",
-      "name": "Subset Selecting",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-10-24T11:22:38+00:00",
-      "url": "https://codeforces.com/contest/2277/problem/A"
-    },
-    {
-      "contestId": 1822,
-      "index": "D",
-      "name": "Super-Permutation",
-      "rating": 1200,
-      "verdict": "OK",
-      "time": "2026-10-24T10:25:12+00:00",
-      "url": "https://codeforces.com/contest/1822/problem/D"
-    },
-    {
-      "contestId": 1822,
-      "index": "D",
-      "name": "Super-Permutation",
-      "rating": 1200,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-24T10:24:23+00:00",
-      "url": "https://codeforces.com/contest/1822/problem/D"
-    },
-    {
-      "contestId": 1822,
-      "index": "D",
-      "name": "Super-Permutation",
-      "rating": 1200,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-24T10:22:27+00:00",
-      "url": "https://codeforces.com/contest/1822/problem/D"
-    },
-    {
-      "contestId": 1822,
-      "index": "D",
-      "name": "Super-Permutation",
-      "rating": 1200,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-24T10:21:34+00:00",
-      "url": "https://codeforces.com/contest/1822/problem/D"
     }
   ],
   "atcoder_daily_stats": {
@@ -2518,6 +2544,31 @@
           "name": "past17_o"
         }
       ]
+    },
+    "2026-10-26": {
+      "count": 4,
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_a",
+          "name": "awc0186_a"
+        },
+        {
+          "rating": null,
+          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_b",
+          "name": "awc0186_b"
+        },
+        {
+          "rating": null,
+          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_c",
+          "name": "awc0186_c"
+        },
+        {
+          "rating": null,
+          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_d",
+          "name": "awc0186_d"
+        }
+      ]
     }
   },
   "atcoder_rating_dist": {
@@ -2527,7 +2578,7 @@
     "1200-1599": 0,
     "1600-1999": 0,
     ">=2000": 0,
-    "Unrated": 1
+    "Unrated": 5
   },
   "upcoming_contests": [
     {
@@ -2560,6 +2611,14 @@
       "url": "https://codeforces.com/contest/2278",
       "start": "2026-10-31T14:35:00Z",
       "duration": 8100,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2283",
+      "start": "2026-11-04T14:35:00Z",
+      "duration": 7200,
       "color": "#00d4ff"
     },
     {
@@ -2613,10 +2672,26 @@
     {
       "platform": "AtCoder",
       "name": "",
+      "url": "https://atcoder.jp/contests/abc485",
+      "start": "2026-11-21T12:00:00Z",
+      "duration": 6000,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
       "url": "https://atcoder.jp/contests/arc234",
       "start": "2026-11-22T12:00:00Z",
       "duration": 9000,
       "color": "#a882ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2282",
+      "start": "2026-11-27T14:35:00Z",
+      "duration": 9000,
+      "color": "#00d4ff"
     }
   ]
 }
