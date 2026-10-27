@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-27 02:06:08 UTC",
-  "total_ac": 655,
+  "updated_at": "2026-10-27 07:54:27 UTC",
+  "total_ac": 657,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 273,
+    "Codeforces": 275,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,23 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-10-27": {
+      "count": 2,
+      "max_rating": 0,
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2272/problem/B",
+          "name": "Frogs Jump"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2272/problem/A",
+          "name": "Maximize One MEX"
+        }
+      ]
+    },
     "2026-10-26": {
       "count": 3,
       "max_rating": 1100,
@@ -2440,9 +2457,45 @@
     "1600-1899": 29,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 5
+    "Unrated": 7
   },
   "recent_submissions": [
+    {
+      "contestId": 2272,
+      "index": "B",
+      "name": "Frogs Jump",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-10-27T06:37:27+00:00",
+      "url": "https://codeforces.com/contest/2272/problem/B"
+    },
+    {
+      "contestId": 2272,
+      "index": "B",
+      "name": "Frogs Jump",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-27T06:27:39+00:00",
+      "url": "https://codeforces.com/contest/2272/problem/B"
+    },
+    {
+      "contestId": 2272,
+      "index": "A",
+      "name": "Maximize One MEX",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-10-27T06:19:35+00:00",
+      "url": "https://codeforces.com/contest/2272/problem/A"
+    },
+    {
+      "contestId": 2272,
+      "index": "A",
+      "name": "Maximize One MEX",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-27T06:14:06+00:00",
+      "url": "https://codeforces.com/contest/2272/problem/A"
+    },
     {
       "contestId": 2231,
       "index": "B",
@@ -2496,42 +2549,6 @@
       "verdict": "WRONG_ANSWER",
       "time": "2026-10-26T09:01:18+00:00",
       "url": "https://codeforces.com/contest/2231/problem/A"
-    },
-    {
-      "contestId": 1607,
-      "index": "A",
-      "name": "Linear Keyboard",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-10-26T08:49:00+00:00",
-      "url": "https://codeforces.com/contest/1607/problem/A"
-    },
-    {
-      "contestId": 1146,
-      "index": "F",
-      "name": "Leaf Partition",
-      "rating": 2500,
-      "verdict": "OK",
-      "time": "2026-10-25T13:18:36+00:00",
-      "url": "https://codeforces.com/contest/1146/problem/F"
-    },
-    {
-      "contestId": 1019,
-      "index": "A",
-      "name": "Elections",
-      "rating": 1700,
-      "verdict": "OK",
-      "time": "2026-10-25T13:17:59+00:00",
-      "url": "https://codeforces.com/contest/1019/problem/A"
-    },
-    {
-      "contestId": 825,
-      "index": "A",
-      "name": "Binary Protocol",
-      "rating": 1100,
-      "verdict": "OK",
-      "time": "2026-10-25T13:15:50+00:00",
-      "url": "https://codeforces.com/contest/825/problem/A"
     }
   ],
   "atcoder_daily_stats": {
