@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-27 07:54:27 UTC",
-  "total_ac": 657,
+  "updated_at": "2026-10-27 14:33:19 UTC",
+  "total_ac": 658,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 275,
+    "Codeforces": 276,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -25,10 +25,15 @@
   },
   "daily_stats": {
     "2026-10-27": {
-      "count": 2,
+      "count": 3,
       "max_rating": 0,
       "ratings": [],
       "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2272/problem/C",
+          "name": "Yet Another Black Cell Problem"
+        },
         {
           "rating": null,
           "url": "https://codeforces.com/contest/2272/problem/B",
@@ -2457,9 +2462,18 @@
     "1600-1899": 29,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 7
+    "Unrated": 8
   },
   "recent_submissions": [
+    {
+      "contestId": 2272,
+      "index": "C",
+      "name": "Yet Another Black Cell Problem",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-10-27T07:56:44+00:00",
+      "url": "https://codeforces.com/contest/2272/problem/C"
+    },
     {
       "contestId": 2272,
       "index": "B",
@@ -2539,15 +2553,6 @@
       "rating": 800,
       "verdict": "OK",
       "time": "2026-10-26T09:09:11+00:00",
-      "url": "https://codeforces.com/contest/2231/problem/A"
-    },
-    {
-      "contestId": 2231,
-      "index": "A",
-      "name": "Construct an Array",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-26T09:01:18+00:00",
       "url": "https://codeforces.com/contest/2231/problem/A"
     }
   ],
