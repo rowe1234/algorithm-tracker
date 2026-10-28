@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28 09:00:29 UTC",
-  "total_ac": 658,
+  "updated_at": "2026-10-28 16:05:32 UTC",
+  "total_ac": 661,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 276,
+    "Codeforces": 279,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,32 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-10-28": {
+      "count": 3,
+      "max_rating": 1200,
+      "ratings": [
+        1000,
+        800,
+        1200
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1598/problem/A",
+          "name": "Computer Game"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1598/problem/B",
+          "name": "Groups"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/1598/problem/C",
+          "name": "Delete Two Elements"
+        }
+      ]
+    },
     "2026-10-27": {
       "count": 3,
       "max_rating": 0,
@@ -2456,8 +2482,8 @@
     }
   },
   "rating_dist": {
-    "<1200": 133,
-    "1200-1399": 48,
+    "<1200": 135,
+    "1200-1399": 49,
     "1400-1599": 43,
     "1600-1899": 29,
     "1900-2099": 6,
@@ -2465,6 +2491,33 @@
     "Unrated": 8
   },
   "recent_submissions": [
+    {
+      "contestId": 1598,
+      "index": "B",
+      "name": "Groups",
+      "rating": 1000,
+      "verdict": "OK",
+      "time": "2026-10-28T14:59:27+00:00",
+      "url": "https://codeforces.com/contest/1598/problem/B"
+    },
+    {
+      "contestId": 1598,
+      "index": "A",
+      "name": "Computer Game",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-10-28T14:58:14+00:00",
+      "url": "https://codeforces.com/contest/1598/problem/A"
+    },
+    {
+      "contestId": 1598,
+      "index": "C",
+      "name": "Delete Two Elements",
+      "rating": 1200,
+      "verdict": "OK",
+      "time": "2026-10-28T14:54:39+00:00",
+      "url": "https://codeforces.com/contest/1598/problem/C"
+    },
     {
       "contestId": 2272,
       "index": "C",
@@ -2527,33 +2580,6 @@
       "verdict": "WRONG_ANSWER",
       "time": "2026-10-26T09:59:55+00:00",
       "url": "https://codeforces.com/contest/2231/problem/B"
-    },
-    {
-      "contestId": 2231,
-      "index": "B",
-      "name": "Another Sorting Problem",
-      "rating": 1100,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-26T09:56:35+00:00",
-      "url": "https://codeforces.com/contest/2231/problem/B"
-    },
-    {
-      "contestId": 2231,
-      "index": "B",
-      "name": "Another Sorting Problem",
-      "rating": 1100,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-26T09:53:37+00:00",
-      "url": "https://codeforces.com/contest/2231/problem/B"
-    },
-    {
-      "contestId": 2231,
-      "index": "A",
-      "name": "Construct an Array",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-10-26T09:09:11+00:00",
-      "url": "https://codeforces.com/contest/2231/problem/A"
     }
   ],
   "atcoder_daily_stats": {
