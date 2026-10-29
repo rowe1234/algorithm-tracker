@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29 14:22:38 UTC",
+  "updated_at": "2026-10-29 19:53:54 UTC",
   "total_ac": 664,
   "cf_info": {
     "rating": 1451,
@@ -2749,6 +2749,14 @@
       "url": "https://codeforces.com/contest/2285",
       "start": "2026-11-15T14:35:00Z",
       "duration": 7200,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2286",
+      "start": "2026-11-20T14:30:00Z",
+      "duration": 604800,
       "color": "#00d4ff"
     },
     {
