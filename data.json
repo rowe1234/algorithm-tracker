@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-29 07:08:02 UTC",
-  "total_ac": 661,
+  "updated_at": "2026-10-29 14:22:38 UTC",
+  "total_ac": 664,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 279,
+    "Codeforces": 282,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,38 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-10-29": {
+      "count": 4,
+      "max_rating": 1400,
+      "ratings": [
+        1200,
+        800,
+        1000,
+        1400
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1431/problem/A",
+          "name": "Selling Hamburgers"
+        },
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1195/problem/B",
+          "name": "Sport Mafia"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/489/problem/A",
+          "name": "SwapSort"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1195/problem/C",
+          "name": "Basketball Exercise"
+        }
+      ]
+    },
     "2026-10-28": {
       "count": 3,
       "max_rating": 1200,
@@ -874,11 +906,10 @@
       ]
     },
     "2026-09-30": {
-      "count": 3,
+      "count": 2,
       "max_rating": 1400,
       "ratings": [
         1000,
-        1400,
         1400
       ],
       "problems": [
@@ -886,11 +917,6 @@
           "rating": 1000,
           "url": "https://codeforces.com/contest/1195/problem/A",
           "name": "Drinks Choosing"
-        },
-        {
-          "rating": 1400,
-          "url": "https://codeforces.com/contest/1195/problem/C",
-          "name": "Basketball Exercise"
         },
         {
           "rating": 1400,
@@ -2482,8 +2508,8 @@
     }
   },
   "rating_dist": {
-    "<1200": 135,
-    "1200-1399": 49,
+    "<1200": 137,
+    "1200-1399": 50,
     "1400-1599": 43,
     "1600-1899": 29,
     "1900-2099": 6,
@@ -2492,94 +2518,94 @@
   },
   "recent_submissions": [
     {
-      "contestId": 1598,
-      "index": "B",
-      "name": "Groups",
-      "rating": 1000,
-      "verdict": "OK",
-      "time": "2026-10-28T14:59:27+00:00",
-      "url": "https://codeforces.com/contest/1598/problem/B"
-    },
-    {
-      "contestId": 1598,
+      "contestId": 489,
       "index": "A",
-      "name": "Computer Game",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-10-28T14:58:14+00:00",
-      "url": "https://codeforces.com/contest/1598/problem/A"
-    },
-    {
-      "contestId": 1598,
-      "index": "C",
-      "name": "Delete Two Elements",
+      "name": "SwapSort",
       "rating": 1200,
       "verdict": "OK",
-      "time": "2026-10-28T14:54:39+00:00",
-      "url": "https://codeforces.com/contest/1598/problem/C"
+      "time": "2026-10-29T12:00:42+00:00",
+      "url": "https://codeforces.com/contest/489/problem/A"
     },
     {
-      "contestId": 2272,
-      "index": "C",
-      "name": "Yet Another Black Cell Problem",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-10-27T07:56:44+00:00",
-      "url": "https://codeforces.com/contest/2272/problem/C"
-    },
-    {
-      "contestId": 2272,
-      "index": "B",
-      "name": "Frogs Jump",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-10-27T06:37:27+00:00",
-      "url": "https://codeforces.com/contest/2272/problem/B"
-    },
-    {
-      "contestId": 2272,
-      "index": "B",
-      "name": "Frogs Jump",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-27T06:27:39+00:00",
-      "url": "https://codeforces.com/contest/2272/problem/B"
-    },
-    {
-      "contestId": 2272,
+      "contestId": 489,
       "index": "A",
-      "name": "Maximize One MEX",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-10-27T06:19:35+00:00",
-      "url": "https://codeforces.com/contest/2272/problem/A"
+      "name": "SwapSort",
+      "rating": 1200,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-29T11:58:25+00:00",
+      "url": "https://codeforces.com/contest/489/problem/A"
     },
     {
-      "contestId": 2272,
+      "contestId": 489,
       "index": "A",
-      "name": "Maximize One MEX",
-      "rating": null,
+      "name": "SwapSort",
+      "rating": 1200,
       "verdict": "WRONG_ANSWER",
-      "time": "2026-10-27T06:14:06+00:00",
-      "url": "https://codeforces.com/contest/2272/problem/A"
+      "time": "2026-10-29T11:45:33+00:00",
+      "url": "https://codeforces.com/contest/489/problem/A"
     },
     {
-      "contestId": 2231,
-      "index": "B",
-      "name": "Another Sorting Problem",
-      "rating": 1100,
+      "contestId": 1431,
+      "index": "A",
+      "name": "Selling Hamburgers",
+      "rating": 800,
       "verdict": "OK",
-      "time": "2026-10-26T12:23:36+00:00",
-      "url": "https://codeforces.com/contest/2231/problem/B"
+      "time": "2026-10-29T11:40:30+00:00",
+      "url": "https://codeforces.com/contest/1431/problem/A"
     },
     {
-      "contestId": 2231,
+      "contestId": 1431,
+      "index": "A",
+      "name": "Selling Hamburgers",
+      "rating": 800,
+      "verdict": "COMPILATION_ERROR",
+      "time": "2026-10-29T11:38:58+00:00",
+      "url": "https://codeforces.com/contest/1431/problem/A"
+    },
+    {
+      "contestId": 1195,
       "index": "B",
-      "name": "Another Sorting Problem",
-      "rating": 1100,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-26T09:59:55+00:00",
-      "url": "https://codeforces.com/contest/2231/problem/B"
+      "name": "Sport Mafia",
+      "rating": 1000,
+      "verdict": "OK",
+      "time": "2026-10-29T11:38:03+00:00",
+      "url": "https://codeforces.com/contest/1195/problem/B"
+    },
+    {
+      "contestId": 1431,
+      "index": "A",
+      "name": "Selling Hamburgers",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-10-29T11:36:40+00:00",
+      "url": "https://codeforces.com/contest/1431/problem/A"
+    },
+    {
+      "contestId": 1431,
+      "index": "A",
+      "name": "Selling Hamburgers",
+      "rating": 800,
+      "verdict": "COMPILATION_ERROR",
+      "time": "2026-10-29T11:35:48+00:00",
+      "url": "https://codeforces.com/contest/1431/problem/A"
+    },
+    {
+      "contestId": 1431,
+      "index": "A",
+      "name": "Selling Hamburgers",
+      "rating": 800,
+      "verdict": "COMPILATION_ERROR",
+      "time": "2026-10-29T11:34:33+00:00",
+      "url": "https://codeforces.com/contest/1431/problem/A"
+    },
+    {
+      "contestId": 1431,
+      "index": "A",
+      "name": "Selling Hamburgers",
+      "rating": 800,
+      "verdict": "COMPILATION_ERROR",
+      "time": "2026-10-29T11:01:29+00:00",
+      "url": "https://codeforces.com/contest/1431/problem/A"
     }
   ],
   "atcoder_daily_stats": {
