@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-30 05:51:49 UTC",
-  "total_ac": 665,
+  "updated_at": "2026-10-30 12:58:15 UTC",
+  "total_ac": 667,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 283,
+    "Codeforces": 285,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -25,12 +25,24 @@
   },
   "daily_stats": {
     "2026-10-30": {
-      "count": 1,
+      "count": 3,
       "max_rating": 1400,
       "ratings": [
+        1300,
+        1300,
         1400
       ],
       "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/493/problem/A",
+          "name": "Vasya and Football"
+        },
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/777/problem/B",
+          "name": "Game of Credit Cards"
+        },
         {
           "rating": 1400,
           "url": "https://codeforces.com/contest/1986/problem/D",
@@ -2523,7 +2535,7 @@
   },
   "rating_dist": {
     "<1200": 137,
-    "1200-1399": 50,
+    "1200-1399": 52,
     "1400-1599": 44,
     "1600-1899": 29,
     "1900-2099": 6,
@@ -2531,6 +2543,33 @@
     "Unrated": 8
   },
   "recent_submissions": [
+    {
+      "contestId": 493,
+      "index": "A",
+      "name": "Vasya and Football",
+      "rating": 1300,
+      "verdict": "OK",
+      "time": "2026-10-30T12:28:50+00:00",
+      "url": "https://codeforces.com/contest/493/problem/A"
+    },
+    {
+      "contestId": 777,
+      "index": "B",
+      "name": "Game of Credit Cards",
+      "rating": 1300,
+      "verdict": "OK",
+      "time": "2026-10-30T08:52:52+00:00",
+      "url": "https://codeforces.com/contest/777/problem/B"
+    },
+    {
+      "contestId": 777,
+      "index": "B",
+      "name": "Game of Credit Cards",
+      "rating": 1300,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-10-30T08:48:26+00:00",
+      "url": "https://codeforces.com/contest/777/problem/B"
+    },
     {
       "contestId": 1986,
       "index": "D",
@@ -2593,33 +2632,6 @@
       "verdict": "COMPILATION_ERROR",
       "time": "2026-10-29T11:38:58+00:00",
       "url": "https://codeforces.com/contest/1431/problem/A"
-    },
-    {
-      "contestId": 1195,
-      "index": "B",
-      "name": "Sport Mafia",
-      "rating": 1000,
-      "verdict": "OK",
-      "time": "2026-10-29T11:38:03+00:00",
-      "url": "https://codeforces.com/contest/1195/problem/B"
-    },
-    {
-      "contestId": 1431,
-      "index": "A",
-      "name": "Selling Hamburgers",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-10-29T11:36:40+00:00",
-      "url": "https://codeforces.com/contest/1431/problem/A"
-    },
-    {
-      "contestId": 1431,
-      "index": "A",
-      "name": "Selling Hamburgers",
-      "rating": 800,
-      "verdict": "COMPILATION_ERROR",
-      "time": "2026-10-29T11:35:48+00:00",
-      "url": "https://codeforces.com/contest/1431/problem/A"
     }
   ],
   "atcoder_daily_stats": {
@@ -2669,14 +2681,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "AtCoder",
-      "name": "",
-      "url": "https://atcoder.jp/contests/ahc074",
-      "start": "2026-10-30T10:00:00Z",
-      "duration": 864000,
-      "color": "#a882ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
