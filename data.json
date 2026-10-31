@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31 01:51:36 UTC",
-  "total_ac": 667,
+  "updated_at": "2026-10-31 08:27:28 UTC",
+  "total_ac": 670,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 285,
+    "Codeforces": 288,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,32 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-10-31": {
+      "count": 3,
+      "max_rating": 1600,
+      "ratings": [
+        900,
+        1400,
+        1600
+      ],
+      "problems": [
+        {
+          "rating": 900,
+          "url": "https://codeforces.com/contest/1282/problem/A",
+          "name": "Temporarily unavailable"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1282/problem/B1",
+          "name": "K for the Price of One (Easy Version)"
+        },
+        {
+          "rating": 1600,
+          "url": "https://codeforces.com/contest/1282/problem/B2",
+          "name": "K for the Price of One (Hard Version)"
+        }
+      ]
+    },
     "2026-10-30": {
       "count": 3,
       "max_rating": 1400,
@@ -2534,15 +2560,51 @@
     }
   },
   "rating_dist": {
-    "<1200": 137,
+    "<1200": 138,
     "1200-1399": 52,
-    "1400-1599": 44,
-    "1600-1899": 29,
+    "1400-1599": 45,
+    "1600-1899": 30,
     "1900-2099": 6,
     ">=2100": 9,
     "Unrated": 8
   },
   "recent_submissions": [
+    {
+      "contestId": 1282,
+      "index": "A",
+      "name": "Temporarily unavailable",
+      "rating": 900,
+      "verdict": "OK",
+      "time": "2026-10-31T03:29:51+00:00",
+      "url": "https://codeforces.com/contest/1282/problem/A"
+    },
+    {
+      "contestId": 1282,
+      "index": "B1",
+      "name": "K for the Price of One (Easy Version)",
+      "rating": 1400,
+      "verdict": "OK",
+      "time": "2026-10-31T03:06:59+00:00",
+      "url": "https://codeforces.com/contest/1282/problem/B1"
+    },
+    {
+      "contestId": 1282,
+      "index": "B2",
+      "name": "K for the Price of One (Hard Version)",
+      "rating": 1600,
+      "verdict": "OK",
+      "time": "2026-10-31T03:05:41+00:00",
+      "url": "https://codeforces.com/contest/1282/problem/B2"
+    },
+    {
+      "contestId": 1282,
+      "index": "B2",
+      "name": "K for the Price of One (Hard Version)",
+      "rating": 1600,
+      "verdict": "COMPILATION_ERROR",
+      "time": "2026-10-31T03:04:50+00:00",
+      "url": "https://codeforces.com/contest/1282/problem/B2"
+    },
     {
       "contestId": 493,
       "index": "A",
@@ -2596,42 +2658,6 @@
       "verdict": "OK",
       "time": "2026-10-29T12:00:42+00:00",
       "url": "https://codeforces.com/contest/489/problem/A"
-    },
-    {
-      "contestId": 489,
-      "index": "A",
-      "name": "SwapSort",
-      "rating": 1200,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-29T11:58:25+00:00",
-      "url": "https://codeforces.com/contest/489/problem/A"
-    },
-    {
-      "contestId": 489,
-      "index": "A",
-      "name": "SwapSort",
-      "rating": 1200,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-10-29T11:45:33+00:00",
-      "url": "https://codeforces.com/contest/489/problem/A"
-    },
-    {
-      "contestId": 1431,
-      "index": "A",
-      "name": "Selling Hamburgers",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-10-29T11:40:30+00:00",
-      "url": "https://codeforces.com/contest/1431/problem/A"
-    },
-    {
-      "contestId": 1431,
-      "index": "A",
-      "name": "Selling Hamburgers",
-      "rating": 800,
-      "verdict": "COMPILATION_ERROR",
-      "time": "2026-10-29T11:38:58+00:00",
-      "url": "https://codeforces.com/contest/1431/problem/A"
     }
   ],
   "atcoder_daily_stats": {
@@ -2703,14 +2729,6 @@
       "url": "https://codeforces.com/contest/2283",
       "start": "2026-11-04T14:35:00Z",
       "duration": 7200,
-      "color": "#00d4ff"
-    },
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2281",
-      "start": "2026-11-05T11:00:00Z",
-      "duration": 1209600,
       "color": "#00d4ff"
     },
     {
