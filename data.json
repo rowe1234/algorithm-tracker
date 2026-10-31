@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31 08:27:28 UTC",
+  "updated_at": "2026-10-31 14:46:53 UTC",
   "total_ac": 670,
   "cf_info": {
     "rating": 1451,
@@ -2707,22 +2707,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "AtCoder",
-      "name": "",
-      "url": "https://atcoder.jp/contests/abc482",
-      "start": "2026-10-31T12:00:00Z",
-      "duration": 6000,
-      "color": "#a882ff"
-    },
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2278",
-      "start": "2026-10-31T14:35:00Z",
-      "duration": 8100,
-      "color": "#00d4ff"
-    },
     {
       "platform": "Codeforces",
       "name": "",
