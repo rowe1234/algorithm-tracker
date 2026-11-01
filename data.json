@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31 22:51:36 UTC",
+  "updated_at": "2026-11-01 02:15:00 UTC",
   "total_ac": 670,
   "cf_info": {
     "rating": 1451,
@@ -2772,14 +2772,6 @@
       "color": "#00d4ff"
     },
     {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2286",
-      "start": "2026-11-20T14:30:00Z",
-      "duration": 604800,
-      "color": "#00d4ff"
-    },
-    {
       "platform": "AtCoder",
       "name": "",
       "url": "https://atcoder.jp/contests/abc485",
@@ -2798,8 +2790,16 @@
     {
       "platform": "Codeforces",
       "name": "",
+      "url": "https://codeforces.com/contest/2286",
+      "start": "2026-12-01T14:30:00Z",
+      "duration": 604800,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
       "url": "https://codeforces.com/contest/2282",
-      "start": "2026-11-27T14:35:00Z",
+      "start": "2026-12-08T14:35:00Z",
       "duration": 9000,
       "color": "#00d4ff"
     }
