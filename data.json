@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01 09:23:18 UTC",
-  "total_ac": 670,
+  "updated_at": "2026-11-01 16:25:29 UTC",
+  "total_ac": 675,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 288,
+    "Codeforces": 293,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,38 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-01": {
+      "count": 5,
+      "max_rating": 0,
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2278/problem/D",
+          "name": "Lock and Unlock"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2278/problem/E",
+          "name": "Swap and Negate"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2278/problem/C",
+          "name": "Math and Physics"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2278/problem/B",
+          "name": "Stakes and Shapes"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2278/problem/A",
+          "name": "Fraction and Six"
+        }
+      ]
+    },
     "2026-10-31": {
       "count": 3,
       "max_rating": 1600,
@@ -2566,98 +2598,98 @@
     "1600-1899": 30,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 8
+    "Unrated": 13
   },
   "recent_submissions": [
     {
-      "contestId": 1282,
-      "index": "A",
-      "name": "Temporarily unavailable",
-      "rating": 900,
+      "contestId": 2278,
+      "index": "D",
+      "name": "Lock and Unlock",
+      "rating": null,
       "verdict": "OK",
-      "time": "2026-10-31T03:29:51+00:00",
-      "url": "https://codeforces.com/contest/1282/problem/A"
+      "time": "2026-11-01T11:56:57+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/D"
     },
     {
-      "contestId": 1282,
-      "index": "B1",
-      "name": "K for the Price of One (Easy Version)",
-      "rating": 1400,
-      "verdict": "OK",
-      "time": "2026-10-31T03:06:59+00:00",
-      "url": "https://codeforces.com/contest/1282/problem/B1"
-    },
-    {
-      "contestId": 1282,
-      "index": "B2",
-      "name": "K for the Price of One (Hard Version)",
-      "rating": 1600,
-      "verdict": "OK",
-      "time": "2026-10-31T03:05:41+00:00",
-      "url": "https://codeforces.com/contest/1282/problem/B2"
-    },
-    {
-      "contestId": 1282,
-      "index": "B2",
-      "name": "K for the Price of One (Hard Version)",
-      "rating": 1600,
-      "verdict": "COMPILATION_ERROR",
-      "time": "2026-10-31T03:04:50+00:00",
-      "url": "https://codeforces.com/contest/1282/problem/B2"
-    },
-    {
-      "contestId": 493,
-      "index": "A",
-      "name": "Vasya and Football",
-      "rating": 1300,
-      "verdict": "OK",
-      "time": "2026-10-30T12:28:50+00:00",
-      "url": "https://codeforces.com/contest/493/problem/A"
-    },
-    {
-      "contestId": 777,
-      "index": "B",
-      "name": "Game of Credit Cards",
-      "rating": 1300,
-      "verdict": "OK",
-      "time": "2026-10-30T08:52:52+00:00",
-      "url": "https://codeforces.com/contest/777/problem/B"
-    },
-    {
-      "contestId": 777,
-      "index": "B",
-      "name": "Game of Credit Cards",
-      "rating": 1300,
+      "contestId": 2278,
+      "index": "D",
+      "name": "Lock and Unlock",
+      "rating": null,
       "verdict": "WRONG_ANSWER",
-      "time": "2026-10-30T08:48:26+00:00",
-      "url": "https://codeforces.com/contest/777/problem/B"
+      "time": "2026-11-01T11:54:04+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/D"
     },
     {
-      "contestId": 1986,
-      "index": "D",
-      "name": "Mathematical Problem",
-      "rating": 1400,
+      "contestId": 2278,
+      "index": "E",
+      "name": "Swap and Negate",
+      "rating": null,
       "verdict": "OK",
-      "time": "2026-10-30T05:50:11+00:00",
-      "url": "https://codeforces.com/contest/1986/problem/D"
+      "time": "2026-11-01T11:53:07+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/E"
     },
     {
-      "contestId": 1986,
-      "index": "D",
-      "name": "Mathematical Problem",
-      "rating": 1400,
-      "verdict": "COMPILATION_ERROR",
-      "time": "2026-10-30T05:49:34+00:00",
-      "url": "https://codeforces.com/contest/1986/problem/D"
+      "contestId": 2278,
+      "index": "C",
+      "name": "Math and Physics",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-01T11:18:31+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/C"
     },
     {
-      "contestId": 489,
+      "contestId": 2278,
+      "index": "C",
+      "name": "Math and Physics",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-01T11:09:52+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/C"
+    },
+    {
+      "contestId": 2278,
+      "index": "B",
+      "name": "Stakes and Shapes",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-01T10:59:07+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/B"
+    },
+    {
+      "contestId": 2278,
       "index": "A",
-      "name": "SwapSort",
-      "rating": 1200,
+      "name": "Fraction and Six",
+      "rating": null,
       "verdict": "OK",
-      "time": "2026-10-29T12:00:42+00:00",
-      "url": "https://codeforces.com/contest/489/problem/A"
+      "time": "2026-11-01T10:49:21+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/A"
+    },
+    {
+      "contestId": 2278,
+      "index": "A",
+      "name": "Fraction and Six",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-01T10:46:16+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/A"
+    },
+    {
+      "contestId": 2278,
+      "index": "A",
+      "name": "Fraction and Six",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-01T10:39:16+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/A"
+    },
+    {
+      "contestId": 2278,
+      "index": "A",
+      "name": "Fraction and Six",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-01T10:35:25+00:00",
+      "url": "https://codeforces.com/contest/2278/problem/A"
     }
   ],
   "atcoder_daily_stats": {
