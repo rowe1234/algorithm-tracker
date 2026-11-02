@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-02 07:41:39 UTC",
-  "total_ac": 675,
+  "updated_at": "2026-11-02 17:27:29 UTC",
+  "total_ac": 678,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 293,
+    "Codeforces": 296,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,32 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-02": {
+      "count": 3,
+      "max_rating": 1500,
+      "ratings": [
+        800,
+        800,
+        1500
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2236/problem/B",
+          "name": "Tatar TV Show"
+        },
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/2236/problem/A",
+          "name": "Games on the Train"
+        },
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/91/problem/A",
+          "name": "Newspaper Headline"
+        }
+      ]
+    },
     "2026-11-01": {
       "count": 5,
       "max_rating": 0,
@@ -2592,9 +2618,9 @@
     }
   },
   "rating_dist": {
-    "<1200": 138,
+    "<1200": 140,
     "1200-1399": 52,
-    "1400-1599": 45,
+    "1400-1599": 46,
     "1600-1899": 30,
     "1900-2099": 6,
     ">=2100": 9,
@@ -2602,94 +2628,94 @@
   },
   "recent_submissions": [
     {
-      "contestId": 2278,
-      "index": "D",
-      "name": "Lock and Unlock",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-01T11:56:57+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/D"
-    },
-    {
-      "contestId": 2278,
-      "index": "D",
-      "name": "Lock and Unlock",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-01T11:54:04+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/D"
-    },
-    {
-      "contestId": 2278,
-      "index": "E",
-      "name": "Swap and Negate",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-01T11:53:07+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/E"
-    },
-    {
-      "contestId": 2278,
-      "index": "C",
-      "name": "Math and Physics",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-01T11:18:31+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/C"
-    },
-    {
-      "contestId": 2278,
-      "index": "C",
-      "name": "Math and Physics",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-01T11:09:52+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/C"
-    },
-    {
-      "contestId": 2278,
+      "contestId": 2236,
       "index": "B",
-      "name": "Stakes and Shapes",
-      "rating": null,
+      "name": "Tatar TV Show",
+      "rating": 800,
       "verdict": "OK",
-      "time": "2026-11-01T10:59:07+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/B"
+      "time": "2026-11-02T14:21:45+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/B"
     },
     {
-      "contestId": 2278,
+      "contestId": 2236,
+      "index": "B",
+      "name": "Tatar TV Show",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-02T10:19:44+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/B"
+    },
+    {
+      "contestId": 2236,
+      "index": "B",
+      "name": "Tatar TV Show",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-02T10:15:04+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/B"
+    },
+    {
+      "contestId": 2236,
+      "index": "B",
+      "name": "Tatar TV Show",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-02T10:10:24+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/B"
+    },
+    {
+      "contestId": 2236,
+      "index": "B",
+      "name": "Tatar TV Show",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-02T10:06:10+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/B"
+    },
+    {
+      "contestId": 2236,
+      "index": "B",
+      "name": "Tatar TV Show",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-02T09:58:06+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/B"
+    },
+    {
+      "contestId": 2236,
       "index": "A",
-      "name": "Fraction and Six",
-      "rating": null,
+      "name": "Games on the Train",
+      "rating": 800,
       "verdict": "OK",
-      "time": "2026-11-01T10:49:21+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/A"
+      "time": "2026-11-02T09:53:55+00:00",
+      "url": "https://codeforces.com/contest/2236/problem/A"
     },
     {
-      "contestId": 2278,
+      "contestId": 91,
       "index": "A",
-      "name": "Fraction and Six",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-01T10:46:16+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/A"
+      "name": "Newspaper Headline",
+      "rating": 1500,
+      "verdict": "OK",
+      "time": "2026-11-02T09:40:34+00:00",
+      "url": "https://codeforces.com/contest/91/problem/A"
     },
     {
-      "contestId": 2278,
+      "contestId": 91,
       "index": "A",
-      "name": "Fraction and Six",
-      "rating": null,
+      "name": "Newspaper Headline",
+      "rating": 1500,
       "verdict": "WRONG_ANSWER",
-      "time": "2026-11-01T10:39:16+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/A"
+      "time": "2026-11-02T09:07:02+00:00",
+      "url": "https://codeforces.com/contest/91/problem/A"
     },
     {
-      "contestId": 2278,
+      "contestId": 91,
       "index": "A",
-      "name": "Fraction and Six",
-      "rating": null,
+      "name": "Newspaper Headline",
+      "rating": 1500,
       "verdict": "WRONG_ANSWER",
-      "time": "2026-11-01T10:35:25+00:00",
-      "url": "https://codeforces.com/contest/2278/problem/A"
+      "time": "2026-11-02T08:51:29+00:00",
+      "url": "https://codeforces.com/contest/91/problem/A"
     }
   ],
   "atcoder_daily_stats": {
@@ -2817,6 +2843,14 @@
       "url": "https://atcoder.jp/contests/arc234",
       "start": "2026-11-22T12:00:00Z",
       "duration": 9000,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/abc486",
+      "start": "2026-11-28T12:00:00Z",
+      "duration": 6000,
       "color": "#a882ff"
     },
     {
