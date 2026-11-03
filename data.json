@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03 06:50:00 UTC",
-  "total_ac": 678,
+  "updated_at": "2026-11-03 15:10:21 UTC",
+  "total_ac": 681,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 296,
+    "Codeforces": 299,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,32 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-03": {
+      "count": 3,
+      "max_rating": 1400,
+      "ratings": [
+        800,
+        1100,
+        1400
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1903/problem/A",
+          "name": "Halloumi Boxes"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/1066/problem/A",
+          "name": "Vova and Train"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/1066/problem/C",
+          "name": "Books Queries"
+        }
+      ]
+    },
     "2026-11-02": {
       "count": 3,
       "max_rating": 1500,
@@ -2618,15 +2644,69 @@
     }
   },
   "rating_dist": {
-    "<1200": 140,
+    "<1200": 142,
     "1200-1399": 52,
-    "1400-1599": 46,
+    "1400-1599": 47,
     "1600-1899": 30,
     "1900-2099": 6,
     ">=2100": 9,
     "Unrated": 13
   },
   "recent_submissions": [
+    {
+      "contestId": 1903,
+      "index": "A",
+      "name": "Halloumi Boxes",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-03T14:37:03+00:00",
+      "url": "https://codeforces.com/contest/1903/problem/A"
+    },
+    {
+      "contestId": 1066,
+      "index": "A",
+      "name": "Vova and Train",
+      "rating": 1100,
+      "verdict": "OK",
+      "time": "2026-11-03T13:10:25+00:00",
+      "url": "https://codeforces.com/contest/1066/problem/A"
+    },
+    {
+      "contestId": 1066,
+      "index": "A",
+      "name": "Vova and Train",
+      "rating": 1100,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-03T13:06:06+00:00",
+      "url": "https://codeforces.com/contest/1066/problem/A"
+    },
+    {
+      "contestId": 1066,
+      "index": "A",
+      "name": "Vova and Train",
+      "rating": 1100,
+      "verdict": "TIME_LIMIT_EXCEEDED",
+      "time": "2026-11-03T12:54:31+00:00",
+      "url": "https://codeforces.com/contest/1066/problem/A"
+    },
+    {
+      "contestId": 1066,
+      "index": "C",
+      "name": "Books Queries",
+      "rating": 1400,
+      "verdict": "OK",
+      "time": "2026-11-03T12:42:13+00:00",
+      "url": "https://codeforces.com/contest/1066/problem/C"
+    },
+    {
+      "contestId": 1066,
+      "index": "C",
+      "name": "Books Queries",
+      "rating": 1400,
+      "verdict": "TIME_LIMIT_EXCEEDED",
+      "time": "2026-11-03T12:31:16+00:00",
+      "url": "https://codeforces.com/contest/1066/problem/C"
+    },
     {
       "contestId": 2236,
       "index": "B",
@@ -2662,60 +2742,6 @@
       "verdict": "WRONG_ANSWER",
       "time": "2026-11-02T10:10:24+00:00",
       "url": "https://codeforces.com/contest/2236/problem/B"
-    },
-    {
-      "contestId": 2236,
-      "index": "B",
-      "name": "Tatar TV Show",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T10:06:10+00:00",
-      "url": "https://codeforces.com/contest/2236/problem/B"
-    },
-    {
-      "contestId": 2236,
-      "index": "B",
-      "name": "Tatar TV Show",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T09:58:06+00:00",
-      "url": "https://codeforces.com/contest/2236/problem/B"
-    },
-    {
-      "contestId": 2236,
-      "index": "A",
-      "name": "Games on the Train",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-11-02T09:53:55+00:00",
-      "url": "https://codeforces.com/contest/2236/problem/A"
-    },
-    {
-      "contestId": 91,
-      "index": "A",
-      "name": "Newspaper Headline",
-      "rating": 1500,
-      "verdict": "OK",
-      "time": "2026-11-02T09:40:34+00:00",
-      "url": "https://codeforces.com/contest/91/problem/A"
-    },
-    {
-      "contestId": 91,
-      "index": "A",
-      "name": "Newspaper Headline",
-      "rating": 1500,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T09:07:02+00:00",
-      "url": "https://codeforces.com/contest/91/problem/A"
-    },
-    {
-      "contestId": 91,
-      "index": "A",
-      "name": "Newspaper Headline",
-      "rating": 1500,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T08:51:29+00:00",
-      "url": "https://codeforces.com/contest/91/problem/A"
     }
   ],
   "atcoder_daily_stats": {
@@ -2836,6 +2862,22 @@
       "start": "2026-11-21T12:00:00Z",
       "duration": 6000,
       "color": "#a882ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2287",
+      "start": "2026-11-21T14:35:00Z",
+      "duration": 7200,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2288",
+      "start": "2026-11-21T14:35:00Z",
+      "duration": 7200,
+      "color": "#00d4ff"
     },
     {
       "platform": "AtCoder",
