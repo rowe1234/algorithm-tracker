@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-04 01:24:05 UTC",
-  "total_ac": 681,
+  "updated_at": "2026-11-04 08:04:01 UTC",
+  "total_ac": 677,
   "cf_info": {
-    "rating": "N/A",
-    "maxRating": "N/A",
-    "rank": "unrated",
-    "avatar": ""
+    "rating": 1451,
+    "maxRating": 1495,
+    "rank": "specialist",
+    "avatar": "https://userpic.codeforces.org/5395057/avatar/1decc048b4e55985.jpg"
   },
   "profiles": {
     "Codeforces": "https://codeforces.com/profile/Rowe",
@@ -14,16 +14,30 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 299,
+    "Codeforces": 300,
     "Luogu": 377,
     "Nowcoder": 0,
-    "AtCoder": 5
+    "AtCoder": 0
   },
   "manual": {
     "Luogu": true,
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-04": {
+      "count": 1,
+      "max_rating": 1800,
+      "ratings": [
+        1800
+      ],
+      "problems": [
+        {
+          "rating": 1800,
+          "url": "https://codeforces.com/contest/252/problem/B",
+          "name": "Unsorting Array"
+        }
+      ]
+    },
     "2026-11-03": {
       "count": 3,
       "max_rating": 1400,
@@ -2647,12 +2661,39 @@
     "<1200": 142,
     "1200-1399": 52,
     "1400-1599": 47,
-    "1600-1899": 30,
+    "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
     "Unrated": 13
   },
   "recent_submissions": [
+    {
+      "contestId": 252,
+      "index": "B",
+      "name": "Unsorting Array",
+      "rating": 1800,
+      "verdict": "OK",
+      "time": "2026-11-04T06:00:46+00:00",
+      "url": "https://codeforces.com/contest/252/problem/B"
+    },
+    {
+      "contestId": 252,
+      "index": "B",
+      "name": "Unsorting Array",
+      "rating": 1800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-04T05:56:41+00:00",
+      "url": "https://codeforces.com/contest/252/problem/B"
+    },
+    {
+      "contestId": 252,
+      "index": "B",
+      "name": "Unsorting Array",
+      "rating": 1800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-04T05:50:00+00:00",
+      "url": "https://codeforces.com/contest/252/problem/B"
+    },
     {
       "contestId": 1903,
       "index": "A",
@@ -2715,81 +2756,10 @@
       "verdict": "OK",
       "time": "2026-11-02T14:21:45+00:00",
       "url": "https://codeforces.com/contest/2236/problem/B"
-    },
-    {
-      "contestId": 2236,
-      "index": "B",
-      "name": "Tatar TV Show",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T10:19:44+00:00",
-      "url": "https://codeforces.com/contest/2236/problem/B"
-    },
-    {
-      "contestId": 2236,
-      "index": "B",
-      "name": "Tatar TV Show",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T10:15:04+00:00",
-      "url": "https://codeforces.com/contest/2236/problem/B"
-    },
-    {
-      "contestId": 2236,
-      "index": "B",
-      "name": "Tatar TV Show",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-02T10:10:24+00:00",
-      "url": "https://codeforces.com/contest/2236/problem/B"
     }
   ],
-  "atcoder_daily_stats": {
-    "2026-08-18": {
-      "count": 1,
-      "problems": [
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/past17-open/tasks/past17_o",
-          "name": "整地クエリ"
-        }
-      ]
-    },
-    "2026-10-26": {
-      "count": 4,
-      "problems": [
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_a",
-          "name": "The Last Line of a School Song"
-        },
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_b",
-          "name": "Swimming Practice"
-        },
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_c",
-          "name": "Checking Weather on Consecutive Days"
-        },
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_d",
-          "name": "Installation of Street Lights"
-        }
-      ]
-    }
-  },
-  "atcoder_rating_dist": {
-    "<400": 0,
-    "400-799": 0,
-    "800-1199": 0,
-    "1200-1599": 0,
-    "1600-1999": 0,
-    ">=2000": 0,
-    "Unrated": 5
-  },
+  "atcoder_daily_stats": {},
+  "atcoder_rating_dist": {},
   "upcoming_contests": [
     {
       "platform": "Codeforces",
@@ -2910,6 +2880,22 @@
       "start": "2026-12-08T14:35:00Z",
       "duration": 9000,
       "color": "#00d4ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/agc080",
+      "start": "2026-12-13T12:00:00Z",
+      "duration": 10800,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/agc081",
+      "start": "2026-12-27T12:00:00Z",
+      "duration": 10800,
+      "color": "#a882ff"
     }
   ]
 }
