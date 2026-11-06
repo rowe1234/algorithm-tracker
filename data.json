@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-06 11:33:35 UTC",
-  "total_ac": 687,
+  "updated_at": "2026-11-06 18:30:20 UTC",
+  "total_ac": 689,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 305,
+    "Codeforces": 307,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,26 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-06": {
+      "count": 2,
+      "max_rating": 1200,
+      "ratings": [
+        1200,
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/78/problem/A",
+          "name": "Haiku"
+        },
+        {
+          "rating": 1200,
+          "url": "https://codeforces.com/contest/78/problem/B",
+          "name": "Easter Eggs"
+        }
+      ]
+    },
     "2026-11-05": {
       "count": 3,
       "max_rating": 1300,
@@ -2694,8 +2714,8 @@
     }
   },
   "rating_dist": {
-    "<1200": 143,
-    "1200-1399": 54,
+    "<1200": 144,
+    "1200-1399": 55,
     "1400-1599": 47,
     "1600-1899": 31,
     "1900-2099": 6,
@@ -2703,6 +2723,51 @@
     "Unrated": 15
   },
   "recent_submissions": [
+    {
+      "contestId": 71,
+      "index": "A",
+      "name": "Way Too Long Words",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-06T15:40:21+00:00",
+      "url": "https://codeforces.com/contest/71/problem/A"
+    },
+    {
+      "contestId": 78,
+      "index": "B",
+      "name": "Easter Eggs",
+      "rating": 1200,
+      "verdict": "OK",
+      "time": "2026-11-06T15:24:43+00:00",
+      "url": "https://codeforces.com/contest/78/problem/B"
+    },
+    {
+      "contestId": 78,
+      "index": "B",
+      "name": "Easter Eggs",
+      "rating": 1200,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-06T13:12:51+00:00",
+      "url": "https://codeforces.com/contest/78/problem/B"
+    },
+    {
+      "contestId": 78,
+      "index": "A",
+      "name": "Haiku",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-06T13:12:02+00:00",
+      "url": "https://codeforces.com/contest/78/problem/A"
+    },
+    {
+      "contestId": 71,
+      "index": "A",
+      "name": "Way Too Long Words",
+      "rating": 800,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-06T13:11:07+00:00",
+      "url": "https://codeforces.com/contest/71/problem/A"
+    },
     {
       "contestId": 2283,
       "index": "B",
@@ -2747,51 +2812,6 @@
       "verdict": "OK",
       "time": "2026-11-05T13:34:21+00:00",
       "url": "https://codeforces.com/contest/2283/problem/A"
-    },
-    {
-      "contestId": 2283,
-      "index": "A",
-      "name": "Numbers on the Board",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-05T13:33:06+00:00",
-      "url": "https://codeforces.com/contest/2283/problem/A"
-    },
-    {
-      "contestId": 1676,
-      "index": "F",
-      "name": "Longest Strike",
-      "rating": 1300,
-      "verdict": "OK",
-      "time": "2026-11-05T13:13:24+00:00",
-      "url": "https://codeforces.com/contest/1676/problem/F"
-    },
-    {
-      "contestId": 1676,
-      "index": "F",
-      "name": "Longest Strike",
-      "rating": 1300,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-05T13:12:25+00:00",
-      "url": "https://codeforces.com/contest/1676/problem/F"
-    },
-    {
-      "contestId": 252,
-      "index": "C",
-      "name": "Points on Line",
-      "rating": 1300,
-      "verdict": "OK",
-      "time": "2026-11-04T09:46:01+00:00",
-      "url": "https://codeforces.com/contest/252/problem/C"
-    },
-    {
-      "contestId": 252,
-      "index": "C",
-      "name": "Points on Line",
-      "rating": 1300,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-04T09:29:54+00:00",
-      "url": "https://codeforces.com/contest/252/problem/C"
     }
   ],
   "atcoder_daily_stats": {
@@ -2841,14 +2861,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2284",
-      "start": "2026-11-06T14:35:00Z",
-      "duration": 8100,
-      "color": "#00d4ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
