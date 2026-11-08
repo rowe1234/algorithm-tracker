@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08 06:04:12 UTC",
-  "total_ac": 692,
+  "updated_at": "2026-11-08 13:27:13 UTC",
+  "total_ac": 695,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 310,
+    "Codeforces": 313,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,31 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-08": {
+      "count": 3,
+      "max_rating": 1100,
+      "ratings": [
+        1100,
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1793/problem/A",
+          "name": "Yet Another Promotion"
+        },
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/1793/problem/B",
+          "name": "Fedya and Array"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2280/problem/A",
+          "name": "Are They the Same?"
+        }
+      ]
+    },
     "2026-11-07": {
       "count": 3,
       "max_rating": 800,
@@ -2738,15 +2763,42 @@
     }
   },
   "rating_dist": {
-    "<1200": 145,
+    "<1200": 147,
     "1200-1399": 55,
     "1400-1599": 47,
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 17
+    "Unrated": 18
   },
   "recent_submissions": [
+    {
+      "contestId": 2280,
+      "index": "A",
+      "name": "Are They the Same?",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-08T09:43:57+00:00",
+      "url": "https://codeforces.com/contest/2280/problem/A"
+    },
+    {
+      "contestId": 1793,
+      "index": "B",
+      "name": "Fedya and Array",
+      "rating": 1100,
+      "verdict": "OK",
+      "time": "2026-11-08T09:06:31+00:00",
+      "url": "https://codeforces.com/contest/1793/problem/B"
+    },
+    {
+      "contestId": 1793,
+      "index": "A",
+      "name": "Yet Another Promotion",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-08T09:05:57+00:00",
+      "url": "https://codeforces.com/contest/1793/problem/A"
+    },
     {
       "contestId": 2284,
       "index": "A2",
@@ -2809,33 +2861,6 @@
       "verdict": "OK",
       "time": "2026-11-07T10:11:07+00:00",
       "url": "https://codeforces.com/contest/71/problem/A"
-    },
-    {
-      "contestId": 71,
-      "index": "A",
-      "name": "Way Too Long Words",
-      "rating": 800,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-06T15:40:21+00:00",
-      "url": "https://codeforces.com/contest/71/problem/A"
-    },
-    {
-      "contestId": 78,
-      "index": "B",
-      "name": "Easter Eggs",
-      "rating": 1200,
-      "verdict": "OK",
-      "time": "2026-11-06T15:24:43+00:00",
-      "url": "https://codeforces.com/contest/78/problem/B"
-    },
-    {
-      "contestId": 78,
-      "index": "B",
-      "name": "Easter Eggs",
-      "rating": 1200,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-06T13:12:51+00:00",
-      "url": "https://codeforces.com/contest/78/problem/B"
     }
   ],
   "atcoder_daily_stats": {
@@ -2885,14 +2910,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "AtCoder",
-      "name": "",
-      "url": "https://atcoder.jp/contests/agc079",
-      "start": "2026-11-08T12:00:00Z",
-      "duration": 12600,
-      "color": "#a882ff"
-    },
     {
       "platform": "Codeforces",
       "name": "",
