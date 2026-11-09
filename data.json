@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-09 09:50:34 UTC",
-  "total_ac": 695,
+  "updated_at": "2026-11-09 20:46:13 UTC",
+  "total_ac": 696,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 313,
+    "Codeforces": 314,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,18 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-09": {
+      "count": 1,
+      "max_rating": 0,
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2284/problem/B",
+          "name": "Introduction to the Niche Internet"
+        }
+      ]
+    },
     "2026-11-08": {
       "count": 3,
       "max_rating": 1100,
@@ -2769,9 +2781,36 @@
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 18
+    "Unrated": 19
   },
   "recent_submissions": [
+    {
+      "contestId": 2284,
+      "index": "B",
+      "name": "Introduction to the Niche Internet",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-09T11:03:27+00:00",
+      "url": "https://codeforces.com/contest/2284/problem/B"
+    },
+    {
+      "contestId": 2284,
+      "index": "B",
+      "name": "Introduction to the Niche Internet",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-09T11:02:00+00:00",
+      "url": "https://codeforces.com/contest/2284/problem/B"
+    },
+    {
+      "contestId": 2284,
+      "index": "B",
+      "name": "Introduction to the Niche Internet",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-09T10:59:07+00:00",
+      "url": "https://codeforces.com/contest/2284/problem/B"
+    },
     {
       "contestId": 2280,
       "index": "A",
@@ -2834,33 +2873,6 @@
       "verdict": "WRONG_ANSWER",
       "time": "2026-11-07T10:42:29+00:00",
       "url": "https://codeforces.com/contest/2284/problem/A2"
-    },
-    {
-      "contestId": 2284,
-      "index": "A2",
-      "name": "15K4JR3B (Hard Version)",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-07T10:38:37+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/A2"
-    },
-    {
-      "contestId": 2284,
-      "index": "A1",
-      "name": "15K4JR3B (Easy Version)",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-07T10:23:30+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/A1"
-    },
-    {
-      "contestId": 71,
-      "index": "A",
-      "name": "Way Too Long Words",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-11-07T10:11:07+00:00",
-      "url": "https://codeforces.com/contest/71/problem/A"
     }
   ],
   "atcoder_daily_stats": {
