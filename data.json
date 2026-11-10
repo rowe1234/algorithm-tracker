@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 03:35:23 UTC",
+  "updated_at": "2026-11-10 11:49:21 UTC",
   "total_ac": 697,
   "cf_info": {
     "rating": 1451,
@@ -2985,9 +2985,9 @@
     {
       "platform": "AtCoder",
       "name": "",
-      "url": "https://atcoder.jp/contests/arc234",
+      "url": "https://atcoder.jp/contests/agc080",
       "start": "2026-11-22T12:00:00Z",
-      "duration": 9000,
+      "duration": 10800,
       "color": "#a882ff"
     },
     {
@@ -3007,6 +3007,14 @@
       "color": "#00d4ff"
     },
     {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/abc487",
+      "start": "2026-12-05T12:00:00Z",
+      "duration": 6000,
+      "color": "#a882ff"
+    },
+    {
       "platform": "Codeforces",
       "name": "",
       "url": "https://codeforces.com/contest/2282",
@@ -3017,7 +3025,7 @@
     {
       "platform": "AtCoder",
       "name": "",
-      "url": "https://atcoder.jp/contests/agc080",
+      "url": "https://atcoder.jp/contests/agc081",
       "start": "2026-12-13T12:00:00Z",
       "duration": 10800,
       "color": "#a882ff"
@@ -3025,7 +3033,7 @@
     {
       "platform": "AtCoder",
       "name": "",
-      "url": "https://atcoder.jp/contests/agc081",
+      "url": "https://atcoder.jp/contests/agc082",
       "start": "2026-12-27T12:00:00Z",
       "duration": 10800,
       "color": "#a882ff"
