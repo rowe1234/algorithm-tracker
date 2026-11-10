@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-09 20:46:13 UTC",
-  "total_ac": 696,
+  "updated_at": "2026-11-10 03:35:23 UTC",
+  "total_ac": 697,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 314,
+    "Codeforces": 315,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,18 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-10": {
+      "count": 1,
+      "max_rating": 0,
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2284/problem/C1",
+          "name": "Disgusting + GCD (Constructive Version)"
+        }
+      ]
+    },
     "2026-11-09": {
       "count": 1,
       "max_rating": 0,
@@ -2781,9 +2793,18 @@
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 19
+    "Unrated": 20
   },
   "recent_submissions": [
+    {
+      "contestId": 2284,
+      "index": "C1",
+      "name": "Disgusting + GCD (Constructive Version)",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-10T01:21:37+00:00",
+      "url": "https://codeforces.com/contest/2284/problem/C1"
+    },
     {
       "contestId": 2284,
       "index": "B",
@@ -2863,15 +2884,6 @@
       "rating": null,
       "verdict": "WRONG_ANSWER",
       "time": "2026-11-07T10:49:29+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/A2"
-    },
-    {
-      "contestId": 2284,
-      "index": "A2",
-      "name": "15K4JR3B (Hard Version)",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-07T10:42:29+00:00",
       "url": "https://codeforces.com/contest/2284/problem/A2"
     }
   ],
