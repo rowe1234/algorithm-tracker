@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-12 11:52:51 UTC",
-  "total_ac": 699,
+  "updated_at": "2026-11-12 19:55:43 UTC",
+  "total_ac": 704,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 317,
+    "Codeforces": 322,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -25,10 +25,35 @@
   },
   "daily_stats": {
     "2026-11-12": {
-      "count": 1,
+      "count": 6,
       "max_rating": 0,
       "ratings": [],
       "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2290/problem/E",
+          "name": "Avalanche"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2290/problem/D",
+          "name": "Letters Down"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2290/problem/C",
+          "name": "Books on a Shelf"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2290/problem/B",
+          "name": "Stubborn Pen"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2290/problem/A",
+          "name": "Three Piles"
+        },
         {
           "rating": null,
           "url": "https://codeforces.com/contest/2280/problem/C",
@@ -2817,9 +2842,81 @@
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 22
+    "Unrated": 27
   },
   "recent_submissions": [
+    {
+      "contestId": 2290,
+      "index": "E",
+      "name": "Avalanche",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-12T15:57:57+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/E"
+    },
+    {
+      "contestId": 2290,
+      "index": "E",
+      "name": "Avalanche",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-12T15:57:05+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/E"
+    },
+    {
+      "contestId": 2290,
+      "index": "E",
+      "name": "Avalanche",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-12T15:56:04+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/E"
+    },
+    {
+      "contestId": 2290,
+      "index": "D",
+      "name": "Letters Down",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-12T15:42:06+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/D"
+    },
+    {
+      "contestId": 2290,
+      "index": "C",
+      "name": "Books on a Shelf",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-12T15:16:38+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/C"
+    },
+    {
+      "contestId": 2290,
+      "index": "C",
+      "name": "Books on a Shelf",
+      "rating": null,
+      "verdict": "WRONG_ANSWER",
+      "time": "2026-11-12T15:11:43+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/C"
+    },
+    {
+      "contestId": 2290,
+      "index": "B",
+      "name": "Stubborn Pen",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-12T14:44:40+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/B"
+    },
+    {
+      "contestId": 2290,
+      "index": "A",
+      "name": "Three Piles",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-12T14:38:46+00:00",
+      "url": "https://codeforces.com/contest/2290/problem/A"
+    },
     {
       "contestId": 2280,
       "index": "C",
@@ -2837,78 +2934,6 @@
       "verdict": "OK",
       "time": "2026-11-11T09:45:49+00:00",
       "url": "https://codeforces.com/contest/2280/problem/B"
-    },
-    {
-      "contestId": 2280,
-      "index": "B",
-      "name": "Secret String Patterns",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-11T09:45:03+00:00",
-      "url": "https://codeforces.com/contest/2280/problem/B"
-    },
-    {
-      "contestId": 2284,
-      "index": "C1",
-      "name": "Disgusting + GCD (Constructive Version)",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-10T01:21:37+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/C1"
-    },
-    {
-      "contestId": 2284,
-      "index": "B",
-      "name": "Introduction to the Niche Internet",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-09T11:03:27+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/B"
-    },
-    {
-      "contestId": 2284,
-      "index": "B",
-      "name": "Introduction to the Niche Internet",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-09T11:02:00+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/B"
-    },
-    {
-      "contestId": 2284,
-      "index": "B",
-      "name": "Introduction to the Niche Internet",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-09T10:59:07+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/B"
-    },
-    {
-      "contestId": 2280,
-      "index": "A",
-      "name": "Are They the Same?",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-08T09:43:57+00:00",
-      "url": "https://codeforces.com/contest/2280/problem/A"
-    },
-    {
-      "contestId": 1793,
-      "index": "B",
-      "name": "Fedya and Array",
-      "rating": 1100,
-      "verdict": "OK",
-      "time": "2026-11-08T09:06:31+00:00",
-      "url": "https://codeforces.com/contest/1793/problem/B"
-    },
-    {
-      "contestId": 1793,
-      "index": "A",
-      "name": "Yet Another Promotion",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-11-08T09:05:57+00:00",
-      "url": "https://codeforces.com/contest/1793/problem/A"
     }
   ],
   "atcoder_daily_stats": {
@@ -2958,14 +2983,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2290",
-      "start": "2026-11-12T14:35:00Z",
-      "duration": 8100,
-      "color": "#00d4ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
