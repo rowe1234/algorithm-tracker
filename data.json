@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-12 03:24:06 UTC",
-  "total_ac": 698,
+  "updated_at": "2026-11-12 11:52:51 UTC",
+  "total_ac": 699,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 316,
+    "Codeforces": 317,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,18 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-12": {
+      "count": 1,
+      "max_rating": 0,
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2280/problem/C",
+          "name": "Reverse and Double"
+        }
+      ]
+    },
     "2026-11-11": {
       "count": 1,
       "max_rating": 0,
@@ -2805,9 +2817,18 @@
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 21
+    "Unrated": 22
   },
   "recent_submissions": [
+    {
+      "contestId": 2280,
+      "index": "C",
+      "name": "Reverse and Double",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-12T08:39:18+00:00",
+      "url": "https://codeforces.com/contest/2280/problem/C"
+    },
     {
       "contestId": 2280,
       "index": "B",
@@ -2888,15 +2909,6 @@
       "verdict": "OK",
       "time": "2026-11-08T09:05:57+00:00",
       "url": "https://codeforces.com/contest/1793/problem/A"
-    },
-    {
-      "contestId": 2284,
-      "index": "A2",
-      "name": "15K4JR3B (Hard Version)",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-07T11:00:47+00:00",
-      "url": "https://codeforces.com/contest/2284/problem/A2"
     }
   ],
   "atcoder_daily_stats": {
@@ -3011,6 +3023,14 @@
       "color": "#a882ff"
     },
     {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/ahc075",
+      "start": "2026-11-29T10:00:00Z",
+      "duration": 14400,
+      "color": "#a882ff"
+    },
+    {
       "platform": "Codeforces",
       "name": "",
       "url": "https://codeforces.com/contest/2286",
@@ -3047,6 +3067,22 @@
       "name": "",
       "url": "https://atcoder.jp/contests/agc081",
       "start": "2026-12-27T12:00:00Z",
+      "duration": 10800,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/agc082",
+      "start": "2027-01-17T12:00:00Z",
+      "duration": 10800,
+      "color": "#a882ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/agc083",
+      "start": "2027-01-24T12:00:00Z",
       "duration": 10800,
       "color": "#a882ff"
     }
