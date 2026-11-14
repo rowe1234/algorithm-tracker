@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14 09:27:11 UTC",
+  "updated_at": "2026-11-14 16:07:55 UTC",
   "total_ac": 705,
   "cf_info": {
     "rating": 1451,
@@ -2998,14 +2998,6 @@
   },
   "upcoming_contests": [
     {
-      "platform": "AtCoder",
-      "name": "",
-      "url": "https://atcoder.jp/contests/abc484",
-      "start": "2026-11-14T12:00:00Z",
-      "duration": 6000,
-      "color": "#a882ff"
-    },
-    {
       "platform": "Codeforces",
       "name": "",
       "url": "https://codeforces.com/contest/2285",
@@ -3034,6 +3026,14 @@
       "name": "",
       "url": "https://codeforces.com/contest/2288",
       "start": "2026-11-21T14:35:00Z",
+      "duration": 7200,
+      "color": "#00d4ff"
+    },
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2289",
+      "start": "2026-11-22T09:05:00Z",
       "duration": 7200,
       "color": "#00d4ff"
     },
