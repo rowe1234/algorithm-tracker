@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-15 07:14:04 UTC",
-  "total_ac": 705,
+  "updated_at": "2026-11-15 14:50:33 UTC",
+  "total_ac": 706,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 323,
+    "Codeforces": 324,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,20 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-15": {
+      "count": 1,
+      "max_rating": 800,
+      "ratings": [
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/426/problem/A",
+          "name": "Sereja and Mugs"
+        }
+      ]
+    },
     "2026-11-13": {
       "count": 1,
       "max_rating": 800,
@@ -2850,7 +2864,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 148,
+    "<1200": 149,
     "1200-1399": 55,
     "1400-1599": 47,
     "1600-1899": 31,
@@ -2859,6 +2873,15 @@
     "Unrated": 27
   },
   "recent_submissions": [
+    {
+      "contestId": 426,
+      "index": "A",
+      "name": "Sereja and Mugs",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-15T11:16:39+00:00",
+      "url": "https://codeforces.com/contest/426/problem/A"
+    },
     {
       "contestId": 1328,
       "index": "A",
@@ -2939,15 +2962,6 @@
       "verdict": "OK",
       "time": "2026-11-12T14:38:46+00:00",
       "url": "https://codeforces.com/contest/2290/problem/A"
-    },
-    {
-      "contestId": 2280,
-      "index": "C",
-      "name": "Reverse and Double",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-12T08:39:18+00:00",
-      "url": "https://codeforces.com/contest/2280/problem/C"
     }
   ],
   "atcoder_daily_stats": {
@@ -2997,14 +3011,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2285",
-      "start": "2026-11-15T14:35:00Z",
-      "duration": 7200,
-      "color": "#00d4ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
