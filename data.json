@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-16 07:20:05 UTC",
-  "total_ac": 706,
+  "updated_at": "2026-11-16 17:28:45 UTC",
+  "total_ac": 707,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 324,
+    "Codeforces": 325,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,20 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-16": {
+      "count": 1,
+      "max_rating": 1300,
+      "ratings": [
+        1300
+      ],
+      "problems": [
+        {
+          "rating": 1300,
+          "url": "https://codeforces.com/contest/792/problem/B",
+          "name": "Counting-out Rhyme"
+        }
+      ]
+    },
     "2026-11-15": {
       "count": 1,
       "max_rating": 800,
@@ -2865,7 +2879,7 @@
   },
   "rating_dist": {
     "<1200": 149,
-    "1200-1399": 55,
+    "1200-1399": 56,
     "1400-1599": 47,
     "1600-1899": 31,
     "1900-2099": 6,
@@ -2873,6 +2887,15 @@
     "Unrated": 27
   },
   "recent_submissions": [
+    {
+      "contestId": 792,
+      "index": "B",
+      "name": "Counting-out Rhyme",
+      "rating": 1300,
+      "verdict": "OK",
+      "time": "2026-11-16T14:06:14+00:00",
+      "url": "https://codeforces.com/contest/792/problem/B"
+    },
     {
       "contestId": 426,
       "index": "A",
@@ -2953,15 +2976,6 @@
       "verdict": "OK",
       "time": "2026-11-12T14:44:40+00:00",
       "url": "https://codeforces.com/contest/2290/problem/B"
-    },
-    {
-      "contestId": 2290,
-      "index": "A",
-      "name": "Three Piles",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-12T14:38:46+00:00",
-      "url": "https://codeforces.com/contest/2290/problem/A"
     }
   ],
   "atcoder_daily_stats": {
