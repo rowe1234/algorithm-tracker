@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17 09:14:28 UTC",
-  "total_ac": 707,
+  "updated_at": "2026-11-17 18:39:20 UTC",
+  "total_ac": 708,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 325,
+    "Codeforces": 326,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,20 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-17": {
+      "count": 1,
+      "max_rating": 1000,
+      "ratings": [
+        1000
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/1760/problem/D",
+          "name": "Challenging Valleys"
+        }
+      ]
+    },
     "2026-11-16": {
       "count": 1,
       "max_rating": 1300,
@@ -2878,7 +2892,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 149,
+    "<1200": 150,
     "1200-1399": 56,
     "1400-1599": 47,
     "1600-1899": 31,
@@ -2887,6 +2901,15 @@
     "Unrated": 27
   },
   "recent_submissions": [
+    {
+      "contestId": 1760,
+      "index": "D",
+      "name": "Challenging Valleys",
+      "rating": 1000,
+      "verdict": "OK",
+      "time": "2026-11-17T10:05:33+00:00",
+      "url": "https://codeforces.com/contest/1760/problem/D"
+    },
     {
       "contestId": 792,
       "index": "B",
@@ -2967,15 +2990,6 @@
       "verdict": "WRONG_ANSWER",
       "time": "2026-11-12T15:11:43+00:00",
       "url": "https://codeforces.com/contest/2290/problem/C"
-    },
-    {
-      "contestId": 2290,
-      "index": "B",
-      "name": "Stubborn Pen",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-12T14:44:40+00:00",
-      "url": "https://codeforces.com/contest/2290/problem/B"
     }
   ],
   "atcoder_daily_stats": {
