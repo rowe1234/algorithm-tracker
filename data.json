@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18 09:12:02 UTC",
-  "total_ac": 708,
+  "updated_at": "2026-11-18 18:08:21 UTC",
+  "total_ac": 709,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 326,
+    "Codeforces": 327,
     "Luogu": 377,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,26 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-18": {
+      "count": 2,
+      "max_rating": 1400,
+      "ratings": [
+        1400,
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/630/problem/A",
+          "name": "Again Twenty Five!"
+        },
+        {
+          "rating": 1400,
+          "url": "https://codeforces.com/contest/2271/problem/C",
+          "name": "XOR Problem"
+        }
+      ]
+    },
     "2026-11-17": {
       "count": 1,
       "max_rating": 1000,
@@ -1014,10 +1034,9 @@
       ]
     },
     "2026-10-10": {
-      "count": 7,
+      "count": 6,
       "max_rating": 2700,
       "ratings": [
-        1400,
         1000,
         800,
         2700,
@@ -1040,11 +1059,6 @@
           "rating": 1200,
           "url": "https://codeforces.com/contest/1154/problem/B",
           "name": "Make Them Equal"
-        },
-        {
-          "rating": 1400,
-          "url": "https://codeforces.com/contest/2271/problem/C",
-          "name": "XOR Problem"
         },
         {
           "rating": 1400,
@@ -2892,7 +2906,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 150,
+    "<1200": 151,
     "1200-1399": 56,
     "1400-1599": 47,
     "1600-1899": 31,
@@ -2901,6 +2915,24 @@
     "Unrated": 27
   },
   "recent_submissions": [
+    {
+      "contestId": 2271,
+      "index": "C",
+      "name": "XOR Problem",
+      "rating": 1400,
+      "verdict": "OK",
+      "time": "2026-11-18T13:37:34+00:00",
+      "url": "https://codeforces.com/contest/2271/problem/C"
+    },
+    {
+      "contestId": 630,
+      "index": "A",
+      "name": "Again Twenty Five!",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-18T13:09:28+00:00",
+      "url": "https://codeforces.com/contest/630/problem/A"
+    },
     {
       "contestId": 1760,
       "index": "D",
@@ -2972,24 +3004,6 @@
       "verdict": "OK",
       "time": "2026-11-12T15:42:06+00:00",
       "url": "https://codeforces.com/contest/2290/problem/D"
-    },
-    {
-      "contestId": 2290,
-      "index": "C",
-      "name": "Books on a Shelf",
-      "rating": null,
-      "verdict": "OK",
-      "time": "2026-11-12T15:16:38+00:00",
-      "url": "https://codeforces.com/contest/2290/problem/C"
-    },
-    {
-      "contestId": 2290,
-      "index": "C",
-      "name": "Books on a Shelf",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-12T15:11:43+00:00",
-      "url": "https://codeforces.com/contest/2290/problem/C"
     }
   ],
   "atcoder_daily_stats": {
