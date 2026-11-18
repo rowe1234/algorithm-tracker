@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 01:20:09 UTC",
+  "updated_at": "2026-11-18 09:12:02 UTC",
   "total_ac": 708,
   "cf_info": {
     "rating": 1451,
@@ -3118,6 +3118,14 @@
       "start": "2026-12-08T14:35:00Z",
       "duration": 9000,
       "color": "#00d4ff"
+    },
+    {
+      "platform": "AtCoder",
+      "name": "",
+      "url": "https://atcoder.jp/contests/abc488",
+      "start": "2026-12-12T12:00:00Z",
+      "duration": 6000,
+      "color": "#a882ff"
     },
     {
       "platform": "AtCoder",
