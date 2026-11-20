@@ -3,6 +3,17 @@ import json
 import re
 import time
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+# Daily buckets must follow the user's local calendar, not UTC: with UTC
+# bucketing, anything solved between 00:00 and 08:00 Beijing time landed
+# on the previous day, which threw the heatmap, the "solved today" panel
+# and the streak off by one day.
+LOCAL_TZ = ZoneInfo("Asia/Shanghai")
+
+
+def local_date_str(ts):
+    return datetime.fromtimestamp(ts, tz=LOCAL_TZ).strftime("%Y-%m-%d")
 
 
 # 1. 抓取 CF 用户信息
@@ -63,7 +74,7 @@ def get_cf_data(handle):
             ac_problems.add(p_id)
 
             ts = sub.get("creationTimeSeconds", 0)
-            date_str = datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
+            date_str = local_date_str(ts)
             p_rating = prob.get("rating")
             p_name = prob.get("name", "")
             p_url = f"https://codeforces.com/contest/{prob.get('contestId')}/problem/{prob.get('index')}"
@@ -189,7 +200,7 @@ def get_atcoder_data(handle):
         ac_problems.add(p_id)
 
         ts = sub.get("epoch_second", 0)
-        date_str = datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
+        date_str = local_date_str(ts)
         p_diff = difficulty_map.get(p_id)
         p_name = problem_name_map.get(p_id, p_id)
 
@@ -225,6 +236,46 @@ def get_atcoder_data(handle):
         "daily_stats": daily_stats,
         "rating_dist": rating_dist
     }
+
+
+# 4b. 洛谷 AC 数：个人主页的内嵌 JSON 里有 passedProblemCount
+def get_luogu_ac(luogu_uid):
+    url = f"https://www.luogu.com.cn/user/{luogu_uid}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/126.0 Safari/537.36"
+    }
+    try:
+        res = requests.get(url, headers=headers, timeout=15)
+        if res.status_code == 200:
+            match = re.search(r'"passedProblemCount"\s*:\s*(\d+)', res.text)
+            if match:
+                return int(match.group(1))
+    except Exception as e:
+        print(f"Luogu fetch failed: {e}")
+    return None
+
+
+# 4c. Codeforces rating 历史（画走势曲线用）
+def get_cf_rating_history(handle):
+    url = f"https://codeforces.com/api/user.rating?handle={handle}"
+    try:
+        res = requests.get(url, timeout=10).json()
+        if res.get("status") == "OK":
+            return [{
+                "contestId": item.get("contestId"),
+                "name": item.get("contestName", ""),
+                "rank": item.get("rank"),
+                "oldRating": item.get("oldRating"),
+                "newRating": item.get("newRating"),
+                "time": datetime.fromtimestamp(
+                    item.get("ratingUpdateTimeSeconds", 0),
+                    tz=timezone.utc).isoformat()
+            } for item in res.get("result", [])]
+    except Exception as e:
+        print(f"CF rating history fetch failed: {e}")
+    return []
 
 
 # 5. 未来赛事雷达（Contest Hive API）
@@ -269,11 +320,14 @@ if __name__ == "__main__":
     NOWCODER_ID = "344403471"
     ATCODER_HANDLE = "Rowe"
 
-    LUOGU_AC = 377
+    LUOGU_AC_MANUAL = 377
     NOWCODER_AC = 0
 
     cf_info = get_cf_user_info(CF_HANDLE)
     cf_ac, daily_stats, rating_dist, recent_submissions = get_cf_data(CF_HANDLE)
+    cf_rating_history = get_cf_rating_history(CF_HANDLE)
+    luogu_fetched = get_luogu_ac(LUOGU_UID)
+    LUOGU_AC = luogu_fetched if luogu_fetched is not None else LUOGU_AC_MANUAL
     nowcoder_ac = get_nowcoder_ac(NOWCODER_ID) or NOWCODER_AC
     atcoder_data = get_atcoder_data(ATCODER_HANDLE)
     upcoming_contests = get_upcoming_contests()
@@ -297,12 +351,13 @@ if __name__ == "__main__":
             "AtCoder": atcoder_data["ac"]
         },
         "manual": {
-            "Luogu": True,
+            "Luogu": luogu_fetched is None,
             "Nowcoder": nowcoder_ac == NOWCODER_AC
         },
         "daily_stats": daily_stats,
         "rating_dist": rating_dist,
         "recent_submissions": recent_submissions,
+        "cf_rating_history": cf_rating_history,
         "atcoder_daily_stats": atcoder_data["daily_stats"],
         "atcoder_rating_dist": atcoder_data["rating_dist"],
         "upcoming_contests": upcoming_contests

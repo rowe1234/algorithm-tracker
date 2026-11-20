@@ -131,6 +131,8 @@ h1.glitch::after{color:var(--magenta);opacity:.7;clip-path:polygon(0 62%,100% 62
 .dist-fill{height:100%;width:0;background:linear-gradient(90deg,rgba(var(--g),.25),var(--green));box-shadow:0 0 10px rgba(var(--g),.35);transition:width 1s cubic-bezier(.2,.8,.2,1)}
 .dist-count{font-size:11px;color:var(--green);text-align:right}
 .spark{display:flex;align-items:flex-end;gap:4px;height:118px}
+.rating-chart svg{width:100%;height:auto;display:block}
+.rating-chart .empty{padding:18px 4px}
 .spark-bar{flex:1;min-width:3px;height:0;border-radius:1px 1px 0 0;background:linear-gradient(to top,rgba(var(--g),.12),var(--green));transition:height .8s cubic-bezier(.2,.8,.2,1);cursor:pointer}
 .spark-bar:hover{background:var(--cyan)}
 .platform-card{margin-top:16px}
@@ -571,6 +573,11 @@ section.blk:last-of-type{padding-bottom:0}
     <div class="grid-2">
       <div class="card reveal"><div class="card-head"><span class="card-title">// Difficulty Distribution</span></div><div id="distList"></div></div>
       <div class="card reveal"><div class="card-head"><span class="card-title">// Last 30 Days</span><span class="card-meta" id="sparkMeta"></span></div><div class="spark" id="spark"></div></div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-head"><span class="card-title">// Rating History</span><span class="card-meta" id="ratingMeta">CODEFORCES</span></div>
+      <div class="rating-chart" id="ratingChart"><div class="empty">LOADING…</div></div>
     </div>
 
     <div class="card platform-card reveal">
@@ -1041,6 +1048,23 @@ function renderToday(merged){
 
 /* ============ 分布 / 30 天 / 平台 ============ */
 function renderDist(dist){const box=$('#distList'),order=['<1200','1200-1399','1400-1599','1600-1899','1900-2099','>=2100','Unrated'];box.innerHTML='';const max=Math.max(1,...order.map(k=>Number(dist[k])||0));order.forEach((k,i)=>{const v=Number(dist[k])||0,row=document.createElement('div');row.className='dist-row';row.innerHTML=`<span class="dist-label">${esc(k)}</span><div class="dist-track"><div class="dist-fill"></div></div><span class="dist-count">${v}</span>`;box.appendChild(row);setTimeout(()=>row.querySelector('.dist-fill').style.width=(v/max*100)+'%',120+i*70)})}
+function renderRatingHistory(history){
+  const box=$('#ratingChart');if(!box)return;
+  const pts=(history||[]).filter(h=>typeof h.newRating==='number');
+  if(pts.length<2){box.innerHTML='<div class="empty">暂无 rated 比赛记录</div>';return}
+  const W=720,H=180,PADL=8,PADR=8,PADT=14,PADB=18;
+  const vals=pts.map(p=>p.newRating);
+  let min=Math.min(...vals),max=Math.max(...vals);
+  if(max-min<100){const mid=(max+min)/2;min=Math.floor(mid-60);max=Math.ceil(mid+60)}
+  const x=i=>PADL+(W-PADL-PADR)*(pts.length===1?0.5:i/(pts.length-1));
+  const y=v=>PADT+(H-PADT-PADB)*(1-(v-min)/(max-min));
+  const line=pts.map((p,i)=>(i?'L':'M')+x(i).toFixed(1)+','+y(p.newRating).toFixed(1)).join(' ');
+  const area=line+` L${x(pts.length-1).toFixed(1)},${(H-PADB)} L${x(0).toFixed(1)},${(H-PADB)} Z`;
+  const dots=pts.map((p,i)=>{const d=new Date(p.time);const when=isNaN(d)?'':`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;return `<circle cx="${x(i).toFixed(1)}" cy="${y(p.newRating).toFixed(1)}" r="3.2" fill="${colorOfRating(p.newRating)}" stroke="rgba(0,0,0,.35)" stroke-width="1"><title>${esc(p.name||'')} · ${when} · #${p.rank??'—'} · ${p.oldRating} → ${p.newRating}</title></circle>`}).join('');
+  const last=pts[pts.length-1];
+  box.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Codeforces rating history"><path d="${area}" fill="rgba(0,212,255,.10)"/><path d="${line}" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>${dots}<text x="${x(pts.length-1).toFixed(1)}" y="${Math.max(10,y(last.newRating)-8).toFixed(1)}" fill="#e8f6ff" font-size="12" font-weight="700" text-anchor="end">${last.newRating}</text><text x="${PADL}" y="${H-4}" fill="rgba(232,246,255,.55)" font-size="10">MIN ${min}</text><text x="${W-PADR}" y="${H-4}" fill="rgba(232,246,255,.55)" font-size="10" text-anchor="end">MAX ${max} · ${pts.length} 场</text></svg>`;
+  const meta=$('#ratingMeta');if(meta)meta.textContent=`CODEFORCES · ${pts.length} RATED`;
+}
 function renderSpark(merged){const box=$('#spark');box.innerHTML='';const today=new Date();today.setHours(0,0,0,0);const arr=[];for(let i=29;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const k=ymd(d);arr.push({k,c:merged[k]?(merged[k].count||0):0})}const max=Math.max(1,...arr.map(a=>a.c));$('#sparkMeta').textContent=`${arr.reduce((s,a)=>s+a.c,0)} AC / 30D`;arr.forEach((a,i)=>{const b=document.createElement('div');b.className='spark-bar';b.title=`${a.k} · ${a.c} AC`;box.appendChild(b);setTimeout(()=>b.style.height=(a.c===0?3:Math.max(8,a.c/max*100))+'%',90+i*18)})}
 const PF_COLORS={Codeforces:'#00d4ff',Luogu:'#00ff9c',Nowcoder:'#ff2bd6',AtCoder:'#a882ff'};
 function renderPlatforms(pf,profiles,manual){const box=$('#platformList');box.innerHTML='';const names=Object.keys(pf),total=names.reduce((s,k)=>s+(Number(pf[k])||0),0)||1;names.forEach((n,i)=>{const v=Number(pf[n])||0,col=PF_COLORS[n]||'#00ff9c',a=document.createElement('a');a.className='pf-row';a.href=profiles[n]||'#';a.target='_blank';a.rel='noopener noreferrer';a.style.setProperty('--c',col);a.innerHTML=`<span class="pf-name">${esc(n)}${manual&&manual[n]?'<span class="pf-tag">MANUAL</span>':''}</span><div class="pf-track"><div class="pf-fill"></div></div><span class="pf-count">${v.toLocaleString('en-US')}</span>`;box.appendChild(a);setTimeout(()=>a.querySelector('.pf-fill').style.width=(v/total*100)+'%',150+i*110)})}
@@ -1300,6 +1324,7 @@ function render(d){
   renderAchievements(d, merged);
 
   renderDist(d.rating_dist||{});
+  renderRatingHistory(d.cf_rating_history||[]);
   renderPlatforms(d.platforms||{},d.profiles||{},d.manual||{});
   renderRadar(d.upcoming_contests||[]);
 
