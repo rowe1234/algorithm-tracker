@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20 07:18:20 UTC",
-  "total_ac": 670,
+  "updated_at": "2026-11-20 16:23:38 UTC",
+  "total_ac": 671,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 328,
+    "Codeforces": 329,
     "Luogu": 337,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,20 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-21": {
+      "count": 1,
+      "max_rating": 1500,
+      "ratings": [
+        1500
+      ],
+      "problems": [
+        {
+          "rating": 1500,
+          "url": "https://codeforces.com/contest/274/problem/A",
+          "name": "k-Multiple Free Set"
+        }
+      ]
+    },
     "2026-11-19": {
       "count": 1,
       "max_rating": 1000,
@@ -2994,13 +3008,31 @@
   "rating_dist": {
     "<1200": 152,
     "1200-1399": 56,
-    "1400-1599": 47,
+    "1400-1599": 48,
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
     "Unrated": 27
   },
   "recent_submissions": [
+    {
+      "contestId": 274,
+      "index": "A",
+      "name": "k-Multiple Free Set",
+      "rating": 1500,
+      "verdict": "OK",
+      "time": "2026-11-20T16:08:36+00:00",
+      "url": "https://codeforces.com/contest/274/problem/A"
+    },
+    {
+      "contestId": 274,
+      "index": "A",
+      "name": "k-Multiple Free Set",
+      "rating": 1500,
+      "verdict": "TIME_LIMIT_EXCEEDED",
+      "time": "2026-11-20T16:04:47+00:00",
+      "url": "https://codeforces.com/contest/274/problem/A"
+    },
     {
       "contestId": 1800,
       "index": "B",
@@ -3071,24 +3103,6 @@
       "rating": null,
       "verdict": "OK",
       "time": "2026-11-12T15:57:57+00:00",
-      "url": "https://codeforces.com/contest/2290/problem/E"
-    },
-    {
-      "contestId": 2290,
-      "index": "E",
-      "name": "Avalanche",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-12T15:57:05+00:00",
-      "url": "https://codeforces.com/contest/2290/problem/E"
-    },
-    {
-      "contestId": 2290,
-      "index": "E",
-      "name": "Avalanche",
-      "rating": null,
-      "verdict": "WRONG_ANSWER",
-      "time": "2026-11-12T15:56:04+00:00",
       "url": "https://codeforces.com/contest/2290/problem/E"
     }
   ],
