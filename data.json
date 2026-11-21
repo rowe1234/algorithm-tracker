@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 12:40:56 UTC",
+  "updated_at": "2026-11-21 19:49:28 UTC",
   "total_ac": 671,
   "cf_info": {
     "rating": 1451,
@@ -3323,22 +3323,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2287",
-      "start": "2026-11-21T14:35:00Z",
-      "duration": 7200,
-      "color": "#00d4ff"
-    },
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2288",
-      "start": "2026-11-21T14:35:00Z",
-      "duration": 7200,
-      "color": "#00d4ff"
-    },
     {
       "platform": "Codeforces",
       "name": "",
