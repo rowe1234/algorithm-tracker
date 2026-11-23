@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-23 10:48:40 UTC",
-  "total_ac": 672,
+  "updated_at": "2026-11-23 22:39:57 UTC",
+  "total_ac": 675,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 330,
+    "Codeforces": 333,
     "Luogu": 337,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,30 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-23": {
+      "count": 3,
+      "max_rating": 1100,
+      "ratings": [
+        1100
+      ],
+      "problems": [
+        {
+          "rating": 1100,
+          "url": "https://codeforces.com/contest/911/problem/A",
+          "name": "Nearest Minimums"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2285/problem/B",
+          "name": "Diverse String"
+        },
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2285/problem/A",
+          "name": "Composite Permutation"
+        }
+      ]
+    },
     "2026-11-22": {
       "count": 1,
       "max_rating": 1100,
@@ -3020,15 +3044,42 @@
     }
   },
   "rating_dist": {
-    "<1200": 153,
+    "<1200": 154,
     "1200-1399": 56,
     "1400-1599": 48,
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 27
+    "Unrated": 29
   },
   "recent_submissions": [
+    {
+      "contestId": 2285,
+      "index": "B",
+      "name": "Diverse String",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-23T15:45:52+00:00",
+      "url": "https://codeforces.com/contest/2285/problem/B"
+    },
+    {
+      "contestId": 2285,
+      "index": "A",
+      "name": "Composite Permutation",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-23T14:59:15+00:00",
+      "url": "https://codeforces.com/contest/2285/problem/A"
+    },
+    {
+      "contestId": 911,
+      "index": "A",
+      "name": "Nearest Minimums",
+      "rating": 1100,
+      "verdict": "OK",
+      "time": "2026-11-23T12:44:05+00:00",
+      "url": "https://codeforces.com/contest/911/problem/A"
+    },
     {
       "contestId": 1791,
       "index": "E",
@@ -3091,33 +3142,6 @@
       "verdict": "OK",
       "time": "2026-11-17T10:05:33+00:00",
       "url": "https://codeforces.com/contest/1760/problem/D"
-    },
-    {
-      "contestId": 792,
-      "index": "B",
-      "name": "Counting-out Rhyme",
-      "rating": 1300,
-      "verdict": "OK",
-      "time": "2026-11-16T14:06:14+00:00",
-      "url": "https://codeforces.com/contest/792/problem/B"
-    },
-    {
-      "contestId": 426,
-      "index": "A",
-      "name": "Sereja and Mugs",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-11-15T11:16:39+00:00",
-      "url": "https://codeforces.com/contest/426/problem/A"
-    },
-    {
-      "contestId": 1328,
-      "index": "A",
-      "name": "Divisibility Problem",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-11-13T06:06:41+00:00",
-      "url": "https://codeforces.com/contest/1328/problem/A"
     }
   ],
   "cf_rating_history": [
@@ -3337,6 +3361,14 @@
     "Unrated": 5
   },
   "upcoming_contests": [
+    {
+      "platform": "Codeforces",
+      "name": "",
+      "url": "https://codeforces.com/contest/2292",
+      "start": "2026-11-27T14:35:00Z",
+      "duration": 8100,
+      "color": "#00d4ff"
+    },
     {
       "platform": "AtCoder",
       "name": "",
