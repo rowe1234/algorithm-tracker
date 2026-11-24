@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-24 06:27:01 UTC",
-  "total_ac": 675,
+  "updated_at": "2026-11-24 18:21:35 UTC",
+  "total_ac": 676,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 333,
+    "Codeforces": 334,
     "Luogu": 337,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,20 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-24": {
+      "count": 1,
+      "max_rating": 800,
+      "ratings": [
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/231/problem/A",
+          "name": "Team"
+        }
+      ]
+    },
     "2026-11-23": {
       "count": 3,
       "max_rating": 1100,
@@ -3044,7 +3058,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 154,
+    "<1200": 155,
     "1200-1399": 56,
     "1400-1599": 48,
     "1600-1899": 31,
@@ -3053,6 +3067,15 @@
     "Unrated": 29
   },
   "recent_submissions": [
+    {
+      "contestId": 231,
+      "index": "A",
+      "name": "Team",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-24T13:34:29+00:00",
+      "url": "https://codeforces.com/contest/231/problem/A"
+    },
     {
       "contestId": 2285,
       "index": "B",
@@ -3133,15 +3156,6 @@
       "verdict": "OK",
       "time": "2026-11-18T13:09:28+00:00",
       "url": "https://codeforces.com/contest/630/problem/A"
-    },
-    {
-      "contestId": 1760,
-      "index": "D",
-      "name": "Challenging Valleys",
-      "rating": 1000,
-      "verdict": "OK",
-      "time": "2026-11-17T10:05:33+00:00",
-      "url": "https://codeforces.com/contest/1760/problem/D"
     }
   ],
   "cf_rating_history": [
