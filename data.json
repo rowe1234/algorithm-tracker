@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-25 12:58:07 UTC",
-  "total_ac": 676,
+  "updated_at": "2026-11-25 22:34:20 UTC",
+  "total_ac": 677,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 334,
+    "Codeforces": 335,
     "Luogu": 337,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,20 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-25": {
+      "count": 1,
+      "max_rating": 1000,
+      "ratings": [
+        1000
+      ],
+      "problems": [
+        {
+          "rating": 1000,
+          "url": "https://codeforces.com/contest/120/problem/A",
+          "name": "Elevator"
+        }
+      ]
+    },
     "2026-11-24": {
       "count": 1,
       "max_rating": 800,
@@ -3058,7 +3072,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 155,
+    "<1200": 156,
     "1200-1399": 56,
     "1400-1599": 48,
     "1600-1899": 31,
@@ -3067,6 +3081,15 @@
     "Unrated": 29
   },
   "recent_submissions": [
+    {
+      "contestId": 120,
+      "index": "A",
+      "name": "Elevator",
+      "rating": 1000,
+      "verdict": "OK",
+      "time": "2026-11-25T15:43:39+00:00",
+      "url": "https://codeforces.com/contest/120/problem/A"
+    },
     {
       "contestId": 231,
       "index": "A",
@@ -3147,15 +3170,6 @@
       "verdict": "OK",
       "time": "2026-11-18T13:37:34+00:00",
       "url": "https://codeforces.com/contest/2271/problem/C"
-    },
-    {
-      "contestId": 630,
-      "index": "A",
-      "name": "Again Twenty Five!",
-      "rating": 800,
-      "verdict": "OK",
-      "time": "2026-11-18T13:09:28+00:00",
-      "url": "https://codeforces.com/contest/630/problem/A"
     }
   ],
   "cf_rating_history": [
