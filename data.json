@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26 14:30:14 UTC",
-  "total_ac": 678,
+  "updated_at": "2026-11-26 23:20:14 UTC",
+  "total_ac": 679,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 336,
+    "Codeforces": 337,
     "Luogu": 337,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -25,10 +25,15 @@
   },
   "daily_stats": {
     "2026-11-26": {
-      "count": 1,
+      "count": 2,
       "max_rating": 0,
       "ratings": [],
       "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2288/problem/A",
+          "name": "Youmu Konpaku and the Duel"
+        },
         {
           "rating": null,
           "url": "https://codeforces.com/contest/2285/problem/C",
@@ -3090,9 +3095,18 @@
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 30
+    "Unrated": 31
   },
   "recent_submissions": [
+    {
+      "contestId": 2288,
+      "index": "A",
+      "name": "Youmu Konpaku and the Duel",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-26T15:11:49+00:00",
+      "url": "https://codeforces.com/contest/2288/problem/A"
+    },
     {
       "contestId": 2285,
       "index": "C",
@@ -3173,15 +3187,6 @@
       "verdict": "TIME_LIMIT_EXCEEDED",
       "time": "2026-11-20T16:04:47+00:00",
       "url": "https://codeforces.com/contest/274/problem/A"
-    },
-    {
-      "contestId": 1800,
-      "index": "B",
-      "name": "Count the Number of Pairs",
-      "rating": 1000,
-      "verdict": "OK",
-      "time": "2026-11-19T13:04:03+00:00",
-      "url": "https://codeforces.com/contest/1800/problem/B"
     }
   ],
   "cf_rating_history": [
