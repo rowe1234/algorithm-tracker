@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26 04:26:04 UTC",
-  "total_ac": 677,
+  "updated_at": "2026-11-26 14:30:14 UTC",
+  "total_ac": 678,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,7 +14,7 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 335,
+    "Codeforces": 336,
     "Luogu": 337,
     "Nowcoder": 0,
     "AtCoder": 5
@@ -24,6 +24,18 @@
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-26": {
+      "count": 1,
+      "max_rating": 0,
+      "ratings": [],
+      "problems": [
+        {
+          "rating": null,
+          "url": "https://codeforces.com/contest/2285/problem/C",
+          "name": "Max Substitution"
+        }
+      ]
+    },
     "2026-11-25": {
       "count": 1,
       "max_rating": 1000,
@@ -3078,9 +3090,18 @@
     "1600-1899": 31,
     "1900-2099": 6,
     ">=2100": 9,
-    "Unrated": 29
+    "Unrated": 30
   },
   "recent_submissions": [
+    {
+      "contestId": 2285,
+      "index": "C",
+      "name": "Max Substitution",
+      "rating": null,
+      "verdict": "OK",
+      "time": "2026-11-26T09:47:35+00:00",
+      "url": "https://codeforces.com/contest/2285/problem/C"
+    },
     {
       "contestId": 120,
       "index": "A",
@@ -3161,15 +3182,6 @@
       "verdict": "OK",
       "time": "2026-11-19T13:04:03+00:00",
       "url": "https://codeforces.com/contest/1800/problem/B"
-    },
-    {
-      "contestId": 2271,
-      "index": "C",
-      "name": "XOR Problem",
-      "rating": 1400,
-      "verdict": "OK",
-      "time": "2026-11-18T13:37:34+00:00",
-      "url": "https://codeforces.com/contest/2271/problem/C"
     }
   ],
   "cf_rating_history": [
