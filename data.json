@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 05:23:14 UTC",
+  "updated_at": "2026-11-27 15:37:52 UTC",
   "total_ac": 679,
   "cf_info": {
     "rating": 1451,
@@ -3406,14 +3406,6 @@
     "Unrated": 5
   },
   "upcoming_contests": [
-    {
-      "platform": "Codeforces",
-      "name": "",
-      "url": "https://codeforces.com/contest/2292",
-      "start": "2026-11-27T14:35:00Z",
-      "duration": 8100,
-      "color": "#00d4ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
