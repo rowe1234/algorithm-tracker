@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-28 05:01:24 UTC",
-  "total_ac": 679,
+  "updated_at": "2026-11-28 14:13:55 UTC",
+  "total_ac": 675,
   "cf_info": {
     "rating": 1451,
     "maxRating": 1495,
@@ -14,16 +14,30 @@
     "AtCoder": "https://atcoder.jp/users/Rowe"
   },
   "platforms": {
-    "Codeforces": 337,
+    "Codeforces": 338,
     "Luogu": 337,
     "Nowcoder": 0,
-    "AtCoder": 5
+    "AtCoder": 0
   },
   "manual": {
     "Luogu": false,
     "Nowcoder": true
   },
   "daily_stats": {
+    "2026-11-28": {
+      "count": 1,
+      "max_rating": 800,
+      "ratings": [
+        800
+      ],
+      "problems": [
+        {
+          "rating": 800,
+          "url": "https://codeforces.com/contest/1454/problem/B",
+          "name": "Unique Bid Auction"
+        }
+      ]
+    },
     "2026-11-26": {
       "count": 2,
       "max_rating": 0,
@@ -3089,7 +3103,7 @@
     }
   },
   "rating_dist": {
-    "<1200": 156,
+    "<1200": 157,
     "1200-1399": 56,
     "1400-1599": 48,
     "1600-1899": 31,
@@ -3098,6 +3112,24 @@
     "Unrated": 31
   },
   "recent_submissions": [
+    {
+      "contestId": 1454,
+      "index": "B",
+      "name": "Unique Bid Auction",
+      "rating": 800,
+      "verdict": "OK",
+      "time": "2026-11-28T12:34:42+00:00",
+      "url": "https://codeforces.com/contest/1454/problem/B"
+    },
+    {
+      "contestId": 1454,
+      "index": "B",
+      "name": "Unique Bid Auction",
+      "rating": 800,
+      "verdict": "RUNTIME_ERROR",
+      "time": "2026-11-28T12:33:25+00:00",
+      "url": "https://codeforces.com/contest/1454/problem/B"
+    },
     {
       "contestId": 2288,
       "index": "A",
@@ -3169,24 +3201,6 @@
       "verdict": "OK",
       "time": "2026-11-22T11:39:36+00:00",
       "url": "https://codeforces.com/contest/1791/problem/E"
-    },
-    {
-      "contestId": 274,
-      "index": "A",
-      "name": "k-Multiple Free Set",
-      "rating": 1500,
-      "verdict": "OK",
-      "time": "2026-11-20T16:08:36+00:00",
-      "url": "https://codeforces.com/contest/274/problem/A"
-    },
-    {
-      "contestId": 274,
-      "index": "A",
-      "name": "k-Multiple Free Set",
-      "rating": 1500,
-      "verdict": "TIME_LIMIT_EXCEEDED",
-      "time": "2026-11-20T16:04:47+00:00",
-      "url": "https://codeforces.com/contest/274/problem/A"
     }
   ],
   "cf_rating_history": [
@@ -3359,61 +3373,9 @@
       "time": "2026-10-24T13:20:00+00:00"
     }
   ],
-  "atcoder_daily_stats": {
-    "2026-08-18": {
-      "count": 1,
-      "problems": [
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/past17-open/tasks/past17_o",
-          "name": "整地クエリ"
-        }
-      ]
-    },
-    "2026-10-26": {
-      "count": 4,
-      "problems": [
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_a",
-          "name": "The Last Line of a School Song"
-        },
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_b",
-          "name": "Swimming Practice"
-        },
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_c",
-          "name": "Checking Weather on Consecutive Days"
-        },
-        {
-          "rating": null,
-          "url": "https://atcoder.jp/contests/awc0186/tasks/awc0186_d",
-          "name": "Installation of Street Lights"
-        }
-      ]
-    }
-  },
-  "atcoder_rating_dist": {
-    "<400": 0,
-    "400-799": 0,
-    "800-1199": 0,
-    "1200-1599": 0,
-    "1600-1999": 0,
-    ">=2000": 0,
-    "Unrated": 5
-  },
+  "atcoder_daily_stats": {},
+  "atcoder_rating_dist": {},
   "upcoming_contests": [
-    {
-      "platform": "AtCoder",
-      "name": "",
-      "url": "https://atcoder.jp/contests/abc486",
-      "start": "2026-11-28T12:00:00Z",
-      "duration": 6000,
-      "color": "#a882ff"
-    },
     {
       "platform": "AtCoder",
       "name": "",
